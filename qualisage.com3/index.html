@@ -1,0 +1,2441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            width: 100vw;
+            background: #eceffe;
+            font-family: 'Rubik', sans-serif;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        nav {
+            margin: 0;
+            width: 100vw;
+            height: 114px;
+            display: flex;
+            color: white;
+            padding: 20px 30px;
+            background: #7a44ff;
+            background: linear-gradient(135deg, #7a44ff, #8146ff, #8849ff, #8f4bff, #954eff, #9c50ff, #a153ff, #a756ff);
+        }
+
+        ul li {
+            cursor: pointer;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        span {
+            cursor: context-menu;
+        }
+
+        .nav-child {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-continer {
+            padding: 10px;
+        }
+
+        .nav-child-side {
+            width: 20%;
+        }
+
+        .nav-child-center {
+            width: 60%;
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar-items {
+            width: 80%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .navbar-list-items {
+            width: auto;
+            height: 100%;
+            display: flex;
+            font-size: 20px;
+            list-style: none;
+            font-weight: 500;
+            transition: 0.2s;
+            align-items: center;
+        }
+
+        .navbar-list-items:hover {
+            transform: scale(1.05);
+        }
+
+        .navbar-button-container {
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+        }
+
+        .lets-do-it-button {
+            border: 0;
+            height: 50px;
+            width: 206px;
+            transition: 1s;
+            transform: none;
+            cursor: pointer;
+            position: relative;
+            border-radius: 8px;
+            background: white;
+            box-shadow: rgba(0, 0, 0, 0.13) 0px 7px 9px -4px, rgba(0, 0, 0, 0.08) 0px 14px 21px 2px, rgba(0, 0, 0, 0.07) 0px 5px 26px 4px;
+        }
+
+        .lets-do-it-button:hover {
+            transform: scale(1.02);
+        }
+
+        .main-nav-logo-svg {
+            width: 220px;
+            height: 43px;
+        }
+
+        .button-content-text {
+            width: 75%;
+            height: 100%;
+            display: flex;
+            font-size: 17px;
+            cursor: pointer;
+            color: #ba54de;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .top-right-corner {
+            top: -6px;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            background: white;
+            transform: rotate(-35deg);
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .airplane-svg {
+            top: -1px;
+            right: 6px;
+            position: absolute;
+        }
+
+        .Intro_section__nsFpO {
+            display: flex;
+            min-height: 848px;
+            position: relative;
+            padding-bottom: 8vw;
+            align-items: center;
+            justify-content: center;
+            background: #7a44ff;
+            transform: translateY(-115px);
+            background: linear-gradient(135deg, #7a44ff, #8146ff, #8849ff, #8f4bff, #954eff, #9c50ff, #a153ff, #a756ff);
+        }
+
+        .PageIntroBackgroundImage_image__qJwSi {
+            opacity: .15;
+        }
+
+        .Intro_text__r2_tn h1 {
+            margin-bottom: 20px;
+            color: white;
+        }
+
+
+        .Intro_text__r2_tn {
+            position: relative;
+            width: 100%;
+            max-width: 650px;
+            padding: 13.5vw 20px 15vw;
+            text-align: center;
+            color: #fff;
+            z-index: 1;
+        }
+
+        .PageIntroBottomLines_container__sqVVV {
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            bottom: -1px;
+            overflow: hidden;
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .PageIntroBottomLines_lineContainer__CRMUm:first-child {
+            z-index: 1;
+            position: absolute;
+        }
+
+        .PageIntroBottomLines_lineContainer__CRMUm:first-child {
+            z-index: 1;
+            position: absolute;
+        }
+
+        .PageIntroBottomLines_lineContainer__CRMUm {
+            width: 130%;
+            left: -30%;
+            transform-origin: 50% 100%;
+        }
+
+        .PageIntroBottomLines_lineContainer__CRMUm:nth-child(2) svg {
+            transform: scaleX(-1) scaleY(0.9) translate(15%);
+            color: rgba(236, 239, 254, .3);
+        }
+
+        .PageIntroBottomLines_lineContainer__CRMUm svg {
+            width: 170% !important;
+        }
+
+        .PageIntroBottomLines_lineContainer__CRMUm svg {
+            width: 100%;
+            height: auto;
+            color: #eceffe;
+            transform-origin: 50% 100%;
+            transform: scaleX(-1) scaleY(.6) translateY(15px) translateX(40px);
+        }
+
+        .OurFocus_section__gmfR6 {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            z-index: 1;
+            margin-top: 80px;
+        }
+
+        .OurFocus_section__gmfR6 h2 {
+            width: 100%;
+            font-weight: 500;
+            color: #454cc1;
+            font-size: 48px;
+            padding: 0 20px;
+            max-width: 1920px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .Quote_content__SLd4q {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-column-gap: 0;
+            grid-row-gap: 30px;
+            justify-items: center;
+            width: 100%;
+            max-width: 1280px;
+            padding: 0 20px;
+        }
+
+        .Quote_quoteIcon__jSjek {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .Quote_figure__M7Au3 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            margin: 0;
+            text-align: center;
+            order: 2;
+        }
+
+        .Quote_quoteIcon__jSjek svg {
+            width: 25vw;
+            max-width: 420px;
+            max-height: 420px;
+            color: #d3dafd;
+            transform: translate(-25%, -55%);
+        }
+
+        .Quote_blockquote__8zUB2 {
+            margin: 0;
+            z-index: 1;
+            font-size: 21px;
+            position: relative;
+            color: #454cc1;
+        }
+
+        .Quote_figcaption__igRLQ {
+            z-index: 1;
+            color: #454cc1;
+            position: relative;
+            max-width: 200px;
+            margin: 20px 0 0;
+        }
+
+        abbr[title] {
+            text-decoration: none;
+        }
+
+        .Quote_authorContainer__OSAAA {
+            position: relative;
+            width: 100%;
+            max-width: 200px;
+            order: 1;
+        }
+
+        .Quote_imagePadContainer__ZIkWQ {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform: rotate(-40deg) scaleX(-1.05) scaleY(1.15);
+        }
+
+        .Quote_imagePadInner__lRDRy {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-clip-path: url(#authorColorPadClipPath);
+            clip-path: url(https://qualisage.com/about#authorColorPadClipPath);
+        }
+
+        .Quote_imagePad__wcmCB {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: #9237f6;
+            border-top-left-radius: 100%;
+            border-top-right-radius: 100%;
+            border-bottom-left-radius: 60%;
+            border-bottom-right-radius: 100%;
+            background: linear-gradient(180deg, #9237f6, #786bf0);
+        }
+
+        .Quote_imageShadowContainer__Vz65l {
+            position: relative;
+            width: 100%;
+            z-index: 1;
+            filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, .3));
+            transform: scale(1.001);
+            will-change: filter;
+        }
+
+        .Quote_imageContainer__GSF2o {
+            width: 100%;
+            -webkit-clip-path: url(#authorClipPath);
+            clip-path: url(#authorClipPath);
+        }
+
+        svg[width="0"][height="0"] {
+            display: block;
+        }
+
+        svg:not([fill]) {
+            fill: currentColor;
+        }
+
+        .Quote_imageContainer__GSF2o span {
+            border-bottom-left-radius: 30%;
+            border-top-left-radius: 55%;
+            border-bottom-right-radius: 55%;
+            border-top-right-radius: 55%;
+        }
+
+        .WhyQualiSage_section__0PHLJ {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 110px;
+            overflow: hidden;
+        }
+
+        .SectionTitleH2_isShort__o6gRz {
+            font-size: 44px;
+            color: #454cc1;
+            font-weight: 600;
+            margin-bottom: 40px;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .SectionTitleH2_heading__g73_o {
+            margin-top: 0;
+        }
+
+
+        .WhyQualiSage_because__1n59b {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+            font-size: 21px;
+            color: #454cc1;
+        }
+
+        .WhyQualiSage_imageContainer__5_wxP {
+            position: relative;
+            width: calc(100% - 80px);
+            max-width: 480px;
+            margin-top: 30px;
+        }
+
+        .WhyQualiSage_desktop__WUXVw {
+            display: none;
+        }
+
+        .WhyQualiSage_desktopImage__U3z_e:not(:nth-child(3)) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .WhyQualiSage_desktopImage__U3z_e:first-child {
+            z-index: 2;
+        }
+
+        .WhyQualiSage_desktopImage__U3z_e:not(:nth-child(3)) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .WhyQualiSage_desktopImage__U3z_e:nth-child(2) {
+            z-index: 1;
+        }
+
+        .WhyQualiSage_texts__RJCTF {
+            width: 100%;
+            transform: skew(349.1deg, 5.6deg);
+            list-style-type: none;
+        }
+
+        .WhyQualiSage_squareText__Spi1r {
+            color: #7750de;
+        }
+
+        .WhyQualiSage_qualiText__vFBrO span,
+        .WhyQualiSage_sageText__x5Pvo span,
+        .WhyQualiSage_squareText__Spi1r span {
+            display: block;
+            font-weight: 600;
+        }
+
+        .WhyQualiSage_squareText__Spi1r svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .WhyQualiSage_qualiText__vFBrO {
+            color: #6954e3;
+        }
+
+        .WhyQualiSage_qualiText__vFBrO,
+        .WhyQualiSage_sageText__x5Pvo,
+        .WhyQualiSage_squareText__Spi1r {
+            width: 100%;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            transform: skew(349.1deg, 5.6deg);
+        }
+
+        .WhyQualiSage_sageText__x5Pvo {
+            color: #5063cc;
+        }
+
+        .Mission_section__u9cF8 {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 110px;
+            overflow: hidden;
+        }
+
+        .Mission_backgroundText__IHJ1P {
+            display: none;
+        }
+
+        .SectionTitleH2_heading__g73_o .SectionTitleH2_isShort__o6gRz {
+            color: #454cc1;
+            font-weight: 600;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .Mission_content__Q1aBy {
+            width: 100%;
+            display: grid;
+            padding: 0 20px;
+            margin-top: 30px;
+            max-width: 1280px;
+            grid-column-gap: 0;
+            grid-row-gap: 60px;
+            align-items: center;
+            justify-items: center;
+            grid-template-columns: 1fr;
+        }
+
+
+        .Mission_missionStatement__MTIt9 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .Mission_textContainer___yjG4 {
+            position: relative;
+            /* max-width: 260px; */
+        }
+
+        .Mission_text__y4n_i {
+            z-index: 1;
+            color: #454cc1;
+            font-size: 26px;
+            position: relative;
+            font-weight: 300;
+            text-align: center;
+        }
+
+
+        .Mission_textContainer___yjG4 svg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 28vw;
+            color: #d3dafd;
+            transform: translate(35%, -50%);
+        }
+
+        .Mission_imageContainer__NLMvU {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .Vision_section__sAtm3 {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 110px;
+            padding-bottom: 8vw;
+            overflow: hidden;
+        }
+
+        .Vision_backgroundText__JRAnO {
+            display: none;
+        }
+
+        .SectionTitleH2_heading__g73_o {
+            margin-top: 0;
+        }
+
+        .SectionTitleH2_isShort__o6gRz {
+            font-size: 44px;
+        }
+
+        .Vision_content__rniCO {
+            display: grid;
+            width: 100%;
+            max-width: 1280px;
+            grid-column-gap: 0;
+            grid-row-gap: 60px;
+            align-items: center;
+            justify-items: center;
+            margin-top: 20px;
+            grid-template-columns: 1fr;
+        }
+
+        .Vision_visionStatement__dAKQR {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+        }
+
+        .Vision_textContainer__E3ltV {
+            position: relative;
+            max-width: 280px;
+        }
+
+        .Vision_graphicsContainer__sktBP {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .Vision_text__7Lrna {
+            z-index: 1;
+            font-size: 24px;
+            font-weight: 300;
+            font-family: 'Rubik', 'sans-serif';
+            color: #454cc1;
+            position: relative;
+            text-align: center;
+        }
+
+        .Vision_textContainer__E3ltV svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 22vw;
+            color: #d3dafd;
+            transform: translate(-35%, -50%);
+        }
+
+        .Vision_graphicsContainer__sktBP {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .Vision_graphicsInner__q8rYp {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            transform: translateX(-10%);
+        }
+
+        .Vision_nightSkyContainer__Xczro {
+            position: relative;
+            width: 80%;
+            flex: 0 0 80%;
+        }
+
+        .Vision_outerSkySvg__zBbZe {
+            width: 100%;
+            height: auto;
+        }
+
+        .Vision_innerSky__RAdq5 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 88%;
+            height: 88%;
+            z-index: 1;
+            transform: translate3d(-50%, -50%, 0);
+        }
+
+        .Vision_innerSkyClipContainer__lB7rH {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-clip-path: url(#visionClipPath);
+            clip-path: url(#visionClipPath);
+        }
+
+        .Vision_innerSkyBackground__45h_B {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, #9237f6, #8d42f6, #884bf6, #8452f6, #8059f5, #7d60f3, #7a66f2, #786bf0);
+        }
+
+        .Vision_innerSkySvg__yIOpQ {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+        }
+
+        .Vision_innerSkyClipContainer__lB7rH>span {
+            z-index: 1;
+        }
+
+        .Vision_telescope__b4he0 {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40%;
+            transform: translate(25%, 25%);
+            z-index: 1;
+        }
+
+
+        .Vision_planets__Gv6PS {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .Vision_planet1__6eLhS,
+        .Vision_planet2__S4zt7 {
+            position: absolute;
+            z-index: 1;
+            filter: drop-shadow(0 15px 15px rgba(0, 0, 0, .3));
+        }
+
+        .Vision_planet1__6eLhS {
+            top: 70%;
+            right: 30%;
+            width: 9%;
+        }
+
+        .Vision_planet2__S4zt7 {
+            top: 32%;
+            right: 18%;
+            width: 15%;
+        }
+
+        .Vision_planet1__6eLhS,
+        .Vision_planet2__S4zt7 {
+            position: absolute;
+            z-index: 1;
+            filter: drop-shadow(0 15px 15px rgba(0, 0, 0, .3));
+        }
+
+        .Vision_planet3__5U0j4 {
+            position: absolute;
+            top: 25%;
+            right: 49%;
+            width: 8%;
+            z-index: 1;
+            filter: drop-shadow(0 15px 15px rgba(0, 0, 0, .3));
+        }
+
+        .Values_section__ydfiZ {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 100px;
+            margin-bottom: -20px;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .Values_backgroundText__0BkoQ {
+            display: none;
+        }
+
+        .Values_text__1H49j {
+            width: 100%;
+            display: flex;
+            padding: 0 20px;
+            position: relative;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .Values_text__1H49j h2 {
+            position: relative;
+            z-index: 1;
+        }
+
+        .SectionTitleH2_isShort__o6gRz {
+            font-size: 44px;
+        }
+
+        .SectionTitleH2_heading__g73_o {
+            margin-top: 0;
+        }
+
+        .Values_descriptionContainer__s6BM1 {
+            position: relative;
+            max-width: 640px;
+        }
+
+        .Values_text__1H49j svg {
+            display: none;
+            height: 160px;
+            width: 160px;
+            z-index: -1;
+        }
+
+        .Values_coreValuesSvg__2_JRd {
+            top: 0;
+            left: 0;
+            transform: translate(-30%, -40%);
+        }
+
+        .Values_teamworkSvg__iXWlb {
+            bottom: 0;
+            right: 0;
+            transform: translate(30%, 30%);
+        }
+
+        .Values_description__0l5ch {
+            position: relative;
+            color: #454cc1;
+            z-index: 1;
+        }
+
+        .List_container__nRlsb {
+            display: grid;
+            grid-column-gap: 0;
+            grid-row-gap: 0;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-top: 12vw;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .List_container__nRlsb li:first-child {
+            background: var(--darkPurple);
+            background: linear-gradient(135deg, #9237f6, #8d42f6, #884bf6, #8452f6, #8059f5, #7d60f3, #7a66f2, #786bf0);
+        }
+
+        .List_container__nRlsb li:nth-child(2) {
+            background: var(--lightPurple);
+            background: linear-gradient(135deg, #786bf0, #7a66f2, #7d60f3, #8059f5, #8452f6, #884bf6, #8d42f6, #9237f6);
+        }
+
+        .List_container__nRlsb li:nth-child(3) {
+            background: var(--lightPurple);
+            background: linear-gradient(135deg, #786bf0, #7a66f2, #7d60f3, #8059f5, #8452f6, #884bf6, #8d42f6, #9237f6);
+        }
+
+        .List_container__nRlsb li:nth-child(4) {
+            background: var(--lightPurple);
+            background: linear-gradient(135deg, #786bf0, #7a66f2, #7d60f3, #8059f5, #8452f6, #884bf6, #8d42f6, #9237f6);
+        }
+
+        .List_container__nRlsb li:nth-child(5) {
+            background: var(--lightPurple);
+            background: linear-gradient(135deg, #786bf0, #7a66f2, #7d60f3, #8059f5, #8452f6, #884bf6, #8d42f6, #9237f6);
+        }
+
+        .List_container__nRlsb li:nth-child(6) {
+            background: var(--lightPurple);
+            background: linear-gradient(135deg, #786bf0, #7a66f2, #7d60f3, #8059f5, #8452f6, #884bf6, #8d42f6, #9237f6);
+        }
+
+        .PuzzlePiece_container__9A7Q6:first-child {
+            z-index: 5;
+        }
+
+        .PuzzlePiece_container__9A7Q6 {
+            position: relative;
+            text-align: center;
+            width: 310px;
+            height: 310px;
+            border: 2px solid #eceffe;
+            border-radius: 31px;
+            color: #fff;
+        }
+
+        .PuzzlePiece_slots__fASlo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .PuzzlePiece_content__e1_Sc {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            padding: 0 45px;
+            overflow: hidden;
+        }
+
+        .PuzzlePiece_iconContainer__MAYeq {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .PuzzlePiece_iconContainer__MAYeq svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: rgba(255, 255, 255, .1);
+            width: 80%;
+            transform: translate(-50%, -50%);
+        }
+
+        .PuzzlePiece_label__1xzy_ {
+            position: relative;
+            display: block;
+            margin-bottom: 15px;
+            font-family: Quicksand, sans-serif;
+            font-weight: 500;
+            font-size: 21px;
+            z-index: 1;
+        }
+
+        b,
+        strong {
+            font-weight: 450;
+        }
+
+        b,
+        strong {
+            font-weight: bolder;
+        }
+
+        .PuzzlePiece_description__Q9uOb {
+            position: relative;
+            font-weight: 300;
+            z-index: 1;
+        }
+
+        .foooter-main-storage {
+            margin-top: 220px;
+            width: 100%;
+        }
+
+        .DecorativeLines_svgContainer__UxzVK {
+            left: 50%;
+            bottom: 0;
+            position: absolute;
+            animation-name: block1;
+            animation-duration: 1500ms;
+            transform: translateX(-50%) translateZ(0);
+        }
+
+        .DecorativeLines_container__dQAzD {
+            height: 245px;
+            position: relative;
+            max-width: 100vw;
+            overflow: hidden;
+        }
+
+        .footer-svg-top {
+            opacity: 1;
+            color: #7a8eff;
+            transform: translateY(4%) scale(1) translateZ(0px) !important;
+        }
+
+        .footer-svg-center {
+            opacity: 1;
+            color: #7d58ff;
+            transform: translateY(4%) scale(1) translateZ(0px) !important;
+        }
+
+        .footer-svg-bottom {
+            opacity: 1;
+            color: #9237f6;
+            transform: translateY(4%) scale(1) translateZ(0px) !important;
+        }
+
+        .Footer_container__5d2_x {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            font-size: 14px;
+            background: #9237f6;
+            background: linear-gradient(180deg, #9237f6, #8d42f6, #884bf6, #8452f6, #8059f5, #7d60f3, #7a66f2, #786bf0);
+            overflow: hidden;
+        }
+
+        .Top_container__eI130 {
+            display: flex;
+            width: 100%;
+        }
+
+        .Footer_inner__RY4ud {
+            width: 100%;
+            max-width: 1440px;
+            padding: 60px 20px 20px;
+            color: #fff;
+        }
+
+        .Top_title__6z4Ur {
+            position: relative;
+            font-weight: 600;
+            font-family: 'QuickSand', sans-serif;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .LinkListItem_link__0BOYP {
+            cursor: pointer;
+            font-size: 15px;
+            overflow: hidden;
+            padding: 12px 0;
+            font-weight: 300;
+            color: var(--white);
+            vertical-align: top;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .Top_linkList__bau6S {
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .LinkListItem_arrowIcon__jdfqE {
+            top: -1px;
+            width: 17px;
+            height: 17px;
+            transition: 0.2s;
+            margin-right: 3px;
+            position: relative;
+        }
+
+        .Info_container__c22NI {
+            width: 30%;
+        }
+
+        .Top_extraItems__U4XYB {
+            width: 60%;
+        }
+
+        .Top_company__PhJZN {
+            width: 10%;
+        }
+
+        .Info_qualiSageLink__5syY5 {
+            display: block;
+            width: 180px;
+            padding: 7px 0;
+            margin-top: -7px;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .Info_aboutUs__i4f40 {
+            width: 260px;
+            margin-bottom: 15px;
+        }
+
+        .SocialLink_link__Ru2wq {
+            padding: 10px;
+            color: #fff;
+            transition: 0.2s;
+            display: inline-block;
+        }
+
+        .SocialLink_link__Ru2wq:hover {
+            transform: scale(1.1) !important;
+        }
+
+        .SocialLink_link__Ru2wq_first {
+            color: #fff;
+            padding-left: 0;
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .SocialLink_link__Ru2wq svg {
+            width: 30px;
+            height: 30px;
+        }
+
+        .first-footer-sosial-icon {
+            padding-left: 0;
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+        }
+
+        .Email_link__ZMVsa {
+            overflow: hidden;
+            margin-bottom: 10px;
+            padding: 15px 0;
+            color: #fff;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .Email_icon__cVwSi {
+            width: 0;
+            flex: 0 0 0;
+            height: 22px;
+            transition: 0.2s;
+            position: relative;
+            margin-right: 5px;
+        }
+
+        .Email_inner__54Qz3 {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .adress-title-footer {
+            margin-top: 20px;
+        }
+
+        .ExternalLink_container__0KtGC {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .ExternalLink_container__0KtGC a {
+            display: block;
+            padding: 15px 0;
+            opacity: .9;
+        }
+
+        .clutech-svg-left {
+            width: 70px;
+            height: 20px;
+            color: white;
+            transition: 0.2s;
+        }
+
+        .clutech-svg-right {
+            height: 20px;
+            color: white;
+            margin-left: 20px;
+            transition: 0.2s;
+        }
+
+        .LinkListItem_inner__wIPAE {
+            cursor: pointer;
+        }
+
+        .Top_extraItems__U4XYB {
+            display: flex;
+            order: 0;
+            flex: 1 1;
+            width: auto;
+            grid-column-gap: 20px;
+            margin-top: 0;
+            margin-right: 20px;
+        }
+
+        .footer-center-child-right {
+            width: 40%;
+        }
+
+        .footer-center-child-left {
+            width: 40%;
+        }
+
+        .Bottom_container__Mgtkm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 2px solid rgba(255, 255, 255, .25);
+            text-align: center;
+        }
+
+        .Bottom_copyright__U4Q_M {
+            margin-bottom: 20px;
+        }
+
+        .Bottom_container__Mgtkm {
+            display: flex;
+            width: 100%;
+            margin-top: 60px;
+            padding-top: 20px;
+            text-align: center;
+            align-items: center;
+            border-top: 2px solid rgba(255, 255, 255, .25);
+        }
+
+        .LinkWithAnimatedLine_link___GFMv:hover {
+            transition: 0.2s;
+            border-bottom: 4px solid white;
+        }
+
+        .Bottom_legal__sF5Y_ {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .Bottom_legal__sF5Y_ li {
+            color: white;
+            list-style: none;
+            position: relative;
+            margin-right: 10px;
+            padding-right: 10px;
+            text-decoration: none;
+        }
+
+        .Bottom_legal__sF5Y_ li a {
+            padding: 16px 5px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .bottom-titles-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .LinkListItem_arrowIcon__jdfqE {
+            width: 0;
+            opacity: 0;
+        }
+
+
+        @media(min-width: 1700px) {
+            .Mission_backgroundText__IHJ1P {
+                font-size: 153px !important;
+            }
+        }
+
+        @media(min-width: 1470px) {
+            .Vision_text__7Lrna {
+                font-size: 36px !important;
+            }
+        }
+
+        /* @media(min-width: 1439px) {
+            .List_container__nRlsb {
+                grid-template-columns: repeat(3, 310px);
+                grid-template-rows: repeat(2, 310px);
+            }
+        } */
+
+        @media(min-width: 1366px) {
+            .Quote_quoteIcon__jSjek svg {
+                width: 420px;
+                transform: translate(-30%, -55%);
+            }
+
+            .Vision_text__7Lrna {
+                font-size: 32px;
+            }
+        }
+
+        @media(min-width: 1280px) {
+            .Mission_content__Q1aBy {
+                grid-template-columns: 5fr 3fr;
+                padding-left: 120px;
+                padding-right: 120px;
+            }
+        }
+
+        @media(min-width: 1260px) {
+            .Values_backgroundText__0BkoQ {
+                position: absolute;
+                display: block;
+                bottom: 0;
+                left: 0;
+                color: #e0e5fd;
+                font-weight: 600;
+                font-size: 9vw;
+                line-height: 1;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                transform: rotate(-90deg) translateX(-7%);
+                transform-origin: 0 0;
+            }
+        }
+
+        @media (min-width: 1220px) {
+            .Quote_blockquote__8zUB2 {
+                font-size: 32px;
+            }
+        }
+
+        @media(min-width: 1100px) {
+            .Vision_content__rniCO {
+                padding-right: 80px;
+            }
+        }
+
+        @media(min-width: 1024px) {
+            .Mission_content__Q1aBy {
+                grid-column-gap: 60px !important;
+            }
+        }
+
+
+        @media(min-width: 990px) {
+            .Vision_content__rniCO {
+                grid-template-columns: 4fr 5fr;
+                margin-top: 50px;
+            }
+
+            .Vision_graphicsContainer__sktBP {
+                top: -60px;
+            }
+
+            .Vision_text__7Lrna {
+                font-size: 26px;
+            }
+
+            .Vision_graphicsContainer__sktBP {
+                top: -60px;
+            }
+        }
+
+        @media (min-width: 980px) {
+
+            .Quote_quoteIcon__jSjek svg {
+                width: 30vw;
+                transform: translate(-15%, -55%);
+            }
+        }
+
+        @media(max-width: 980px){
+            .List_container__nRlsb{
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 840px) {
+            .Quote_content__SLd4q {
+                grid-column-gap: 100px;
+                padding-left: 80px;
+                padding-right: 80px;
+            }
+
+            .Quote_blockquote__8zUB2 {
+                font-size: 24px;
+            }
+        }
+
+        @media(min-width: 880px) {
+            .Mission_content__Q1aBy {
+                grid-template-columns: 1fr 1fr;
+                /* max-width: 768px; */
+            }
+
+            .Mission_text__y4n_i {
+                font-size: 32px;
+            }
+
+        }
+
+        @media(min-width: 768px) {
+            .WhyQualiSage_imageContainer__5_wxP {
+                position: relative;
+                width: 100%;
+                max-width: 1440px;
+                margin-top: 0;
+            }
+
+            .WhyQualiSage_desktop__WUXVw {
+                display: block;
+            }
+
+            .WhyQualiSage_texts__RJCTF {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+            }
+
+            .WhyQualiSage_squareText__Spi1r {
+                top: 22%;
+                left: 14.5%;
+            }
+
+            .WhyQualiSage_qualiText__vFBrO,
+            .WhyQualiSage_sageText__x5Pvo,
+            .WhyQualiSage_squareText__Spi1r {
+                position: absolute;
+                width: auto;
+                font-size: 18px;
+                transform: translate(-50%, -50%);
+            }
+
+            .WhyQualiSage_squareText__Spi1r svg {
+                width: 18px;
+                height: 18px;
+            }
+
+            .WhyQualiSage_qualiText__vFBrO {
+                top: 77%;
+                left: 43.2%;
+            }
+
+
+            .WhyQualiSage_sageText__x5Pvo {
+                transform: translate(50%, -50%);
+                top: 31%;
+                right: 22.5%;
+            }
+
+            .Mission_section__u9cF8 {
+                margin-top: 150px;
+            }
+
+            .Mission_backgroundText__IHJ1P {
+                position: absolute;
+                display: block;
+                bottom: 0;
+                left: 0;
+                color: #e0e5fd;
+                font-weight: 600;
+                font-size: 9vw;
+                line-height: 1;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                transform: rotate(-90deg) translateX(-17%);
+                transform-origin: 0 0;
+            }
+
+            .Vision_section__sAtm3 {
+                margin-top: 150px;
+            }
+
+            .Vision_backgroundText__JRAnO {
+                position: absolute;
+                display: block;
+                bottom: 0;
+                right: 0;
+                color: #d3dafd;
+                font-weight: 600;
+                font-size: 9vw;
+                line-height: 1;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                transform: rotate(-90deg) translateX(120%);
+                transform-origin: 100% 100%;
+            }
+
+            .Vision_content__rniCO {
+                padding-left: 80px;
+                padding-right: 110px;
+            }
+
+            .Values_section__ydfiZ {
+                margin-top: 120px;
+                margin-bottom: 0;
+            }
+
+            /* .Values_text__1H49j {
+                max-width: 580px;
+            } */
+
+            .Values_descriptionContainer__s6BM1 {
+                margin-top: 0;
+            }
+
+            .List_container__nRlsb {
+                margin-top: 100px;
+            }
+
+          
+        }
+
+        @media(max-width: 768px){
+            .Vision_content__rniCO{
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+        }
+
+        @media(min-width: 760px) {
+            .WhyQualiSage_section__0PHLJ {
+                margin-top: 150px;
+            }
+        }
+
+        @media(min-width: 750px) {
+            .Values_section__ydfiZ {
+                margin-bottom: -7vw;
+            }
+        }
+
+        @media (min-width: 710px) {
+            .Quote_content__SLd4q {
+                grid-template-columns: 3fr 2fr;
+                padding-left: 60px;
+                padding-right: 60px;
+            }
+        }
+
+        @media(max-width: 680px){
+            .List_container__nRlsb{
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media(min-width: 680px) {
+            .WhyQualiSage_section__0PHLJ {
+                margin-top: 120px;
+            }
+
+            .Mission_section__u9cF8 {
+                margin-top: 120px;
+            }
+
+            .Mission_content__Q1aBy {
+                grid-template-columns: 5fr 4fr;
+                grid-column-gap: 20px;
+                grid-row-gap: 0;
+                justify-items: legacy;
+                /* max-width: 680px; */
+                margin-top: 20px;
+            }
+
+            .Mission_missionStatement__MTIt9 {
+                order: 2;
+            }
+
+
+            .Mission_textContainer___yjG4 {
+                order: 2;
+                max-width: 360px;
+            }
+
+            .Mission_text__y4n_i {
+                font-size: 26px;
+            }
+
+            .Mission_imageContainer__NLMvU {
+                order: 1;
+                max-width: none;
+            }
+
+            .Vision_section__sAtm3 {
+                margin-top: 120px;
+                padding-bottom: 3vw;
+            }
+
+            .Vision_content__rniCO {
+                grid-template-columns: repeat(2, 1fr);
+                grid-row-gap: 0;
+                justify-items: legacy;
+                margin-top: 20px;
+            }
+
+            .Vision_visionStatement__dAKQR {
+                order: 1;
+                max-width: none;
+            }
+
+            .Vision_textContainer__E3ltV {
+                max-width: 560px;
+            }
+
+            .Vision_graphicsContainer__sktBP {
+                order: 2;
+                top: -30px;
+                max-width: none;
+            }
+
+            .Vision_text__7Lrna {
+                font-size: 24px;
+            }
+
+            .Vision_graphicsContainer__sktBP {
+                order: 2;
+                top: -30px;
+                max-width: none;
+            }
+
+            .Vision_graphicsInner__q8rYp {
+                transform: none;
+            }
+
+            .Values_section__ydfiZ {
+                margin-top: 110px;
+            }
+        }
+
+        @media (min-width: 670px) {
+            .Quote_content__SLd4q {
+                grid-template-columns: 5fr 2fr;
+                grid-row-gap: 0;
+                grid-column-gap: 60px;
+                align-items: center;
+                justify-items: legacy;
+            }
+
+            .Quote_figure__M7Au3 {
+                order: 1;
+                display: block;
+                text-align: right;
+            }
+
+            .Quote_authorContainer__OSAAA {
+                order: 2;
+                max-width: none;
+            }
+        }
+
+        @media(min-width: 660px) {
+            .Values_text__1H49j svg {
+                width: 160px;
+            }
+        }
+
+        @media(min-width: 600px) {
+
+            .WhyQualiSage_qualiText__vFBrO,
+            .WhyQualiSage_sageText__x5Pvo,
+            .WhyQualiSage_squareText__Spi1r {
+                font-size: 3vw;
+            }
+
+            .Vision_textContainer__E3ltV {
+                max-width: 450px;
+            }
+
+            .Vision_textContainer__E3ltV svg {
+                width: 132px;
+            }
+        }
+
+        @media(min-width: 570px) {
+            .Values_descriptionContainer__s6BM1 {
+                margin-top: 40px;
+            }
+
+            .Values_coreValuesSvg__2_JRd {
+                transform: translate(-40%, -50%);
+            }
+
+            .List_container__nRlsb {
+                margin-top: 13vw;
+            }
+        }
+
+        @media(min-width: 490px) {
+            .Values_descriptionContainer__s6BM1 {
+                margin-top: 10px;
+            }
+
+            .Values_text__1H49j svg {
+                width: 24vw;
+                position: absolute;
+                display: block;
+                color: #d3dafd;
+            }
+
+            .Values_teamworkSvg__iXWlb {
+                transform: translate(40%, 40%);
+            }
+        }
+
+        @media(min-width: 460px) {
+            .Mission_textContainer___yjG4 svg {
+                width: 132px;
+            }
+        }
+
+        @media(min-width: 450px) {
+            .Vision_text__7Lrna {
+                font-size: 32px;
+            }
+        }
+
+        @media(min-width: 430px) {
+            .Mission_textContainer___yjG4 {
+                max-width: 320px;
+            }
+
+            .Mission_text__y4n_i {
+                font-size: 32px;
+            }
+
+        }
+
+
+        @media(min-width: 425px) {
+            .SectionTitleH2_isShort__o6gRz {
+                font-size: 48px;
+            }
+
+            .SectionTitleH2_isShort__o6gRz {
+                font-size: 48px;
+            }
+
+            .SectionTitleH2_isShort__o6gRz {
+                font-size: 48px;
+            }
+        }
+
+        @media(min-width: 420px) {
+            .Mission_content__Q1aBy {
+                margin-top: 40px;
+            }
+
+            .Vision_content__rniCO {
+                margin-top: 50px;
+            }
+
+            .Vision_visionStatement__dAKQR {
+                padding: 0;
+            }
+        }
+
+        @media (min-width: 400px) {
+            .Quote_figcaption__igRLQ {
+                max-width: none;
+            }
+        }
+
+        @media(min-width: 360px) {
+
+            .WhyQualiSage_qualiText__vFBrO,
+            .WhyQualiSage_sageText__x5Pvo,
+            .WhyQualiSage_squareText__Spi1r {
+                font-size: 18px;
+            }
+
+            .WhyQualiSage_qualiText__vFBrO,
+            .WhyQualiSage_sageText__x5Pvo,
+            .WhyQualiSage_squareText__Spi1r {
+                font-size: 18px;
+            }
+
+            .WhyQualiSage_qualiText__vFBrO,
+            .WhyQualiSage_sageText__x5Pvo,
+            .WhyQualiSage_squareText__Spi1r {
+                font-size: 18px;
+            }
+
+            .Quote_content__SLd4q {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+
+            .Mission_content__Q1aBy {
+                padding-left: 80px;
+                padding-right: 80px;
+            }
+
+            .Vision_visionStatement__dAKQR {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+
+            .Values_text__1H49j {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-child nav-child-side logo-continer">
+            <a href=""
+                style="border-radius: 100%; padding: 10px; height: 80px; width: 80px; z-index: 3; display: flex; justify-content: center; align-items: center; position: relative;">
+                <img src="./Assets/image (2).a2153f2b55833bcab60c.webp" alt=""
+                    style="height: 70px; width: 110px; display: flex; align-items: center; z-index: 3;">
+                <img src="./Assets/logoback.webp" alt="" style="position: absolute; height: 80px; width: 120px;">
+            </a>
+        </div>
+        <div class="nav-child nav-child-center">
+            <ul class="navbar-items">
+                <li class="navbar-list-items">Services</li>
+                <li class="navbar-list-items">Industries</li>
+                <li class="navbar-list-items">Projects</li>
+                <li class="navbar-list-items">Process</li>
+                <li class="navbar-list-items">About</li>
+            </ul>
+        </div>
+        <div class="nav-child nav-child-side navbar-button-container">
+            <button class="lets-do-it-button">
+                <div class="top-right-corner"></div>
+                <h6 class="button-content-text">LET'S DO IT</h6>
+                <svg class="airplane-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.21 91.02" width="32"
+                    height="44">
+                    <path fill="#f1f3fe"
+                        d="M10.23 77.4q6.06-10 7.23-9.45 1.67.77-6.67 23.07 15.24-18.14 16.67-17.1 1 .72-4.72 10.77a31.65 31.65 0 0 0 9.24-6.88c2-2.19 4.27-4.61 5.35-8.54a13.19 13.19 0 0 0-.14-9 12.45 12.45 0 0 0-6.74-6.6 12.82 12.82 0 0 0-9.66.35c-3.28 1.54-4.87 4.15-6.32 6.6a32.22 32.22 0 0 0-4.24 16.78Z">
+                    </path>
+                    <path fill="#7a8eff"
+                        d="M13.84 68.15c4.45-6 5.33-5.45 6.19-5.14 1.54.56 1.88 4.5-4 19.11 9.77-12.25 13.31-15.1 14.62-14.24 1 .64 1.61 2.18-2.22 10.32.92-.36 6.82-2.73 8.89-8.93a12.59 12.59 0 0 0-.14-9 12.4 12.4 0 0 0-6.74-6.6 12.8 12.8 0 0 0-9.66.35c-4.75 2.35-7.58 8-6.94 14.13Z">
+                    </path>
+                    <path fill="#9237f6"
+                        d="M24.65 49.46c3.81-1.3 7.16-4.87 13.86-12 4.75-5.07 7-8.18 7.82-7.72s-.52 3.6-2.19 9c-3.23 10.41-4.82 15.63-4.1 19.61 1 5.24 4.25 9 9 14.43 3.18 3.64 4.77 5.47 5.94 5.42 5.86-.27 7.7-22.77 10.84-61 .61-7.35 1.09-14.43-2.6-16.58-3.95-2.3-10.35 2.23-18.57 8.22C2.4 39.37-1.02 43.94.19 46.4c.6 1.23 3.43 1.71 9.1 2.68 6.96 1.18 10.96 1.86 15.36.38Zm-8.47 8.69a14.3 14.3 0 0 0-1 3.62 8.92 8.92 0 0 0 .19 2.38c3.43-3.83 5.72-5.46 6.88-4.86q2.29 1.17-1.25 13.76c7.58-8.29 10.51-9.5 11.65-8.79 1 .61 1.3 3-.77 9.66a9.49 9.49 0 0 0 5-4 9.62 9.62 0 0 0 1.2-5.89 11.81 11.81 0 0 0-9.23-10.77c-7.8-1.63-11.99 3.49-12.67 4.89Z">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+    <section class="Intro_section__nsFpO" aria-labelledby="title" data-section-mode="dark"><span
+            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                alt="" sizes="100vw" src="./Assets/about-qualisage.webp" decoding="async" data-nimg="fill"
+                class="PageIntroBackgroundImage_image__qJwSi"
+                style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"></span>
+        <div class="Intro_text__r2_tn">
+            <h1 id="title">About</h1>
+            <p>Our clients are companies of different sizes, all led by great entrepreneurs with a strategic vision for
+                the future. We help them transform the way they work by constantly delivering value to their businesses,
+                making them and the people around them confident and happy.</p>
+        </div>
+        <div class="PageIntroBottomLines_container__sqVVV">
+            <div class="PageIntroBottomLines_lineContainer__CRMUm"><svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 2558.055 536.989" fill="currentColor">
+                    <path
+                        d="M2253.895 485.774c-94.695 10.316-133.53-84.154-278.23-115.567-200.496-43.527-264.278 107.815-493 138.69-366.488 49.473-492.9-299.923-812.036-210.997-105.154 29.3-218.769 102.716-356.942 56.71-56.095-18.677-95.894-50.264-124.54-73.39C73.647 187.978 22.709 69.29 0 0v536.989h2558.055V0c-105.723 381.101-217.293 476.312-304.16 485.774Z">
+                    </path>
+                </svg></div>
+            <div class="PageIntroBottomLines_lineContainer__CRMUm"
+                style="opacity: 1; transform: translateY(0%) translateZ(0px);"><svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 2558.055 536.989" fill="currentColor">
+                    <path
+                        d="M2253.895 485.774c-94.695 10.316-133.53-84.154-278.23-115.567-200.496-43.527-264.278 107.815-493 138.69-366.488 49.473-492.9-299.923-812.036-210.997-105.154 29.3-218.769 102.716-356.942 56.71-56.095-18.677-95.894-50.264-124.54-73.39C73.647 187.978 22.709 69.29 0 0v536.989h2558.055V0c-105.723 381.101-217.293 476.312-304.16 485.774Z">
+                    </path>
+                </svg></div>
+        </div>
+    </section>
+    <section class="OurFocus_section__gmfR6" aria-labelledby="our-focus-title" data-section-mode="mixed">
+        <div class="Quote_content__SLd4q">
+            <figure class="Quote_figure__M7Au3">
+                <div class="Quote_quoteIcon__jSjek" style="opacity: 1; transform: translateX(0%) translateZ(0px);"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M8.486 5a.996.996 0 0 0-.8.402l-4.291 5.764A2.003 2.003 0 0 0 3 12.359v4.668a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2H5.99l3.3-4.431A1 1 0 0 0 8.485 5zm9.98 0a1 1 0 0 0-.802.402l-4.27 5.737A2 2 0 0 0 13 12.332V17a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-3.01l3.28-4.402A1 1 0 0 0 18.467 5z">
+                        </path>
+                    </svg></div>
+                <blockquote class="Quote_blockquote__8zUB2">It's not only about the selection of tools and technologies
+                    that we use, but how we use them to achieve results.</blockquote>
+                <figcaption class="Quote_figcaption__igRLQ">— Tsvetomir Lazarov, CEO <abbr title="at"
+                        aria-label="at">@</abbr> QualiSage</figcaption>
+            </figure>
+            <div class="Quote_authorContainer__OSAAA">
+                <div class="Quote_imagePadContainer__ZIkWQ">
+                    <div class="Quote_imagePadInner__lRDRy">
+                        <div class="Quote_imagePad__wcmCB"></div>
+                    </div>
+                </div>
+                <div class="Quote_imageShadowContainer__Vz65l"
+                    style="opacity: 1; transform: scale(1.001) translateZ(0px);">
+                    <div class="Quote_imageContainer__GSF2o"><span
+                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"><span
+                                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 100% 0px 0px;"></span><img
+                                alt=""
+                                sizes="(min-width: 360px) 55vw, (min-width: 470px) 42vw, (min-width: 570px) 35vw, (min-width: 670px) 23vw, (min-width: 710px) 32vw, 60vw"
+                                src="./Assets/tsvetomir-lazarov-ceo.webp"
+                                style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="WhyQualiSage_section__0PHLJ" aria-labelledby="why-qualisage-title" data-section-mode="light">
+        <h2 class="SectionTitleH2_heading__g73_o SectionTitleH2_isShort__o6gRz" id="why-qualisage-title">Why QualiSage?
+        </h2>
+        <p class="WhyQualiSage_because__1n59b">Because...</p>
+        <div class="WhyQualiSage_imageContainer__5_wxP">
+            <div class="WhyQualiSage_desktop__WUXVw">
+                <div>
+                    <div class="WhyQualiSage_desktopImage__U3z_e" style="opacity: 1; transform: none;"><span
+                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"><span
+                                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 27.7778% 0px 0px;"></span><img
+                                alt="" src="./Assets/why-qualisage-square.webp"
+                                style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                                sizes="100vw"></span>
+                    </div>
+                    <div class="WhyQualiSage_desktopImage__U3z_e" style="opacity: 1; transform: none;"><span
+                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"><span
+                                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 27.7778% 0px 0px;"></span><img
+                                alt="" src="./Assets/why-qualisage-quali.webp"
+                                style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                                sizes="100vw"></span>
+                    </div>
+                    <div class="WhyQualiSage_desktopImage__U3z_e" style="opacity: 1; transform: none;"><span
+                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"><span
+                                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 27.7778% 0px 0px;"></span><img
+                                alt="" src="./Assets/why-qualisage-sage.webp"
+                                style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                                sizes="100vw"></span>
+                    </div>
+                </div>
+                <ul class="WhyQualiSage_texts__RJCTF">
+                    <li class="WhyQualiSage_squareText__Spi1r" aria-label="we love what we do"><span
+                            style="opacity: 1; transform: none;">we <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 48 48" fill="currentColor">
+                                <path
+                                    d="M15 7C8.942 7 4 11.942 4 18c0 4.096 3.088 7.953 6.852 11.908 3.763 3.956 8.396 7.961 12.087 11.653a1.5 1.5 0 0 0 2.122 0c3.69-3.692 8.324-7.697 12.087-11.653C40.912 25.953 44 22.096 44 18c0-6.058-4.942-11-11-11-3.476 0-6.503 1.866-9 5.037C21.503 8.867 18.476 7 15 7z">
+                                </path>
+                            </svg> what we do</span></li>
+                    <li class="WhyQualiSage_qualiText__vFBrO"><span style="opacity: 1; transform: none;">quality means
+                            providing value</span></li>
+                    <li class="WhyQualiSage_sageText__x5Pvo"><span style="opacity: 1; transform: none;">wisdom comes
+                            from experience</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="Mission_section__u9cF8" aria-labelledby="mission-statement-title" data-section-mode="light">
+        <div class="Mission_backgroundText__IHJ1P" aria-disabled="true" style="opacity: 1;">Mission</div>
+        <h2 class="SectionTitleH2_heading__g73_o SectionTitleH2_isShort__o6gRz" id="mission-statement-title">Our Mission
+        </h2>
+        <div class="Mission_content__Q1aBy">
+            <div class="Mission_missionStatement__MTIt9">
+                <div class="Mission_textContainer___yjG4">
+                    <p class="Mission_text__y4n_i">Always delivering high-quality software</p><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor">
+                        <path
+                            d="M40.883 24.616a.214.214 0 0 1 0-.233l1.606-2.508c.488-.76.635-1.696.401-2.569s-.828-1.611-1.632-2.026l-2.646-1.368a.22.22 0 0 1-.118-.204l.138-2.977c.042-.902-.3-1.786-.938-2.425s-1.523-.984-2.425-.938l-2.978.138c-.063-.005-.163-.042-.203-.117l-1.367-2.646a3.216 3.216 0 0 0-4.595-1.232l-2.509 1.607h-.001a.214.214 0 0 1-.233 0l-2.508-1.606a3.217 3.217 0 0 0-4.595 1.231l-1.368 2.646a.216.216 0 0 1-.204.118l-2.978-.14a3.214 3.214 0 0 0-3.363 3.363l.138 2.978a.22.22 0 0 1-.117.203l-2.646 1.367c-.804.416-1.398 1.154-1.632 2.027s-.087 1.81.4 2.568l1.607 2.51a.214.214 0 0 1 0 .233l-1.606 2.508c-.488.76-.635 1.696-.401 2.569s.828 1.611 1.632 2.026l2.646 1.368a.22.22 0 0 1 .118.204l-.139 2.979c-.042.902.3 1.786.938 2.425.64.64 1.532.996 2.425.938l2.978-.138a.247.247 0 0 1 .203.117l1.367 2.646a3.203 3.203 0 0 0 2.856 1.74c.611 0 1.217-.174 1.739-.509l2.51-1.607a.212.212 0 0 1 .233 0l2.508 1.606a3.217 3.217 0 0 0 4.595-1.231l1.368-2.646c.039-.074.124-.113.204-.118l2.977.138c.877.05 1.785-.3 2.425-.938.639-.639.98-1.522.938-2.425l-.138-2.978a.22.22 0 0 1 .117-.203l2.646-1.367c.804-.416 1.398-1.154 1.632-2.027s.087-1.81-.4-2.568l-1.605-2.509zm-8.766-3.906c-3.506 2.568-6.767 5.83-9.69 9.695A1.5 1.5 0 0 1 21.23 31h-.006a1.5 1.5 0 0 1-1.197-.604c-1.556-2.09-3.069-3.609-4.628-4.646a1.5 1.5 0 0 1 1.662-2.498c1.428.95 2.8 2.209 4.163 3.824 2.789-3.44 5.851-6.391 9.119-8.785a1.5 1.5 0 1 1 1.774 2.419z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+            <div class="Mission_imageContainer__NLMvU" style="opacity: 1; transform: none;"><span
+                    style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"><span
+                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 86.7863% 0px 0px;"></span><img
+                        alt="" src="./Assets/mission.webp"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                        sizes="(min-width: 680px) 48vw, (min-width: 880px) 38vw, (min-width: 1024px) 37vw, (min-width: 1280px) 48vw, 84vw"></span>
+            </div>
+        </div>
+    </section>
+    <section class="Vision_section__sAtm3" aria-labelledby="vision-statement-title" data-section-mode="light">
+        <div class="Vision_backgroundText__JRAnO" aria-disabled="true" style="opacity: 1;">Vision</div>
+        <h2 class="SectionTitleH2_heading__g73_o SectionTitleH2_isShort__o6gRz" id="vision-statement-title">Our Vision
+        </h2>
+        <div class="Vision_content__rniCO">
+            <div class="Vision_visionStatement__dAKQR">
+                <div class="Vision_textContainer__E3ltV">
+                    <p class="Vision_text__7Lrna">Inspire and support businesses to embrace innovation through
+                        digitalization</p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                        fill="currentColor">
+                        <path
+                            d="M24 42.935a1.044 1.044 0 0 1-1.114 1.034 20.077 20.077 0 0 1-2.871-.367 1.516 1.516 0 0 1-1.221-1.313l-.446-4.072a2.788 2.788 0 0 0-3.893-2.247l-3.709 1.631a1.48 1.48 0 0 1-1.702-.35 19.875 19.875 0 0 1-4.026-6.978 1.48 1.48 0 0 1 .55-1.645l3.294-2.415a2.788 2.788 0 0 0-.002-4.496l-3.273-2.4a1.48 1.48 0 0 1-.548-1.65 19.866 19.866 0 0 1 4.048-6.965 1.48 1.48 0 0 1 1.698-.346l3.729 1.64a2.79 2.79 0 0 0 3.894-2.248l.442-4.046a1.516 1.516 0 0 1 1.225-1.314 20.056 20.056 0 0 1 2.813-.354A1.043 1.043 0 0 1 24 5.068v10.97a1.027 1.027 0 0 1-.898 1.02 7 7 0 0 0 0 13.885A1.027 1.027 0 0 1 24 31.962Zm8.568-32.616V8.037A1.037 1.037 0 0 0 31.53 7h-2.282a1.037 1.037 0 0 0-1.037 1.037v2.282a1.037 1.037 0 0 0 1.037 1.036h2.282a1.037 1.037 0 0 0 1.037-1.036Zm0 9.436v-2.282a1.037 1.037 0 0 0-1.037-1.037h-2.282a1.037 1.037 0 0 0-1.037 1.037v2.282a1.037 1.037 0 0 0 1.037 1.037h2.282a1.037 1.037 0 0 0 1.037-1.037Zm0 10.772v-2.282a1.037 1.037 0 0 0-1.037-1.037h-2.282a1.037 1.037 0 0 0-1.037 1.037v2.282a1.037 1.037 0 0 0 1.037 1.037h2.282a1.037 1.037 0 0 0 1.037-1.037Zm8.27-5.384V22.86a1.037 1.037 0 0 0-1.037-1.037H37.52a1.037 1.037 0 0 0-1.036 1.037v2.282a1.037 1.037 0 0 0 1.036 1.036h2.282a1.037 1.037 0 0 0 1.037-1.036Zm-.005-10.699v-1.772a1.288 1.288 0 0 0-1.287-1.287h-1.772a1.288 1.288 0 0 0-1.287 1.287v1.772a1.288 1.288 0 0 0 1.287 1.287h1.772a1.288 1.288 0 0 0 1.287-1.287Zm-1.287-2.559a.788.788 0 0 1 .787.787v1.772a.788.788 0 0 1-.787.787h-1.772a.788.788 0 0 1-.787-.787v-1.772a.788.788 0 0 1 .787-.787Zm1.287 23.446V33.56a1.288 1.288 0 0 0-1.287-1.288h-1.772a1.288 1.288 0 0 0-1.287 1.288v1.771a1.288 1.288 0 0 0 1.287 1.287h1.772a1.288 1.288 0 0 0 1.287-1.287Zm-1.287-2.559a.789.789 0 0 1 .787.788v1.771a.789.789 0 0 1-.787.787h-1.772a.789.789 0 0 1-.787-.787V33.56a.789.789 0 0 1 .787-.788Zm-6.978 7.191v-2.282a1.037 1.037 0 0 0-1.037-1.036h-2.282a1.037 1.037 0 0 0-1.037 1.036v2.282A1.037 1.037 0 0 0 29.25 41h2.282a1.037 1.037 0 0 0 1.037-1.037Z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+            <div class="Vision_graphicsContainer__sktBP">
+                <div class="Vision_graphicsInner__q8rYp">
+                    <div class="Vision_nightSkyContainer__Xczro"><svg class="Vision_outerSkySvg__zBbZe"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 880">
+                            <defs>
+                                <linearGradient id="visionOuterSkyLinearGradient" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#8074f1"></stop>
+                                    <stop offset="1" stop-color="#9186f3"></stop>
+                                </linearGradient>
+                                <filter id="visionNightSkyInsetShadow" x="-50%" y="-50%" width="200%" height="200%">
+                                    <feComponentTransfer in="SourceAlpha">
+                                        <feFuncA type="table" tableValues="1 0"></feFuncA>
+                                    </feComponentTransfer>
+                                    <feGaussianBlur stdDeviation="4"></feGaussianBlur>
+                                    <feOffset dx="0" dy="2" result="offsetblur"></feOffset>
+                                    <feFlood flood-color="rgb(0, 0, 0)" result="color"></feFlood>
+                                    <feComposite in2="offsetblur" operator="in"></feComposite>
+                                    <feComposite in2="SourceAlpha" operator="in"></feComposite>
+                                    <feMerge>
+                                        <feMergeNode in="SourceGraphic"></feMergeNode>
+                                        <feMergeNode></feMergeNode>
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            <path
+                                d="M.25852,452.40146c-4.52215-101.90811,51.30336-179.3863,87.59706-229.7571C203.68394,61.89039,404.619-14.634,586.13528,2.31086,636.50284,7.01278,739.12834,17.77183,829.52,91.90409c199.73027,163.80339,235.473,553.54011,45.57206,713.706C733.589,924.95625,522.78488,870.45935,439.481,847.29737,281.74767,803.44094,9.83743,668.26736.25852,452.40146Z"
+                                fill="url(#visionOuterSkyLinearGradient)" filter="url(#visionNightSkyInsetShadow)">
+                            </path>
+                        </svg>
+                        <div class="Vision_innerSky__RAdq5">
+                            <div class="Vision_innerSkyClipContainer__lB7rH">
+                                <div class="Vision_innerSkyBackground__45h_B"></div><svg
+                                    class="Vision_innerSkySvg__yIOpQ" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 1000 880">
+                                    <defs>
+                                        <linearGradient id="visionInnerSkyLinearGradient"
+                                            gradientUnits="userSpaceOnUse">
+                                            <stop offset="0" stop-color="#9237f6"></stop>
+                                            <stop offset="0.14285714285714285" stop-color="#8d42f6"></stop>
+                                            <stop offset="0.2857142857142857" stop-color="#884bf6"></stop>
+                                            <stop offset="0.42857142857142855" stop-color="#8452f6"></stop>
+                                            <stop offset="0.5714285714285714" stop-color="#8059f5"></stop>
+                                            <stop offset="0.7142857142857142" stop-color="#7d60f3"></stop>
+                                            <stop offset="0.8571428571428571" stop-color="#7a66f2"></stop>
+                                            <stop offset="1" stop-color="#786bf0"></stop>
+                                        </linearGradient>
+                                    </defs>
+                                    <path
+                                        d="M.25852,452.40146c-4.52215-101.90811,51.30336-179.3863,87.59706-229.7571C203.68394,61.89039,404.619-14.634,586.13528,2.31086,636.50284,7.01278,739.12834,17.77183,829.52,91.90409c199.73027,163.80339,235.473,553.54011,45.57206,713.706C733.589,924.95625,522.78488,870.45935,439.481,847.29737,281.74767,803.44094,9.83743,668.26736.25852,452.40146Z"
+                                        fill="url(#visionInnerSkyLinearGradient)"
+                                        filter="url(#visionNightSkyInsetShadow)"></path>
+                                </svg><span
+                                    style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                                        alt="" src="./Assets/vision-stars.webp"
+                                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                                        sizes="(min-width: 680px) 31vw, (min-width: 990px) 35vw, 70vw"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Vision_telescope__b4he0"
+                        style="opacity: 1; transform: translateX(25%) translateY(25%) scale(1) translateZ(0px);"><span
+                            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"><span
+                                style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 115.231% 0px 0px;"></span><img
+                                alt="" src="./Assets/vision-telescope.webp"
+                                style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                                sizes="(min-width: 680px) 16vw, (min-width: 990px) 25vw, 40vw"></span>
+                    </div>
+                    <div class="Vision_planets__Gv6PS">
+                        <div class="Vision_planet1__6eLhS" style="opacity: 1; transform: none;"><span
+                                style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"><span
+                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 100% 0px 0px;"></span><img
+                                    alt="" src="./Assets/planet-2.webp"
+                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                                    sizes="(min-width: 680px) 4vw, 7vw"></span>
+                        </div>
+                        <div class="Vision_planet2__S4zt7" style="opacity: 1; transform: none;"><span
+                                style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"><span
+                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 100% 0px 0px;"></span><img
+                                    alt="" src="./Assets/planet-1.webp"
+                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                                    sizes="(min-width: 680px) 7vw, (min-width: 1366px) 6vw, 12vw"></span>
+                        </div>
+                        <div class="Vision_planet3__5U0j4" style="opacity: 1; transform: none;"><span
+                                style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"><span
+                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 100% 0px 0px;"></span><img
+                                    alt="" src="./Assets/planet-4.webp"
+                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                                    sizes="(min-width: 680px) 4vw, 7vw"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><svg width="0" height="0" aria-hidden="true">
+            <defs>
+                <clipPath id="visionClipPath" clipPathUnits="objectBoundingBox"
+                    transform="scale(0.001, 0.0011363636363636)">
+                    <path
+                        d="M.25852,452.40146c-4.52215-101.90811,51.30336-179.3863,87.59706-229.7571C203.68394,61.89039,404.619-14.634,586.13528,2.31086,636.50284,7.01278,739.12834,17.77183,829.52,91.90409c199.73027,163.80339,235.473,553.54011,45.57206,713.706C733.589,924.95625,522.78488,870.45935,439.481,847.29737,281.74767,803.44094,9.83743,668.26736.25852,452.40146Z">
+                    </path>
+                </clipPath>
+            </defs>
+        </svg>
+    </section>
+    <section class="Values_section__ydfiZ" aria-labelledby="core-values-title" data-subsection-mode="light">
+        <div class="Values_backgroundText__0BkoQ" aria-disabled="true" style="opacity: 1;">Teamwork</div>
+        <div class="Values_text__1H49j">
+            <h2 class="SectionTitleH2_heading__g73_o SectionTitleH2_isShort__o6gRz" id="core-values-title">Our Values
+            </h2>
+            <div class="Values_descriptionContainer__s6BM1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                    class="Values_coreValuesSvg__2_JRd">
+                    <path
+                        d="M7.527 9.512a1.867 1.867 0 0 0-2.63-.269c-.818.734-.833 1.444-1.344 9.184-.403 6.093-.589 8.243.781 9.771a36.626 36.626 0 0 0 3.29 3.11 36.168 36.168 0 0 1 3.21 3.03 2.798 2.798 0 0 1 .17 3.386 1.117 1.117 0 0 0 .102 1.36 1.108 1.108 0 0 0 .931.365l8.72-.835a1.113 1.113 0 0 0 .914-.662c.125-.286 3.027-7.062-.607-11.116a10.845 10.845 0 0 0-2.011-1.761 16.202 16.202 0 0 1-2.794-2.496c-.016-.015-.033-.027-.047-.043l-.301-.336-2.178-2.428a3.313 3.313 0 0 0-1.642-.992 2.21 2.21 0 0 0-2.018.827 2.305 2.305 0 0 0 .167 2.943l3.646 4.066a1.114 1.114 0 1 1-1.66 1.487l-3.448-3.847a4.912 4.912 0 0 1-1.04-4.911 4.04 4.04 0 0 1 1.353-1.878 1.129 1.129 0 0 0 .445-1.128 92.57 92.57 0 0 0-.815-3.364c-.5-1.939-.685-2.896-1.194-3.463m32.946 0c-.509.567-.694 1.524-1.194 3.463a92.402 92.402 0 0 0-.815 3.364 1.129 1.129 0 0 0 .445 1.128 4.04 4.04 0 0 1 1.354 1.878 4.912 4.912 0 0 1-1.041 4.91l-3.449 3.848a1.114 1.114 0 0 1-1.659-1.487l3.646-4.066a2.305 2.305 0 0 0 .167-2.943 2.21 2.21 0 0 0-2.018-.827 3.313 3.313 0 0 0-1.642.992L32.089 22.2l-.3.336c-.015.016-.032.028-.048.043a16.202 16.202 0 0 1-2.794 2.496 10.845 10.845 0 0 0-2.01 1.76c-3.635 4.055-.733 10.83-.607 11.117a1.113 1.113 0 0 0 .914.662l8.719.835a1.108 1.108 0 0 0 .931-.366 1.117 1.117 0 0 0 .102-1.36 2.798 2.798 0 0 1 .17-3.386 36.168 36.168 0 0 1 3.21-3.03 36.626 36.626 0 0 0 3.29-3.109c1.37-1.528 1.184-3.678.781-9.77-.51-7.741-.526-8.45-1.345-9.185a1.867 1.867 0 0 0-2.63.269m-10.121 5.37-5.524 5.93a1.114 1.114 0 0 1-1.63 0l-5.55-5.96a3.713 3.713 0 0 1 .028-5.222 3.718 3.718 0 0 1 5.25 0l1.088 1.089L25.1 9.63a3.718 3.718 0 0 1 5.25 0 3.712 3.712 0 0 1 0 5.25Z">
+                    </path>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="Values_teamworkSvg__iXWlb">
+                    <path
+                        d="M24 5.58a6.728 6.728 0 0 0-4.625 11.621.204.204 0 0 1 .045.098l.002.01 1.043 4.43a2.726 2.726 0 0 0 2.648 2.125h1.774a2.728 2.728 0 0 0 2.648-2.124l1.043-4.432.002-.01a.215.215 0 0 1 .044-.095h.001A6.729 6.729 0 0 0 24 5.58Zm0 2.887a3.841 3.841 0 0 1 2.643 6.636 3.05 3.05 0 0 0-.88 1.57l-.56 2.38h-2.406l-.56-2.38a3.061 3.061 0 0 0-.878-1.568v-.002h-.002A3.841 3.841 0 0 1 24 8.467Zm-8.66 14.434a4.811 4.811 0 1 0 4.81 4.812 4.811 4.811 0 0 0-4.81-4.812Zm17.32 0a4.811 4.811 0 1 0 4.812 4.812 4.811 4.811 0 0 0-4.811-4.812ZM11.01 35.411a3.372 3.372 0 0 0-3.368 3.368v.481c0 2.744 3.31 4.812 7.698 4.812s7.699-2.068 7.699-4.812v-.48a3.372 3.372 0 0 0-3.368-3.369Zm17.321 0a3.372 3.372 0 0 0-3.368 3.368v.481c0 2.744 3.31 4.812 7.699 4.812s7.698-2.068 7.698-4.812v-.48a3.372 3.372 0 0 0-3.368-3.369ZM33.056 5.8l-1.112 1.112a1.096 1.096 0 0 1-1.55 0 1.096 1.096 0 0 1 0-1.55l1.112-1.112a1.096 1.096 0 0 1 1.55 0 1.096 1.096 0 0 1 0 1.55Zm1.82 7.132h-1.57a1.096 1.096 0 0 1-1.095-1.096 1.096 1.096 0 0 1 1.096-1.096h1.57a1.096 1.096 0 0 1 1.096 1.096 1.096 1.096 0 0 1-1.096 1.096Zm-20.183 0h-1.565a1.096 1.096 0 0 1-1.096-1.096 1.096 1.096 0 0 1 1.096-1.096h1.565a1.096 1.096 0 0 1 1.096 1.096 1.096 1.096 0 0 1-1.096 1.096Zm1.8-8.682 1.113 1.112a1.096 1.096 0 0 1 0 1.55 1.096 1.096 0 0 1-1.55 0L14.944 5.8a1.096 1.096 0 0 1 0-1.55 1.096 1.096 0 0 1 1.55 0Zm15.013 15.172-1.112-1.112a1.096 1.096 0 0 1 0-1.55 1.096 1.096 0 0 1 1.55 0l1.112 1.112a1.096 1.096 0 0 1 0 1.55 1.096 1.096 0 0 1-1.55 0Zm-16.562-1.55 1.112-1.112a1.096 1.096 0 0 1 1.55 0 1.096 1.096 0 0 1 0 1.55l-1.112 1.112a1.096 1.096 0 0 1-1.55 0 1.096 1.096 0 0 1 0-1.55Z">
+                    </path>
+                </svg>
+                <p class="Values_description__0l5ch">The 6 core values of QualiSage represent our mindset and the way we
+                    communicate within the team and with our clients. This creates an environment that allows our team
+                    members to realize their true potential and to face challenges more eagerly.</p>
+            </div>
+        </div>
+        <ul class="List_container__nRlsb">
+            <li class="PuzzlePiece_container__9A7Q6"><span class="PuzzlePiece_slots__fASlo"><span
+                        class="PuzzlePiece_slot__54BAO"></span><span class="PuzzlePiece_slot__54BAO"></span><span
+                        class="PuzzlePiece_slot__54BAO"></span><span class="PuzzlePiece_slot__54BAO"></span></span>
+                <div class="PuzzlePiece_content__e1_Sc">
+                    <div class="PuzzlePiece_iconContainer__MAYeq" style="opacity: 1; transform: none;"><svg
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                            <path
+                                d="M9.284 33.945a5.078 5.078 0 0 0 3.762 3.95l14.028 3.438a7.828 7.828 0 0 0 9.437-5.66l2.603-10.205a5.057 5.057 0 0 0-4.9-6.309h-4.608a28.326 28.326 0 0 0 1.706-7.912c0-5.022-2.483-6.803-4.61-6.803-1.532 0-1.9 1.385-2.325 3.001a48 48 0 0 1-.278 1.05q-.281.999-.974 3.378a1.277 1.277 0 0 1-.162.356l-5.273 8.25a11.824 11.824 0 0 1-5.693 4.643l-.872.334a4.132 4.132 0 0 0-2.585 4.651Z">
+                            </path>
+                        </svg></div><strong class="PuzzlePiece_label__1xzy_">Quality Over Quantity</strong>
+                    <p class="PuzzlePiece_description__Q9uOb">Be professional, always deliver high-quality solutions</p>
+                </div>
+            </li>
+            <li class="PuzzlePiece_container__9A7Q6"><span class="PuzzlePiece_slots__fASlo"><span
+                        class="PuzzlePiece_slot__54BAO"></span><span class="PuzzlePiece_slot__54BAO"></span><span
+                        class="PuzzlePiece_slot__54BAO"></span><span class="PuzzlePiece_slot__54BAO"></span></span>
+                <div class="PuzzlePiece_content__e1_Sc">
+                    <div class="PuzzlePiece_iconContainer__MAYeq" style="opacity: 1; transform: none;"><svg
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                            <path
+                                d="M43.367 22c-1.026 0-2.152.675-4.546 1.917-1.983 1.03-3.817 2.009-4.982 2.723.101.438.161.892.161 1.36 0 3.309-2.692 6-6 6h-7.5a1.5 1.5 0 1 1 0-3H28c1.654 0 3-1.346 3-3 0-.897-.404-1.694-1.03-2.245A4.462 4.462 0 0 0 27.5 25h-5c-.029 0-.056-.007-.085-.009-2.636-.041-3.902-.313-5.015-.558-1.012-.223-1.968-.433-3.573-.433-7.332 0-11.518 9.001-11.692 9.384a1.499 1.499 0 0 0 .158 1.512l7 9.494a1.492 1.492 0 0 0 1.488.578 1.508 1.508 0 0 0 1.171-1.093C12.031 43.58 12.795 41 15.5 41c1.952 0 3.971.252 5.924.495 1.989.249 4.047.505 6.076.505 2.763 0 4.752-2.119 10.5-8 7.302-7.471 8-8.124 8-9.605C46 23.113 44.875 22 43.367 22m-7.832-8.467-7.438 7.986a1.5 1.5 0 0 1-2.196 0l-7.475-8.025C17.521 12.589 17 11.333 17 9.997s.521-2.592 1.465-3.536a5.007 5.007 0 0 1 7.07.001L27 7.927l1.465-1.465a5.007 5.007 0 0 1 7.07-.001v.001C36.479 7.406 37 8.661 37 9.997s-.521 2.592-1.465 3.536z">
+                            </path>
+                        </svg></div><strong class="PuzzlePiece_label__1xzy_">Be Transparent</strong>
+                    <p class="PuzzlePiece_description__Q9uOb">Share feedback, express your feelings and thoughts</p>
+                </div>
+            </li>
+            <li class="PuzzlePiece_container__9A7Q6"><span class="PuzzlePiece_slots__fASlo"><span
+                        class="PuzzlePiece_slot__54BAO"></span><span class="PuzzlePiece_slot__54BAO"></span><span
+                        class="PuzzlePiece_slot__54BAO"></span><span class="PuzzlePiece_slot__54BAO"></span></span>
+                <div class="PuzzlePiece_content__e1_Sc">
+                    <div class="PuzzlePiece_iconContainer__MAYeq" style="opacity: 1; transform: none;"><svg
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor">
+                            <path
+                                d="M21.5 3C11.299 3 3 11.523 3 22c0 5.271 2.168 10.35 5.95 13.936C10.27 37.19 11 38.8 11 40.469V43.5a1.5 1.5 0 0 0 1.5 1.5h17a1.5 1.5 0 0 0 1.5-1.5v-.559a.5.5 0 0 1 .342-.474l5.58-1.862A4.491 4.491 0 0 0 40 36.338v-5.174l2.992-1.047a3.008 3.008 0 0 0 1.354-4.713l-4.514-5.64C38.739 10.174 30.936 3 21.5 3zm.5 10.596a9.38 9.38 0 0 1 2.14.254l.163 1.474a2.286 2.286 0 0 0 3.193 1.846l1.358-.598A9.376 9.376 0 0 1 31 20.273l-1.201.883a2.289 2.289 0 0 0 0 3.69l1.201.88a9.388 9.388 0 0 1-2.146 3.702l-1.358-.598a2.286 2.286 0 0 0-3.193 1.846l-.162 1.474a9.43 9.43 0 0 1-2.141.254 9.38 9.38 0 0 1-2.14-.254l-.163-1.474a2.286 2.286 0 0 0-3.193-1.846l-1.358.598A9.376 9.376 0 0 1 13 25.727l1.201-.883a2.289 2.289 0 0 0 0-3.69L13 20.274a9.388 9.388 0 0 1 2.146-3.702l1.358.598a2.286 2.286 0 0 0 3.193-1.846l.162-1.474A9.43 9.43 0 0 1 22 13.596zm0 6.1a3.304 3.304 0 1 0 0 6.609 3.304 3.304 0 1 0 0-6.61z">
+                            </path>
+                        </svg></div><strong class="PuzzlePiece_label__1xzy_">Improve Constantly</strong>
+                    <p class="PuzzlePiece_description__Q9uOb">Challenge yourself, embrace failure and learn from it</p>
+                </div>
+            </li>
+            <li class="PuzzlePiece_container__9A7Q6"><span class="PuzzlePiece_slots__fASlo"><span
+                        class="PuzzlePiece_slot__54BAO"></span><span class="PuzzlePiece_slot__54BAO"></span><span
+                        class="PuzzlePiece_slot__54BAO"></span><span class="PuzzlePiece_slot__54BAO"></span></span>
+                <div class="PuzzlePiece_content__e1_Sc">
+                    <div class="PuzzlePiece_iconContainer__MAYeq" style="opacity: 1; transform: none;"><svg
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor">
+                            <path
+                                d="M24 4C12.972 4 4 12.972 4 24s8.972 20 20 20 20-8.972 20-20S35.028 4 24 4zm-9.309 11.07c.985 0 1.84.569 2.309 1.405.47-.837 1.324-1.405 2.309-1.405 1.484 0 2.691 1.275 2.691 2.842 0 .707-.253 1.388-.707 1.914-.014.016-.051.063-3.748 3.938a.747.747 0 0 1-1.09 0 836.373 836.373 0 0 1-3.65-3.838 2.88 2.88 0 0 1-.742-1.39c-.373-1.839.951-3.466 2.628-3.466zm14 0c.985 0 1.84.57 2.309 1.407.47-.837 1.324-1.407 2.309-1.407 1.677 0 3 1.627 2.629 3.465a2.896 2.896 0 0 1-.743 1.39c-.225.24-.99 1.05-3.65 3.84a.748.748 0 0 1-1.09-.001c-3.697-3.875-3.733-3.92-3.748-3.936A2.941 2.941 0 0 1 26 17.912c0-1.567 1.207-2.843 2.691-2.842zM13.498 27.998c.384 0 .769.146 1.063.44C15.936 29.81 19.606 33 24 33s8.065-3.19 9.441-4.56a1.5 1.5 0 1 1 2.12 2.123C33.524 32.593 29.314 36 24 36s-9.523-3.407-11.559-5.44a1.5 1.5 0 0 1 1.057-2.562z">
+                            </path>
+                        </svg></div><strong class="PuzzlePiece_label__1xzy_">Love What You Do</strong>
+                    <p class="PuzzlePiece_description__Q9uOb">Be passionate about your work and be proud of it</p>
+                </div>
+            </li>
+            <li class="PuzzlePiece_container__9A7Q6"><span class="PuzzlePiece_slots__fASlo"><span
+                        class="PuzzlePiece_slot__54BAO"></span><span class="PuzzlePiece_slot__54BAO"></span><span
+                        class="PuzzlePiece_slot__54BAO"></span><span class="PuzzlePiece_slot__54BAO"></span></span>
+                <div class="PuzzlePiece_content__e1_Sc">
+                    <div class="PuzzlePiece_iconContainer__MAYeq" style="opacity: 1; transform: none;"><svg
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor">
+                            <path
+                                d="M10.5 4C8.57 4 7 5.57 7 7.5v10a1.502 1.502 0 0 0 2.332 1.248L13.453 16H21.5c1.93 0 3.5-1.57 3.5-3.5v-5C25 5.57 23.43 4 21.5 4h-11zm16.287 2c.136.478.213.979.213 1.5v5a5.503 5.503 0 0 1-2.979 4.883A3.469 3.469 0 0 0 26 18h8.547l4.121 2.748a1.494 1.494 0 0 0 1.539.074c.487-.26.793-.769.793-1.322v-10C41 7.57 39.43 6 37.5 6H26.787zM15 22a5 5 0 0 0 0 10 5 5 0 0 0 0-10zm18 0a5 5 0 0 0 0 10 5 5 0 0 0 0-10zM10.5 35C8.57 35 7 36.57 7 38.5v.5c0 2.851 3.439 5 8 5s8-2.149 8-5v-.5c0-1.93-1.57-3.5-3.5-3.5h-9zm18 0c-1.93 0-3.5 1.57-3.5 3.5v.5c0 2.851 3.439 5 8 5s8-2.149 8-5v-.5c0-1.93-1.57-3.5-3.5-3.5h-9z">
+                            </path>
+                        </svg></div><strong class="PuzzlePiece_label__1xzy_">Team Comes First</strong>
+                    <p class="PuzzlePiece_description__Q9uOb">Share knowledge, ask for help, trust others</p>
+                </div>
+            </li>
+            <li class="PuzzlePiece_container__9A7Q6"><span class="PuzzlePiece_slots__fASlo"><span
+                        class="PuzzlePiece_slot__54BAO"></span><span class="PuzzlePiece_slot__54BAO"></span><span
+                        class="PuzzlePiece_slot__54BAO"></span><span class="PuzzlePiece_slot__54BAO"></span></span>
+                <div class="PuzzlePiece_content__e1_Sc">
+                    <div class="PuzzlePiece_iconContainer__MAYeq" style="opacity: 1; transform: none;"><svg
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor">
+                            <path
+                                d="M6.781 1.781a1.5 1.5 0 0 0-1.045 2.576L7.15 5.771a1.5 1.5 0 1 0 2.121-2.12L7.857 2.235a1.5 1.5 0 0 0-1.076-.455zM36 2a9.91 9.91 0 0 0-2.445.307.984.984 0 0 0-.72.845l-.097.8a1.5 1.5 0 0 1-2.078 1.2l-.732-.312a.985.985 0 0 0-1.092.2 9.988 9.988 0 0 0-2.455 4.228.99.99 0 0 0 .373 1.048l.646.485a1.497 1.497 0 0 1 0 2.398l-.644.485a.987.987 0 0 0-.373 1.048 9.974 9.974 0 0 0 2.453 4.229.987.987 0 0 0 1.094.2l.73-.313a1.5 1.5 0 0 1 2.078 1.201l.098.8a.984.984 0 0 0 .719.846 9.964 9.964 0 0 0 4.89-.002.984.984 0 0 0 .72-.845l.095-.801a1.499 1.499 0 0 1 2.078-1.2l.732.313c.371.16.81.09 1.092-.2a9.988 9.988 0 0 0 2.455-4.228.99.99 0 0 0-.373-1.048l-.644-.485a1.497 1.497 0 0 1 0-2.398l.644-.485a.987.987 0 0 0 .373-1.048 9.974 9.974 0 0 0-2.453-4.229.987.987 0 0 0-1.094-.2l-.73.313a1.5 1.5 0 0 1-2.078-1.2l-.098-.802a.985.985 0 0 0-.719-.845A9.964 9.964 0 0 0 36 2zM24 4.021C16.283 4.024 10 10.282 10 18c0 3.864 1.605 7.53 4.373 10.154 1.054 1 1.726 2.335 2.041 3.752L16.881 34h14.238l.467-2.094c.315-1.417.988-2.753 2.041-3.752a14.006 14.006 0 0 0 3.014-4.187c-.213.012-.425.033-.641.033-6.627 0-12-5.373-12-12 0-2.93 1.053-5.611 2.797-7.695A14.009 14.009 0 0 0 24 4.02zM36 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6zM1.5 15a1.5 1.5 0 1 0 0 3h3a1.5 1.5 0 1 0 0-3h-3zm38.273 11.773a1.5 1.5 0 0 0-1.044 2.577l1.414 1.414a1.5 1.5 0 1 0 2.12-2.121l-1.413-1.414a1.5 1.5 0 0 0-1.077-.456zm-31.591.002a1.5 1.5 0 0 0-1.032.454l-1.414 1.414a1.5 1.5 0 1 0 2.121 2.12l1.414-1.413a1.5 1.5 0 0 0-1.09-2.575zM17.547 37l.945 4.26A3.5 3.5 0 0 0 21.91 44h4.18a3.5 3.5 0 0 0 3.418-2.74l.945-4.26H17.547z">
+                            </path>
+                        </svg></div><strong class="PuzzlePiece_label__1xzy_">Be proactive</strong>
+                    <p class="PuzzlePiece_description__Q9uOb">Every idea matters</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <footer class="foooter-main-storage">
+        <div class="DecorativeLines_container__dQAzD">
+            <div class="DecorativeLines_svgContainer__UxzVK"><svg class="footer-svg-top"
+                    xmlns="http://www.w3.org/2000/svg" width="2668.683" height="234.818" fill="currentColor"
+                    class="DecorativeLines_topLine__PT_CR"
+                    style="opacity: 1; transform: translateY(0%) scale(1) translateZ(0px);">
+                    <path
+                        d="M2176.637 39.43c-168.958-16.77-253.496 192.718-472.921 165.69a341.569 341.569 0 0 1-52.485-10.71c-25.46-9.272-45.384-21.226-65.784-34.954-37.907-25.51-65.706-47.47-101.567-52.475-97.853-13.9-151.41 76.39-284.516 52.718C1068.424 136.412 1053.052 10.603 907.324.51c-34.35-2.379-66.195 4.331-66.195 4.331s-24.985 5.78-47.987 17.67c-71.35 36.886-88.091 92.836-167.285 139.79a204.294 204.294 0 0 1-7.741 4.386c-40.25 21.468-79.461 22.074-91.502 21.885-26.84-.42-51.554-5.933-98.544-23.846-24.954-9.513-26.321-9.93-41.147-12.432-34.603-5.839-68.42 5.549-79.346 9.198-1.035.345-1.839.622-2.384.81-100.085 34.48-150.545 51.82-170.965 56.71A556.366 556.366 0 0 1 16.559 234.64 541.21 541.21 0 0 1 0 234.773h2668.683a624.02 624.02 0 0 1-172.355-21.877c-195.748-53.711-201.037-161.69-319.691-173.467Z">
+                    </path>
+                </svg></div>
+            <div class="DecorativeLines_svgContainer__UxzVK"><svg class="footer-svg-center"
+                    xmlns="http://www.w3.org/2000/svg" width="2481.958" height="172.607" fill="currentColor"
+                    class="DecorativeLines_middleLine__MeC6P"
+                    style="opacity: 1; transform: translateY(0%) scale(1) translateZ(0px);">
+                    <path
+                        d="M79.634 163.536c-11.257 2.815-22.666 4.76-22.666 4.76a301.49 301.49 0 0 1-21.89 2.915A304.376 304.376 0 0 1 0 172.548h2481.958c-57.82 0-103.02-9.37-140.333-23.317C2185.97 91.05 2175.032 40.7 2079.957 30.415c-118.825-12.853-209.278 77.195-348.621 112.164-33.122 8.312-86.882 17.998-149.187 6.016h-.002c-27.894-5.793-49.957-12.448-62.413-17.385-43.487-17.237-63.342-38.092-112.127-50.801-99.612-25.951-160.132 59.4-292.161 42.813C993.666 107.922 965.06 7.155 829.529.524 810.412-.41 769.887-2 723.336 14.98c-38.208 13.938-54.968 31.081-92.917 55.418 0 0-55.485 42.3-133.613 63.524C371.028 168.09 330.763 82.8 225.012 119.199c0 0-84.79 29.183-145.378 44.337Z">
+                    </path>
+                </svg></div>
+            <div class="DecorativeLines_svgContainer__UxzVK"><svg class="footer-svg-bottom"
+                    xmlns="http://www.w3.org/2000/svg" width="2335.092" height="105.403" fill="currentColor"
+                    class="DecorativeLines_bottomLine__vadu8">
+                    <path
+                        d="M74.921 100.09a446.06 446.06 0 0 1-41.92 4.495A459.256 459.256 0 0 1 0 105.368h2335.092c-223.656 0-246.638-92.755-378.213-83.239-98.011 7.089-211.076 67.398-337.23 73.808-68.599 3.486-131.122-4.597-131.122-4.597-26.244-3.392-47.001-7.29-58.72-10.181-40.914-10.095-59.594-22.308-105.493-29.751-119.868-19.44-155.388 37.443-274.873 25.073C933.601 64.488 905.652 5.1 777.648.34c-14.585-.542-49.306-1.477-88.938 6.67-46.035 9.464-66.213 24.567-95.595 38.535C529.07 75.994 449.457 87.48 402.22 90.187c-110.727 6.347-149.824-26.313-223.885-10.963-59.014 12.231-73.03 16.185-103.414 20.866Z">
+                    </path>
+                </svg></div>
+        </div>
+        <div class="Footer_container__5d2_x">
+            <div class="Footer_inner__RY4ud">
+                <div class="Top_container__eI130">
+                    <div class="Info_container__c22NI"> <a href=""
+                            style="border-radius: 100%; padding: 10px; height: 80px; width: 80px; z-index: 3; display: flex; justify-content: center; align-items: center; position: relative;">
+                            <img src="./Assets/image (2).a2153f2b55833bcab60c.webp" alt=""
+                                style="height: 70px; width: 110px; display: flex; align-items: center; z-index: 3;">
+                            <img src="./Assets/logoback.webp" alt=""
+                                style="position: absolute; height: 80px; width: 120px;">
+                        </a>
+                        <p class="Info_aboutUs__i4f40">We are a software company that strives to create high quality
+                            products that correspond to our clients' expectations.</p>
+                        <div class="Socials_container__d5LbO"><a class="SocialLink_link__Ru2wq first-footer-sosial-icon"
+                                href="https://www.linkedin.com/company/qualisage" aria-label="LinkedIn" target="_blank"
+                                rel="nofollow noreferrer" style="transform:none"><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 48 48" fill="currentColor">
+                                    <path
+                                        d="M36.5 6h-25A5.507 5.507 0 0 0 6 11.5v25c0 3.032 2.468 5.5 5.5 5.5h25c3.032 0 5.5-2.468 5.5-5.5v-25C42 8.468 39.532 6 36.5 6zM18 34a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V21a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v13zm-2.5-16a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zM35 34a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-7.5c0-1.379-1.121-2.5-2.5-2.5S25 25.121 25 26.5V34a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V21a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v.541A5.965 5.965 0 0 1 29 20c3.309 0 6 2.691 6 6v8z">
+                                    </path>
+                                </svg></a><a class="SocialLink_link__Ru2wq" href="https://dribbble.com/qualisage"
+                                aria-label="Dribbble" target="_blank" rel="nofollow noreferrer"
+                                style="transform:none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                    fill="currentColor">
+                                    <path
+                                        d="M34.25 26c-1.402 0-2.774.123-4.113.348a78.71 78.71 0 0 1 4.127 14.785c4.767-2.867 8.252-7.648 9.356-13.286A24.621 24.621 0 0 0 34.25 26zm-8.227-1.755a75.509 75.509 0 0 0-1.699-3.591 38.806 38.806 0 0 1-20.242 1.719A20.344 20.344 0 0 0 4 24c0 5.405 2.164 10.308 5.661 13.911 3.396-6.478 9.271-11.46 16.362-13.666zm1.082-4.74a78.888 78.888 0 0 1 1.876 4.003A27.728 27.728 0 0 1 34.25 23c3.416 0 6.687.624 9.712 1.758.009-.254.038-.502.038-.758 0-4.98-1.842-9.531-4.864-13.035a39.158 39.158 0 0 1-12.031 8.54zM11.985 39.95C15.335 42.48 19.488 44 24 44c2.641 0 5.159-.527 7.469-1.461a75.81 75.81 0 0 0-4.286-15.505c-6.682 1.994-12.189 6.738-15.198 12.916zm25.03-31.105C33.513 5.834 28.97 4 24 4c-2.181 0-4.276.363-6.243 1.011A79.773 79.773 0 0 1 25.72 16.84a36.148 36.148 0 0 0 11.295-7.995zM4.552 19.41c2.094.381 4.246.59 6.448.59 4.173 0 8.179-.722 11.909-2.033a76.836 76.836 0 0 0-8.026-11.746C9.749 8.864 5.911 13.658 4.552 19.41z">
+                                    </path>
+                                </svg></a><a class="SocialLink_link__Ru2wq" href="https://twitter.com/QualiSage"
+                                aria-label="Twitter" target="_blank" rel="nofollow noreferrer"
+                                style="transform:none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                    fill="currentColor">
+                                    <path
+                                        d="M44.719 10.305a.998.998 0 0 0-1.136-.214l-.164.075-.418.191c.407-.649.73-1.343.953-2.061a.999.999 0 0 0-1.474-1.151c-1.141.693-2.237 1.192-3.37 1.54A9.463 9.463 0 0 0 32.5 6a9.5 9.5 0 0 0-9.5 9.5v.5l-.999-.08C12.278 14.77 9.51 8.23 9.395 7.948a1.5 1.5 0 0 0-2.456-.509C6.741 7.638 5 9.48 5 13c0 2.508 1.118 4.542 2.565 6.124a9.094 9.094 0 0 1-1.077-.753 1.504 1.504 0 0 0-1.669-.208 1.503 1.503 0 0 0-.813 1.473c.019.211.445 4.213 5.068 7.235l-.843.153A1.5 1.5 0 0 0 7.3 29.4c.105.141 2.058 2.68 6.299 4.14A28.848 28.848 0 0 1 4.5 35a1.5 1.5 0 0 0-1.129 2.487C3.532 37.672 7.435 42 17.5 42 34.213 42 42 26.485 42 16v-.5c0-.148-.016-.293-.022-.439 2.092-2.022 2.879-3.539 2.917-3.614a1 1 0 0 0-.176-1.142z">
+                                    </path>
+                                </svg></a><a class="SocialLink_link__Ru2wq"
+                                href="https://www.youtube.com/channel/UCtKj0KXj-aWwEx-4YWKDGWw" aria-label="YouTube"
+                                target="_blank" rel="nofollow noreferrer" style="transform:none"><svg
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor">
+                                    <path
+                                        d="M23.857 8.5c-6.352 0-12.255.453-15.623 1.156a1.5 1.5 0 0 0-.021.006c-2.538.569-4.927 2.386-5.43 5.233a1.5 1.5 0 0 0-.002.011C2.395 17.2 2 20.191 2 24.5c0 4.301.396 7.212.885 9.627.515 2.762 2.85 4.635 5.426 5.21a1.5 1.5 0 0 0 .037.01c3.515.693 9.25 1.153 15.603 1.153s12.092-.46 15.608-1.152a1.5 1.5 0 0 0 .037-.01c2.537-.569 4.926-2.386 5.43-5.233a1.5 1.5 0 0 0 .003-.021c.38-2.34.874-5.328.971-9.645a1.5 1.5 0 0 0 0-.033c0-4.318-.494-7.327-.977-9.71-.51-2.769-2.848-4.647-5.427-5.223a1.5 1.5 0 0 0-.12-.022c-3.43-.482-9.265-.951-15.619-.951zm-3.7 8.502c.37-.008.753.08 1.113.283l8.603 4.861a2.124 2.124 0 0 1 0 3.71l-8.603 4.86c-1.44.813-3.233-.216-3.233-1.855V19.14c0-1.23 1.008-2.114 2.12-2.137z">
+                                    </path>
+                                </svg></a><a class="SocialLink_link__Ru2wq" href="https://www.facebook.com/QualiSage/"
+                                aria-label="Facebook" target="_blank" rel="nofollow noreferrer"
+                                style="transform:none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                    fill="currentColor">
+                                    <path
+                                        d="M24 4C12.972 4 4 12.972 4 24c0 10.006 7.394 18.295 17 19.75V29h-4a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h4v-3.632C21 15.617 23.427 13 27.834 13c1.786 0 3.195.124 3.254.129a1 1 0 0 1 .912.996V17.5a1 1 0 0 1-1 1h-2c-1.103 0-2 .897-2 2V24h4a1 1 0 0 1 .993 1.124l-.375 3c-.063.5-.489.876-.993.876H27v14.75c9.606-1.455 17-9.744 17-19.75 0-11.028-8.972-20-20-20z">
+                                    </path>
+                                </svg></a></div><a class="Email_link__ZMVsa" href="mailto:info@qualisage.com"
+                            aria-label="Email us at info@qualisage.com"><span class="Email_inner__54Qz3"><svg
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor"
+                                    class="Email_icon__cVwSi" style="opacity:0">
+                                    <path
+                                        d="M10 8c-3.14 0-5.72 2.42-5.98 5.5L24 24.29 43.98 13.5C43.72 10.42 41.14 8 38 8H10zm-6 8.89V34c0 3.31 2.69 6 6 6h28c3.31 0 6-2.69 6-6V16.89L24.71 27.32c-.22.12-.46.18-.71.18-.25 0-.49-.06-.71-.18L4 16.89z">
+                                    </path>
+                                </svg>info@qualisage.com</span></a>
+                        <p class="adress-title-footer"><strong>Headquarters</strong><br>Sofia, Bulgaria</p>
+                        <div class="ExternalLink_container__0KtGC"><a class="footer-logo-links-icon-svg-1"
+                                href="https://clutch.co/profile/qualisage" target="_blank" rel="nofollow noreferrer"
+                                aria-label="QualiSage's profile on Clutch" style="opacity:0.9;transform:none"><svg
+                                    class="clutech-svg-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 25"
+                                    fill="currentColor">
+                                    <path
+                                        d="M22.942 0h4v25h-4V0Zm18 17.025c0 3.826-3.217 4.131-4.174 4.131-2.39 0-2.826-2.238-2.826-3.588V8h-4v9.548c0 2.37.744 4.326 2.048 5.63 1.152 1.153 2.878 1.783 4.748 1.783 1.326 0 3.204-.413 4.204-1.326V25h4V8h-4v9.025ZM52.942 2h-4v6h-3v4h3v13h4V12h3V8h-3V2ZM68.54 19.917c-.87.783-2.02 1.217-3.283 1.217-2.782 0-4.825-2.043-4.825-4.848s1.978-4.762 4.825-4.762c1.24 0 2.412.413 3.305 1.196l.607.522 2.697-2.696-.675-.609C69.603 8.504 67.496 7.7 65.255 7.7c-5 0-8.63 3.608-8.63 8.565 0 4.936 3.717 8.673 8.63 8.673 2.283 0 4.412-.804 5.98-2.26l.651-.609-2.739-2.694-.608.542ZM86.142 9.482C84.99 8.33 83.64 7.7 81.77 7.7c-1.326 0-2.828.413-3.828 1.325V0h-4v25h4v-9.365c0-3.826 2.718-4.13 3.675-4.13 2.391 0 2.325 2.239 2.325 3.587V25h4v-9.887c0-2.37-.495-4.326-1.8-5.631Zm-21.018 3.956a2.892 2.892 0 1 1 0 5.784 2.892 2.892 0 0 1 0-5.784Zm-47.782 5.283c-1.52 1.565-3.587 2.413-5.76 2.413-4.457 0-7.697-3.5-7.697-8.304 0-4.826 3.24-8.326 7.696-8.326 2.153 0 4.196.847 5.74 2.391l.608.609 2.674-2.674-.587-.609C17.8 1.938 14.8.7 11.581.7 5.016.7.081 5.917.081 12.851c0 6.913 4.957 12.109 11.5 12.109 3.24 0 6.24-1.26 8.457-3.543l.587-.609-2.652-2.717-.63.63Z">
+                                    </path>
+                                </svg></a><a class="footer-logo-links-icon-svg-2"
+                                href="https://www.goodfirms.co/company/qualisage" target="_blank"
+                                rel="nofollow noreferrer" aria-label="QualiSage's profile on GoodFirms"
+                                style="opacity:0.9;transform:none"><svg class="clutech-svg-right"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141 21" fill="currentColor">
+                                    <path
+                                        d="M8.633 7.385s-1.166-.116-1.166.923v4.615h7.7v1.385s.023.692-.7.692h-7v6h8.4s5.086-.785 5.133-6V7.385H8.633ZM20.767 0H5.6C.116 1.292 0 5.792 0 5.792V21h5.834V7.154C5.834 5.977 7 5.77 7 5.77h13.767V0Zm20.021 16.648c-.4.267-.697.461-.905.588a16.21 16.21 0 0 1-2.122 1.105c-.953.4-1.81.588-2.575.588-2.627 0-4.802-.802-6.56-2.424C26.868 14.883 26 12.852 26 10.393c0-2.37.783-4.42 2.366-6.167 1.583-1.746 3.497-2.602 5.759-2.602.94 0 1.946.165 2.992.5 1.355.434 2.453 1.069 3.323 1.906l-1.514 1.675c-.643-.623-1.478-1.087-2.453-1.372-.73-.214-1.53-.32-2.418-.32-1.583 0-2.927.637-3.984 1.906-1.065 1.28-1.6 2.798-1.6 4.58 0 1.765.608 3.208 1.826 4.367 1.218 1.158 2.766 1.746 4.645 1.746.783 0 1.584-.25 2.401-.73.679-.517 1.027-.767 1.044-.785v-3.653h-5.08l.73-2.281h6.751v7.485Zm15.345-4.456c0 1.764-.626 3.297-1.879 4.58-1.253 1.283-2.801 1.943-4.645 1.943-1.705 0-3.201-.642-4.489-1.907-1.288-1.265-1.914-2.798-1.914-4.598 0-1.782.61-3.315 1.827-4.634s2.714-1.96 4.471-1.96c1.949 0 3.523.633 4.767 1.889 1.227 1.239 1.862 2.798 1.862 4.687Zm-2.383.036c0-1.194-.405-2.206-1.201-3.03-.805-.834-1.792-1.248-2.975-1.248-1.113 0-2.053.428-2.836 1.284-.783.855-1.166 1.835-1.166 2.94 0 1.159.4 2.139 1.183 2.959.783.82 1.758 1.247 2.94 1.247 1.097 0 2.032-.414 2.837-1.23.813-.824 1.218-1.8 1.218-2.922Zm17.519-.036c0 1.764-.626 3.297-1.879 4.58-1.253 1.283-2.801 1.943-4.645 1.943-1.705 0-3.201-.642-4.489-1.907-1.287-1.265-1.914-2.798-1.914-4.598 0-1.782.61-3.315 1.827-4.634 1.218-1.32 2.714-1.96 4.471-1.96 1.949 0 3.523.633 4.767 1.889 1.227 1.239 1.862 2.798 1.862 4.687Zm-2.383.036c0-1.194-.405-2.206-1.201-3.03-.805-.834-1.792-1.248-2.975-1.248-1.113 0-2.053.428-2.836 1.284-.783.855-1.166 1.835-1.166 2.94 0 1.159.4 2.139 1.184 2.959.783.82 1.757 1.247 2.94 1.247 1.096 0 2.031-.414 2.836-1.23.813-.824 1.218-1.8 1.218-2.922Zm16.406 6.13-2.209.339v-2.121l-.47.534c-.414.388-.88.719-1.392.963a5.5 5.5 0 0 1-2.383.517c-1.705-.004-3.167-.624-4.35-1.89-1.183-1.266-1.774-2.762-1.774-4.508 0-1.8.591-3.35 1.757-4.634s2.592-1.925 4.297-1.925c.975 0 1.828.157 2.54.481.506.23.94.535 1.305.91.122.16.244.338.366.498v-5.56l2.313-.339v16.735Zm-2.069-6.006c0-1.247-.424-2.294-1.271-3.154-.857-.87-1.81-1.301-2.905-1.301-1.218 0-2.197.405-2.94 1.23-.702.779-1.062 1.746-1.062 2.869 0 1.265.365 2.316 1.096 3.136.73.82 1.653 1.23 2.784 1.23 1.113 0 2.089-.373 2.958-1.14.888-.784 1.34-1.747 1.34-2.87ZM97.575 4.28h-6.524v4.437h5.062v2.281h-5.062v7.343l-2.54.374V1.98h8.559l.505 2.3Zm5.237-1.302-1.566 1.978-1.496-1.978 1.583-1.96 1.479 1.96Zm-.47 15.381-2.331.32V6.293l2.331-.356v12.422Zm10.526-12.547-1.096 2.53a2.978 2.978 0 0 0-.435-.035 4.318 4.318 0 0 0-.679.053c-.227.035-.468.13-.73.25-.483.222-.909.675-1.27 1.372a5.494 5.494 0 0 0-.61 2.549v5.81l-2.33.374V6.293l2.157-.392v2.584c.278-.446.574-.891.852-1.354.4-.464.87-.801 1.392-.999.278-.106.782-.204 1.548-.267.73-.06 1.149-.089 1.201-.053Zm17.362 12.546-2.331.339v-8.501c0-.785-.174-1.355-.522-1.711-.348-.357-.87-.535-1.549-.535-.817 0-1.447.337-1.861 1.016a2.816 2.816 0 0 0-.435 1.461v7.913l-2.331.428v-8.519c0-.748-.17-1.323-.505-1.71-.344-.397-.8-.589-1.392-.589h-.226c-.818 0-1.407.34-1.775 1.034-.275.518-.417 1.176-.417 1.978v7.378l-2.418.428V6.293l2.174-.374v1.586c.244-.375.487-.678.714-.891.626-.588 1.357-.874 2.174-.874.922 0 1.598.146 2.07.446.398.253.783.748 1.166 1.461.8-1.265 1.931-1.907 3.428-1.907 1.426 0 2.487.447 3.183 1.355.574.749.853 1.853.853 3.297v7.966Zm10.65-3.76c0 1.14-.404 2.08-1.2 2.816-.804.743-1.81 1.105-3.028 1.105-.922 0-1.74-.214-2.488-.642-.748-.427-1.304-.909-1.67-1.479l1.636-1.461c.121.178.226.32.33.427.61.625 1.34.945 2.192.945.592 0 1.058-.164 1.392-.463.344-.308.505-.731.505-1.284 0-.623-.401-1.046-1.2-1.283-1.587-.471-2.437-.748-2.558-.802-.731-.374-1.258-.762-1.584-1.212-.371-.513-.556-1.194-.556-2.067 0-1.07.4-1.96 1.183-2.673.783-.713 1.722-1.052 2.8-1.052.819 0 1.584.178 2.28.553.696.374 1.2.766 1.496 1.23l-1.392 1.514c-.21-.21-.436-.4-.678-.57-.557-.392-1.096-.588-1.6-.588-.488 0-.892.102-1.201.32-.37.262-.557.66-.557 1.177 0 .499.173.874.54 1.105.312.197.976.4 2.018.641 1.045.24 1.835.687 2.418 1.284.634.65.922 1.443.922 2.459Z">
+                                    </path>
+                                </svg></a></div>
+                    </div>
+                    <div class="Top_extraItems__U4XYB">
+                        <div class="footer-center-child-left">
+                            <div class="Top_title__6z4Ur">Key Services</div>
+                            <ul class="Top_linkList__bau6S">
+                                <li><a class="LinkListItem_link__0BOYP" aria-label="Custom Software Development"
+                                        href="/services/custom-software-development"><span
+                                            class="LinkListItem_inner__wIPAE"
+                                            style="transform: translateX(-20px) translateZ(0px);"><svg
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                                fill="currentColor" class="LinkListItem_arrowIcon__jdfqE"
+                                                style="opacity: 0;">
+                                                <path
+                                                    d="M15.979 5.98a2 2 0 0 0-1.393 3.434L29.172 24 14.586 38.586a2 2 0 1 0 2.828 2.828l16-16a2 2 0 0 0 0-2.828l-16-16a2 2 0 0 0-1.435-.606z">
+                                                </path>
+                                            </svg>Custom Software Development</span></a></li>
+                                <li><a class="LinkListItem_link__0BOYP" aria-label="MVP Development"
+                                        href="/services/minimum-viable-product"><span class="LinkListItem_inner__wIPAE"
+                                            style="transform: translateX(-20px) translateZ(0px);"><svg
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                                fill="currentColor" class="LinkListItem_arrowIcon__jdfqE"
+                                                style="opacity: 0;">
+                                                <path
+                                                    d="M15.979 5.98a2 2 0 0 0-1.393 3.434L29.172 24 14.586 38.586a2 2 0 1 0 2.828 2.828l16-16a2 2 0 0 0 0-2.828l-16-16a2 2 0 0 0-1.435-.606z">
+                                                </path>
+                                            </svg>MVP Development</span></a></li>
+                                <li><a class="LinkListItem_link__0BOYP" aria-label="Mobile App Development"
+                                        href="/services/mobile-app-development"><span class="LinkListItem_inner__wIPAE"
+                                            style="transform: translateX(-20px) translateZ(0px);"><svg
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                                fill="currentColor" class="LinkListItem_arrowIcon__jdfqE"
+                                                style="opacity: 0;">
+                                                <path
+                                                    d="M15.979 5.98a2 2 0 0 0-1.393 3.434L29.172 24 14.586 38.586a2 2 0 1 0 2.828 2.828l16-16a2 2 0 0 0 0-2.828l-16-16a2 2 0 0 0-1.435-.606z">
+                                                </path>
+                                            </svg>Mobile App Development</span></a></li>
+                                <li><a class="LinkListItem_link__0BOYP" aria-label="Website Development"
+                                        href="/services/website-development"><span class="LinkListItem_inner__wIPAE"
+                                            style="transform: translateX(-20px) translateZ(0px);"><svg
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                                fill="currentColor" class="LinkListItem_arrowIcon__jdfqE"
+                                                style="opacity: 0;">
+                                                <path
+                                                    d="M15.979 5.98a2 2 0 0 0-1.393 3.434L29.172 24 14.586 38.586a2 2 0 1 0 2.828 2.828l16-16a2 2 0 0 0 0-2.828l-16-16a2 2 0 0 0-1.435-.606z">
+                                                </path>
+                                            </svg>Website Development</span></a></li>
+                                <li><a class="LinkListItem_link__0BOYP" aria-label="Ecommerce Development"
+                                        href="/services/e-commerce"><span class="LinkListItem_inner__wIPAE"
+                                            style="transform: translateX(-20px) translateZ(0px);"><svg
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                                fill="currentColor" class="LinkListItem_arrowIcon__jdfqE"
+                                                style="opacity: 0;">
+                                                <path
+                                                    d="M15.979 5.98a2 2 0 0 0-1.393 3.434L29.172 24 14.586 38.586a2 2 0 1 0 2.828 2.828l16-16a2 2 0 0 0 0-2.828l-16-16a2 2 0 0 0-1.435-.606z">
+                                                </path>
+                                            </svg>Ecommerce Development</span></a></li>
+                                <li><a class="LinkListItem_link__0BOYP" aria-label="Legacy Software Modernization"
+                                        href="/services/legacy-software-modernization"><span
+                                            class="LinkListItem_inner__wIPAE"
+                                            style="transform: translateX(-20px) translateZ(0px);"><svg
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                                fill="currentColor" class="LinkListItem_arrowIcon__jdfqE"
+                                                style="opacity: 0;">
+                                                <path
+                                                    d="M15.979 5.98a2 2 0 0 0-1.393 3.434L29.172 24 14.586 38.586a2 2 0 1 0 2.828 2.828l16-16a2 2 0 0 0 0-2.828l-16-16a2 2 0 0 0-1.435-.606z">
+                                                </path>
+                                            </svg>Legacy Software Modernization</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-center-child-right">
+                            <div class="Top_title__6z4Ur">Focus Industries</div>
+                            <ul class="Top_linkList__bau6S">
+                                <li><a class="LinkListItem_link__0BOYP" aria-label="Renewable Energy"
+                                        href="/industries/renewable-energy"><span class="LinkListItem_inner__wIPAE"
+                                            style="transform:translateX(-20px) translateZ(0)"><svg
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                                fill="currentColor" class="LinkListItem_arrowIcon__jdfqE"
+                                                style="opacity:0">
+                                                <path
+                                                    d="M15.979 5.98a2 2 0 0 0-1.393 3.434L29.172 24 14.586 38.586a2 2 0 1 0 2.828 2.828l16-16a2 2 0 0 0 0-2.828l-16-16a2 2 0 0 0-1.435-.606z">
+                                                </path>
+                                            </svg>Renewable Energy</span></a></li>
+                                <li><a class="LinkListItem_link__0BOYP" aria-label="Manufacturing"
+                                        href="/industries/manufacturing"><span class="LinkListItem_inner__wIPAE"
+                                            style="transform:translateX(-20px) translateZ(0)"><svg
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                                fill="currentColor" class="LinkListItem_arrowIcon__jdfqE"
+                                                style="opacity:0">
+                                                <path
+                                                    d="M15.979 5.98a2 2 0 0 0-1.393 3.434L29.172 24 14.586 38.586a2 2 0 1 0 2.828 2.828l16-16a2 2 0 0 0 0-2.828l-16-16a2 2 0 0 0-1.435-.606z">
+                                                </path>
+                                            </svg>Manufacturing</span></a></li>
+                                <li><a class="LinkListItem_link__0BOYP" aria-label="Ecommerce &amp; Retail"
+                                        href="/industries/e-commerce-and-retail"><span class="LinkListItem_inner__wIPAE"
+                                            style="transform:translateX(-20px) translateZ(0)"><svg
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                                fill="currentColor" class="LinkListItem_arrowIcon__jdfqE"
+                                                style="opacity:0">
+                                                <path
+                                                    d="M15.979 5.98a2 2 0 0 0-1.393 3.434L29.172 24 14.586 38.586a2 2 0 1 0 2.828 2.828l16-16a2 2 0 0 0 0-2.828l-16-16a2 2 0 0 0-1.435-.606z">
+                                                </path>
+                                            </svg>Ecommerce &amp; Retail</span></a></li>
+                                <li><a class="LinkListItem_link__0BOYP" aria-label="Real Estate &amp; PropTech"
+                                        href="/industries/real-estate-and-proptech"><span
+                                            class="LinkListItem_inner__wIPAE"
+                                            style="transform:translateX(-20px) translateZ(0)"><svg
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                                fill="currentColor" class="LinkListItem_arrowIcon__jdfqE"
+                                                style="opacity:0">
+                                                <path
+                                                    d="M15.979 5.98a2 2 0 0 0-1.393 3.434L29.172 24 14.586 38.586a2 2 0 1 0 2.828 2.828l16-16a2 2 0 0 0 0-2.828l-16-16a2 2 0 0 0-1.435-.606z">
+                                                </path>
+                                            </svg>Real Estate &amp; PropTech</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="Top_company__PhJZN">
+                        <div class="Top_title__6z4Ur">Company</div>
+                        <ul class="Top_linkList__bau6S Top_linkList__bau6S-bottom">
+                            <li><a class="LinkListItem_link__0BOYP" aria-label="Projects" href="/projects"><span
+                                        class="LinkListItem_inner__wIPAE"
+                                        style="transform: translateX(-20px) translateZ(0px);"><svg
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor"
+                                            class="LinkListItem_arrowIcon__jdfqE" style="opacity: 0;">
+                                            <path
+                                                d="M15.979 5.98a2 2 0 0 0-1.393 3.434L29.172 24 14.586 38.586a2 2 0 1 0 2.828 2.828l16-16a2 2 0 0 0 0-2.828l-16-16a2 2 0 0 0-1.435-.606z">
+                                            </path>
+                                        </svg>Projects</span></a></li>
+                            <li><a class="LinkListItem_link__0BOYP" aria-label="Process" href="/process"><span
+                                        class="LinkListItem_inner__wIPAE"
+                                        style="transform: translateX(-20px) translateZ(0px);"><svg
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor"
+                                            class="LinkListItem_arrowIcon__jdfqE" style="opacity: 0;">
+                                            <path
+                                                d="M15.979 5.98a2 2 0 0 0-1.393 3.434L29.172 24 14.586 38.586a2 2 0 1 0 2.828 2.828l16-16a2 2 0 0 0 0-2.828l-16-16a2 2 0 0 0-1.435-.606z">
+                                            </path>
+                                        </svg>Process</span></a></li>
+                            <li><a class="LinkListItem_link__0BOYP" aria-label="About" href="/about"><span
+                                        class="LinkListItem_inner__wIPAE"
+                                        style="transform:translateX(-20px) translateZ(0)"><svg
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor"
+                                            class="LinkListItem_arrowIcon__jdfqE" style="opacity:0">
+                                            <path
+                                                d="M15.979 5.98a2 2 0 0 0-1.393 3.434L29.172 24 14.586 38.586a2 2 0 1 0 2.828 2.828l16-16a2 2 0 0 0 0-2.828l-16-16a2 2 0 0 0-1.435-.606z">
+                                            </path>
+                                        </svg>About</span></a></li>
+                            <li><a class="LinkListItem_link__0BOYP" aria-label="Blog" href="/blog"><span
+                                        class="LinkListItem_inner__wIPAE"
+                                        style="transform:translateX(-20px) translateZ(0)"><svg
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor"
+                                            class="LinkListItem_arrowIcon__jdfqE" style="opacity:0">
+                                            <path
+                                                d="M15.979 5.98a2 2 0 0 0-1.393 3.434L29.172 24 14.586 38.586a2 2 0 1 0 2.828 2.828l16-16a2 2 0 0 0 0-2.828l-16-16a2 2 0 0 0-1.435-.606z">
+                                            </path>
+                                        </svg>Blog</span></a></li>
+                            <li><a class="LinkListItem_link__0BOYP" aria-label="Contact us" aria-current="page"
+                                    href="/contact-us"><span class="LinkListItem_inner__wIPAE"
+                                        style="transform:translateX(-20px) translateZ(0)"><svg
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor"
+                                            class="LinkListItem_arrowIcon__jdfqE" style="opacity:0">
+                                            <path
+                                                d="M15.979 5.98a2 2 0 0 0-1.393 3.434L29.172 24 14.586 38.586a2 2 0 1 0 2.828 2.828l16-16a2 2 0 0 0 0-2.828l-16-16a2 2 0 0 0-1.435-.606z">
+                                            </path>
+                                        </svg>Contact us</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="Bottom_container__Mgtkm">
+                    <div class="bottom-titles-container">
+                        <p class="Bottom_copyright__U4Q_M">© 2020-2023 QualiSage. All rights reserved.</p>
+                        <ul class="Bottom_legal__sF5Y_">
+                            <li><a class="LinkWithAnimatedLine_link___GFMv" href="/terms-of-use">Terms of Use<span
+                                        class="ActiveLine_container__wB2id"><span class="ActiveLine_line__26M7B"
+                                            style="opacity: 0; transform: scaleX(0) translateZ(0px);"></span></span></a>
+                            </li>
+                            <li><a class="LinkWithAnimatedLine_link___GFMv" href="/privacy">Privacy<span
+                                        class="ActiveLine_container__wB2id"><span class="ActiveLine_line__26M7B"
+                                            style="opacity: 0; transform: scaleX(0) translateZ(0px);"></span></span></a>
+                            </li>
+                            <li><a class="LinkWithAnimatedLine_link___GFMv" href="/cookies">Cookies<span
+                                        class="ActiveLine_container__wB2id"><span class="ActiveLine_line__26M7B"
+                                            style="opacity: 0; transform: scaleX(0) translateZ(0px);"></span></span></a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

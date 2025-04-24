@@ -1,0 +1,2739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: 'Rubik', sans-serif;
+            font-size: 18px;
+            font-weight: 340;
+        }
+
+        body {
+            background: #eceffe;
+            overflow-x: hidden;
+        }
+
+        nav {
+            margin: 0;
+            width: 100vw;
+            height: 114px;
+            display: flex;
+            color: white;
+            z-index: 10;
+            padding: 20px 30px;
+        }
+
+        section {
+            overflow: hidden;
+        }
+
+        ul li {
+            cursor: pointer;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            line-height: 1.3;
+            font-family: QuickSand, sans-serif;
+            font-weight: 600;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        span {
+            cursor: context-menu;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        .nav-child {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-continer {
+            padding: 10px;
+        }
+
+        .nav-child-side {
+            width: 20%;
+        }
+
+        .nav-child-center {
+            width: 60%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar-items {
+            width: 80%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .navbar-list-items {
+            width: auto;
+            height: 100%;
+            display: flex;
+            z-index: 1;
+            font-size: 20px;
+            list-style: none;
+            font-weight: 500;
+            transition: 0.2s;
+            align-items: center;
+        }
+
+        .navbar-list-items:hover {
+            transform: scale(1.05);
+        }
+
+        .navbar-button-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .lets-do-it-button {
+            border: 0;
+            z-index: 1;
+            height: 50px;
+            width: 206px;
+            transition: 1s;
+            transform: none;
+            cursor: pointer;
+            position: relative;
+            border-radius: 8px;
+            background: white;
+            box-shadow: rgba(0, 0, 0, 0.13) 0px 7px 9px -4px, rgba(0, 0, 0, 0.08) 0px 14px 21px 2px, rgba(0, 0, 0, 0.07) 0px 5px 26px 4px;
+        }
+
+        .lets-do-it-button:hover {
+            transform: scale(1.02);
+        }
+
+        .main-nav-logo-svg {
+            width: 220px;
+            height: 43px;
+            z-index: 1;
+        }
+
+        .button-content-text {
+            width: 75%;
+            height: 100%;
+            display: flex;
+            font-size: 17px;
+            cursor: pointer;
+            color: #ba54de;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .top-right-corner {
+            top: -6px;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            background: white;
+            transform: rotate(-35deg);
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .airplane-svg {
+            top: -1px;
+            right: 6px;
+            position: absolute;
+        }
+
+        .container {
+            height: 678px;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container-children {
+            margin: auto;
+            display: flex;
+            height: 100%;
+            width: 100vw;
+            max-width: 1440px;
+            padding: 20px 40px;
+        }
+
+        .section {
+            height: 100%;
+            width: 50%;
+        }
+
+        .contact_us_title {
+            width: 100%;
+            font-size: 48px;
+            line-height: 1.3;
+            font-weight: 400;
+            color: #454cc1;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            font-family: 'QuickSand', sans-serif;
+        }
+
+        .Intro_section__nsFpO {
+            display: flex;
+            min-height: 848px;
+            position: relative;
+            padding-bottom: 8vw;
+            align-items: center;
+            justify-content: center;
+            background: #7a44ff;
+            transform: translateY(-115px);
+            background: linear-gradient(135deg, #7a44ff, #8146ff, #8849ff, #8f4bff, #954eff, #9c50ff, #a153ff, #a756ff);
+        }
+
+        .PageIntroBackgroundImage_image__qJwSi {
+            opacity: .15;
+        }
+
+        .Intro_text__r2_tn h1 {
+            margin-bottom: 20px;
+            color: white;
+        }
+
+
+        .Intro_text__r2_tn {
+            position: relative;
+            width: 100%;
+            max-width: 650px;
+            padding: 13.5vw 20px 15vw;
+            text-align: center;
+            color: #fff;
+            z-index: 1;
+        }
+
+        .PageIntroBottomLines_container__sqVVV {
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            bottom: -1px;
+            overflow: hidden;
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .PageIntroBottomLines_lineContainer__CRMUm:first-child {
+            z-index: 1;
+            position: absolute;
+        }
+
+        .PageIntroBottomLines_lineContainer__CRMUm {
+            width: 130%;
+            left: -30%;
+            transform-origin: 50% 100%;
+        }
+
+        .PageIntroBottomLines_lineContainer__CRMUm:nth-child(2) svg {
+            transform: scaleX(-1) scaleY(0.9) translate(15%);
+            color: rgba(236, 239, 254, .3);
+        }
+
+        .PageIntroBottomLines_lineContainer__CRMUm svg {
+            width: 170% !important;
+        }
+
+        .PageIntroBottomLines_lineContainer__CRMUm svg {
+            width: 100%;
+            height: auto;
+            color: #eceffe;
+            transform-origin: 50% 100%;
+            transform: scaleX(-1) scaleY(.6) translateY(15px) translateX(40px);
+        }
+
+        .OurFocus_section__gmfR6 {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            z-index: 1;
+            margin-top: 80px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        span {
+            cursor: context-menu;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            line-height: 1.3;
+            font-family: QuickSand, sans-serif;
+            font-weight: 600;
+        }
+
+
+        .OurFocus_section__gmfR6 h2 {
+            width: 100%;
+            font-weight: 500;
+            color: #454cc1;
+            font-size: 48px;
+            padding: 0 20px;
+            max-width: 1920px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .OurFocus_list__0oDSj {
+            width: 100%;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .OurFocus_industriesContainer__SrXpt {
+            display: grid;
+            justify-items: center;
+            margin-top: 10px;
+            margin-bottom: 50px;
+        }
+
+        .Industries_container__XgDtO {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .Industries_inner__THS7L {
+            width: 100%;
+            display: flex;
+            grid-row-gap: 0;
+            max-width: 1920px;
+            padding-left: 40px;
+            padding-right: 40px;
+            align-items: center;
+            grid-column-gap: 80px;
+            grid-template-columns: 4fr 6fr;
+        }
+
+        .Industries_text__FhxgH {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            padding: 0 20px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .Industries_list__kDbrF {
+            padding: 0;
+            width: 50%;
+            display: grid;
+            grid-row-gap: 20px;
+            grid-column-gap: 15px;
+            list-style-type: none;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .Industries_list__kDbrF li a>div:nth-child(2) {
+            background: #e0e5fd;
+            opacity: 1;
+        }
+
+        .DropdownListItemBox_backgroundEffect__gCxMg,
+        .DropdownListItemBox_shadowEffect___RbrS {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            border-radius: 16px;
+        }
+
+        .DropdownListItemBox_link___tTop {
+            width: auto;
+            display: flex;
+            height: 115px;
+            position: relative;
+            align-items: center;
+            text-decoration: none;
+            color: #7765f3;
+            font-weight: 400;
+            padding: 25px 25px 30px;
+            border-radius: 16px;
+            background-color: #e0e5fd;
+            transition: .28s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .Industries_text__FhxgH>* {
+            max-width: 480px;
+        }
+
+        .SectionSubtitleH3_heading__KHtfF {
+            color: #454cc1;
+            margin: 28px 0;
+            font-size: 28px;
+            font-weight: 500;
+        }
+
+        .paragraph-1 {
+            color: #454cc1;
+            margin: 0 0 30px;
+            max-width: 480px;
+            text-align: center;
+        }
+
+
+
+        .book-and-meeteng-button {
+            border: 0;
+            width: 226px;
+            height: 50px;
+            color: #fff;
+            transform: none;
+            border-radius: 15px;
+            padding: 0px 32px;
+            background: #9237f6;
+            box-shadow: rgba(0, 0, 0, 0.13) 0px 7px 9px -4px, rgba(0, 0, 0, 0.08) 0px 14px 21px 2px, rgba(0, 0, 0, 0.07) 0px 5px 26px 4px;
+            background: linear-gradient(135deg, #9237f6 0, #7190f4 100%);
+        }
+
+        .Industries_text__FhxgH {
+            width: 45%;
+            height: 100%;
+            display: flex;
+            padding: 0 20px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .Icon_colorPad__42cv5,
+        .Icon_glass__jHtwP {
+            width: 100%;
+            height: 100%;
+            border-radius: 16px;
+        }
+
+
+
+        .Icon_colorPad__42cv5 {
+            background: var#a105fe;
+            background: linear-gradient(135deg, #a105fe 0, #4fc0e8 100%);
+            box-shadow: inset -2px 2px 5px 2px rgba(255, 255, 255, .25), 0 3px 3px -2px rgba(0, 0, 0, .13), 0 3px 4px 0 rgba(0, 0, 0, .08), 0 1px 8px 0 rgba(0, 0, 0, .07);
+            transform: rotateY(-8deg);
+        }
+
+        .Icon_glass__jHtwP svg {
+            width: 38px;
+            color: rgba(255, 255, 255, .85);
+            filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, .3));
+        }
+
+        .Icon_glass__jHtwP {
+            position: relative;
+            bottom: -7px;
+            left: -7px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(161, 5, 254, .4);
+            background: linear-gradient(135deg, rgba(161, 5, 254, .4), rgba(79, 192, 232, .4));
+            box-shadow: inset -1px 1px 3px 0 rgba(255, 255, 255, .5), 0 4px 5px -2px rgba(0, 0, 0, .13), 0 7px 10px 1px rgba(0, 0, 0, .08), 0 2px 16px 1px rgba(0, 0, 0, .07);
+        }
+
+        .DropdownListItemBox_activeMenuItemLine__1ht7D {
+            bottom: -8px;
+            left: 0;
+            width: 35px;
+            transform: none;
+        }
+
+        .ActiveMenuItemLine_container__g9Rjq {
+            position: absolute;
+            bottom: 16px;
+            left: 50%;
+            width: calc(75% - 12px);
+            transform: translateX(-50%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .DropdownListItemBox_label__QkNN8 {
+            flex: 1 1;
+            z-index: 1;
+            display: flex;
+            font-size: 15px;
+            position: relative;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .Icon_container__oi4Ze {
+            width: 60px;
+            height: 60px;
+            perspective: 1000px;
+        }
+
+        .DropdownListItemBox_link___tTop>div:nth-child(3) {
+            position: relative;
+            flex: 0 0 60px;
+            margin-right: 12px;
+            z-index: 1;
+        }
+
+        .SMEs_container__Iyo3O {
+            width: 100%;
+            display: grid;
+            grid-column-gap: 80px;
+            grid-row-gap: 0;
+            max-width: 1920px;
+            padding-left: 40px;
+            grid-template-columns: 6fr 5fr;
+            padding-right: 40px;
+        }
+
+        .SMEs_imageContainer__ftlnJ {
+            position: relative;
+            width: 100%;
+        }
+
+        .SMEs_content__K_Pz9 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .Startups_content__BB7zK {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: -5vw;
+            z-index: 3;
+        }
+
+        .Startups_smoke__Dut0a {
+            z-index: 1;
+            width: 40vw;
+            left: 31.8vw;
+            bottom: -3.8vw;
+            position: absolute;
+            transform: rotate(13deg);
+        }
+
+        .Startups_planets__8nheI {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+
+        }
+
+        .Startups_planets__8nheI>span:first-child {
+            width: 14vw !important;
+            bottom: 20vw;
+            left: 9vw;
+        }
+
+        .Startups_foregroundSvg__tcMDu {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            z-index: 1;
+        }
+
+        .Startups_foreground__7ndlz {
+            left: 0;
+            top: 20px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: linear-gradient(0deg, #9237f6, #8d42f6, #884bf6, #8452f6, #8059f5, #7d60f3, #7a66f2, #786bf0);
+            -webkit-clip-path: url(#ourFocusStartupsBackground);
+            clip-path: url(#ourFocusStartupsBackground);
+        }
+
+        .Startups_foreground__7ndlz>span {
+            top: 0;
+            left: 0;
+            z-index: 2;
+            width: 100% !important;
+            position: absolute !important;
+        }
+
+        .Startups_foregroundContainer__D921_{
+            position: absolute;
+            bottom: 0;
+            left: -10%;
+            width: 140%;
+            padding-top: 81.8125%;
+            z-index: 1;
+            transform: translateZ(0);
+        }
+
+        svg:not([fill]) {
+           fill: currentColor;
+        }
+
+        .Startups_backgroundSvg__baMY0 {
+           position: relative;
+           left: -10%;
+           width: 140%;
+           height: auto;
+        }
+
+        .clouds-storage {
+            width: 410px;
+            height: 286px;
+            position: absolute;
+        }
+
+        .Startups_cloudsSvg__fHZfi {
+            left: 0;
+            z-index: 2;
+            bottom: -25px;
+            width: 100%;
+            height: auto;
+            color: #eceffe;
+            position: absolute;
+            filter: drop-shadow(0 15px 15px rgba(0, 0, 0, .6));
+        }
+
+        .Startups_container__gdn0K {
+            position: relative;
+            margin-top: 50px;
+        }
+
+        .Startups_rocket__Djzld {
+            z-index: 1;
+            position: absolute;
+            bottom: 11.7vw;
+            left: 47.5vw;
+            width: 23vw;
+            transform: rotate(-7deg);
+        }
+
+        .List_section__7ySxr {
+            background: #eceffe;
+        }
+
+        .List_section__7ySxr>h2,
+        .List_section__7ySxr>p {
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .OurFocus_startupsContainer__4kabD {
+            overflow: hidden;
+        }
+
+        .OurFocus_smesContainer___Cgr7 {
+            display: flex;
+            justify-content: center;
+        }
+
+        .Startups_planets__8nheI>span {
+            position: absolute !important;
+        }
+
+        .Startups_planets__8nheI>span:nth-child(2) {
+            width: 18vw !important;
+            bottom: 2vw;
+            right: 3.7vw;
+        }
+
+        .Startups_planets__8nheI>span:nth-child(3) {
+            width: 12vw !important;
+            bottom: 37vw;
+            left: 53vw;
+        }
+
+        .Startups_planets__8nheI>span:nth-child(4) {
+            width: 9vw !important;
+            bottom: 44vw;
+            right: 10vw;
+        }
+
+        .List_section__7ySxr {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-top: 80px;
+            overflow: hidden;
+        }
+
+        .List_section__7ySxr>h2,
+        .List_section__7ySxr>p {
+            padding: 0 20px;
+            max-width: 570px;
+            color: #454cc1;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .SectionTitleH2_heading__g73_o {
+            font-weight: 500;
+            color: #454cc1;
+
+        }
+
+        .List_container__K_jcV {
+            position: relative;
+            width: 100%;
+            background: #7a44ff;
+            background: linear-gradient(135deg, #9237f6, #8d42f6, #884bf6, #8452f6, #8059f5, #7d60f3, #7a66f2, #786bf0);
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+        .TopLines_container__RsDGZ {
+            position: relative;
+            top: -1px;
+            color: #eceffe;
+        }
+
+        .TopLines_container__RsDGZ svg:first-child {
+            position: relative;
+        }
+
+        .TopLines_container__RsDGZ svg {
+            width: 100%;
+        }
+
+        .TopLines_container__RsDGZ svg:nth-child(2),
+        .TopLines_container__RsDGZ svg:nth-child(3) {
+            color: rgba(236, 239, 254, .3);
+        }
+
+        .TopLines_container__RsDGZ svg:nth-child(n+2) {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .List_puzzleHands__jc_Wu {
+            top: 7vw;
+            left: 50%;
+            z-index: 1;
+            width: 40vw;
+            min-width: 300px;
+            position: absolute;
+            transform: translateX(-50%);
+        }
+
+        ._rightHand__zyZrs {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .ListItem_container___G2YW>li:nth-child(odd) .ListItem_itemNumber__seuqQ {
+            right: 0;
+        }
+
+        .Item_container___G2YW>li:first-child .ListItem_itemNumber__seuqQ span {
+            transform: translateX(33%);
+        }
+
+        .List_inner__25c_k {
+            display: flex;
+            justify-content: center;
+            padding-top: 7vw;
+        }
+
+        .ListItem_container___G2YW {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 1440px;
+            padding: 120px 40px 140px;
+        }
+
+        .ListItem_container___G2YW>li:nth-child(odd) {
+            align-self: flex-start;
+            justify-content: flex-start;
+        }
+
+        .ListItem_container___G2YW>li {
+            display: flex;
+            position: relative;
+            width: 100%;
+            margin-bottom: 180px;
+        }
+
+        .ListItem_container___G2YW>li>a {
+            width: 80%;
+            max-width: 500px;
+        }
+
+        .Project_iconContainer__CqUDd {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 90%;
+            padding-top: 90%;
+            transform: translate(-7%, -5%);
+        }
+
+        .Project_iconContainer__CqUDd span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            -webkit-clip-path: url(#projectShapeClipPath);
+            clip-path: url(#projectShapeClipPath);
+            background: rgba(236, 239, 254, .1);
+        }
+
+        .Project_link__GMf3U {
+            position: relative;
+            display: block;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .Project_iconContainer__CqUDd svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40%;
+            color: rgba(236, 239, 254, .1);
+            transform: translate(-10%, -15%);
+        }
+
+        .Project_imageContainer__BeLxV>span {
+            -webkit-clip-path: url(#projectShapeClipPath);
+            /* clip-path: url(#projectShapeClipPath); */
+        }
+
+        .Project_textContainer__Cx9od {
+            position: absolute;
+            top: 90%;
+            left: 15%;
+            width: 115%;
+            z-index: 1;
+            transform: translateY(-105%) translateX(75px);
+            filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, .2));
+        }
+
+
+        .Project_textInner__PxJNB {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .Project_name___NOut {
+            margin-bottom: 10px;
+            font-weight: 300;
+            font-size: 21px;
+        }
+
+        .Project_description__fxd5T {
+            font-weight: 300;
+            font-size: 16px;
+            max-width: 450px;
+        }
+
+        .Project_viewProject__kGVoO {
+            display: inline-flex;
+            align-items: center;
+            margin-left: -5px;
+            padding: 15px 5px;
+            font-weight: 400;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .Project_viewProject__kGVoO svg {
+            height: 20px;
+            width: 20px;
+        }
+
+
+        .ListItem_itemNumber__seuqQ {
+            top: 50%;
+            right: 0;
+            display: block;
+            position: absolute;
+            transform: translateY(-50%);
+            color: rgba(236, 239, 254, .06);
+            font-weight: 700;
+            font-size: 25vw;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .Project_link__GMf3U {
+            position: relative;
+            display: block;
+            color: #fff;
+            text-decoration: none;
+        }
+
+
+        .ListItem_container___G2YW>li:nth-child(2n) .ListItem_itemNumber__seuqQ {
+            right: 0;
+        }
+
+        .ListItem_container___G2YW>li>a {
+            width: 80%;
+            max-width: 500px;
+        }
+
+        /* .ListItem_container___G2YW>li:nth-child(odd) .ListItem_itemNumber__seuqQ span {
+            transform: translateX(25%);
+        } */
+
+        .ListItem_container___G2YW>li:first-child .ListItem_itemNumber__seuqQ span {
+            transform: translateX(0);
+        }
+
+        .BottomLines_container__mi8yp {
+            position: relative;
+            bottom: -30px;
+            color: #eceffe;
+            transform-origin: 50% 100%;
+        }
+
+        .BottomLines_container__mi8yp svg:first-child {
+            position: relative;
+            z-index: 1;
+        }
+
+        .BottomLines_container__mi8yp svg:nth-child(n+2) {
+            left: 0;
+            bottom: 0;
+            z-index: 2;
+            position: absolute;
+        }
+
+        .BottomLines_container__mi8yp svg {
+            width: 100%;
+            transform: scale(-1);
+        }
+
+        .CallToActionBlock_section__eu5MM {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 40px;
+            margin-bottom: -10px;
+        }
+
+        .CallToActionBlock_inner__qRDBL {
+            position: relative;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            max-width: 1440px;
+            padding: 0 20px;
+            z-index: 1;
+        }
+
+        .CallToActionBlock_backgroundText__QflR7 {
+            display: none;
+        }
+
+        .CallToActionBlock_imageContainer__aSxSu {
+            flex: 1 1;
+            width: 100%;
+            max-width: 400px;
+            min-width: 400px;
+            margin-bottom: 40px;
+        }
+
+        .CallToActionBlock_textContainer__AuxD4 {
+            flex: 1 1;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .CallToActionBlock_textInner___i1hw h2 {
+            margin-bottom: 37px;
+            font-size: 32px;
+        }
+
+        .SectionTitleH2_isLong__Gxx_w {
+            font-size: 32px;
+        }
+
+        .ContactUsButton_link__I8uTt {
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 50px;
+            padding: 0 60px 0 32px;
+            border-radius: 16px !important;
+            font-family: QuickSand, sans-serif;
+            font-weight: 700 !important;
+            font-size: 16px;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            text-decoration: none;
+            text-align: center;
+            white-space: nowrap;
+            box-shadow: 0 7px 9px -4px rgb(0 0 0 / 13%), 0 14px 21px 2px rgb(0 0 0 / 8%), 0 5px 26px 4px rgb(0 0 0 / 7%);
+        }
+
+        .CallToActionBlock_textInner___i1hw p {
+            margin-bottom: 40px;
+            max-width: 440px;
+            color: #454cc1;
+        }
+
+        .ContactUsButton_isDark__g24jn:after {
+            background: linear-gradient(99deg, #7b75f4, #7486f4);
+        }
+
+
+        .ContactUsButton_link__I8uTt:after {
+            content: "";
+            position: absolute;
+            top: -7px;
+            right: 0;
+            width: 30px;
+            height: 30px;
+            border-radius: 0 10px 0 0;
+            -webkit-clip-path: url(#contactUsButtonBubbleClipPath);
+            clip-path: url(#contactUsButtonBubbleClipPath);
+            z-index: -1;
+        }
+
+
+        *,
+        :after,
+        :before {
+            box-sizing: border-box;
+            background-repeat: no-repeat;
+        }
+
+        .ContactUsButton_container__8_EOU {
+            display: inline-flex;
+            transform: translateZ(0);
+        }
+
+        .ContactUsButton_isDark__g24jn {
+            color: #fff !important;
+            background: #9237f6;
+            background: linear-gradient(135deg, #9237f6 0, #7190f4 100%);
+        }
+
+        .lets-do-it-button {
+            border: 0;
+            z-index: 1;
+            height: 50px;
+            width: 206px;
+            transition: 1s;
+            transform: none;
+            cursor: pointer;
+            position: relative;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #9237f6 0, #7190f4 100%);
+            box-shadow: rgb(0 0 0 / 13%) 0px 7px 9px -4px, rgb(0 0 0 / 8%) 0px 14px 21px 2px, rgb(0 0 0 / 7%) 0px 5px 26px 4px;
+        }
+
+
+        .top-right-corner {
+            top: -6px;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            background: linear-gradient(135deg, #9237f6 0, #7190f4 100%);
+            transform: rotate(-35deg);
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .button-content-text {
+            width: 75%;
+            height: 100%;
+            display: flex;
+            font-size: 17px;
+            cursor: pointer;
+            color: white;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .foooter-main-storage {
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        .DecorativeLines_svgContainer__UxzVK {
+            left: 50%;
+            bottom: 0;
+            position: absolute;
+            animation-name: block1;
+            animation-duration: 1500ms;
+            transform: translateX(-50%) translateZ(0);
+        }
+
+        .DecorativeLines_container__dQAzD {
+            height: 245px;
+            position: relative;
+            max-width: 100vw;
+            overflow: hidden;
+        }
+
+        .footer-svg-top {
+            opacity: 1;
+            color: #7a8eff;
+            transform: translateY(4%) scale(1) translateZ(0px) !important;
+        }
+
+        .footer-svg-center {
+            opacity: 1;
+            color: #7d58ff;
+            transform: translateY(4%) scale(1) translateZ(0px) !important;
+        }
+
+        .footer-svg-bottom {
+            opacity: 1;
+            color: #9237f6;
+            transform: translateY(4%) scale(1) translateZ(0px) !important;
+        }
+
+        .Footer_container__5d2_x {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            font-size: 14px;
+            background: #9237f6;
+            background: linear-gradient(180deg, #9237f6, #8d42f6, #884bf6, #8452f6, #8059f5, #7d60f3, #7a66f2, #786bf0);
+            overflow: hidden;
+        }
+
+        .Top_container__eI130 {
+            display: flex;
+            width: 100%;
+        }
+
+        .Footer_inner__RY4ud {
+            width: 100%;
+            max-width: 1440px;
+            padding: 60px 20px 20px;
+            color: #fff;
+        }
+
+        .Top_title__6z4Ur {
+            position: relative;
+            font-weight: 600;
+            font-family: 'QuickSand', sans-serif;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .LinkListItem_link__0BOYP {
+            cursor: pointer;
+            font-size: 15px;
+            overflow: hidden;
+            padding: 12px 0;
+            font-weight: 300;
+            color: var(--white);
+            vertical-align: top;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .Top_linkList__bau6S {
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .LinkListItem_arrowIcon__jdfqE {
+            top: -1px;
+            width: 17px;
+            height: 17px;
+            transition: 0.2s;
+            margin-right: 3px;
+            position: relative;
+        }
+
+        .Info_container__c22NI {
+            width: 30%;
+        }
+
+        .Top_extraItems__U4XYB {
+            width: 60%;
+        }
+
+        .Top_company__PhJZN {
+            width: 10%;
+        }
+
+        .Info_qualiSageLink__5syY5 {
+            display: block;
+            width: 180px;
+            padding: 7px 0;
+            margin-top: -7px;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .Info_aboutUs__i4f40 {
+            width: 260px;
+            margin-bottom: 15px;
+        }
+
+        .SocialLink_link__Ru2wq {
+            padding: 10px;
+            color: #fff;
+            transition: 0.2s;
+            display: inline-block;
+        }
+
+        .SocialLink_link__Ru2wq:hover{
+           transform: scale(1.1) !important;
+        }
+        
+        .SocialLink_link__Ru2wq_first {
+            color: #fff;
+            padding-left: 0;
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .SocialLink_link__Ru2wq svg {
+            width: 30px;
+            height: 30px;
+        }
+
+        .first-footer-sosial-icon {
+            padding-left: 0;
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+        }
+
+        .Email_link__ZMVsa {
+            overflow: hidden;
+            margin-bottom: 10px;
+            padding: 15px 0;
+            color: #fff;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .Email_icon__cVwSi {
+           width: 0;
+           flex: 0 0 0;
+           height: 22px;
+           transition: 0.2s;
+           position: relative;
+           margin-right: 5px;
+        }
+
+        .Email_inner__54Qz3 {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .adress-title-footer {
+            margin-top: 20px;
+        }
+
+        .ExternalLink_container__0KtGC {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .ExternalLink_container__0KtGC a {
+            display: block;
+            padding: 15px 0;
+            opacity: .9;
+        }
+
+        .clutech-svg-left {
+            width: 70px;
+            height: 20px;
+            color: white;
+            transition: 0.2s;
+        }
+
+        .clutech-svg-right {
+            height: 20px;
+            color: white;
+            margin-left: 20px;
+            transition: 0.2s;
+        }
+
+        .LinkListItem_inner__wIPAE{
+            cursor: pointer;
+        }
+
+        .Top_extraItems__U4XYB {
+            display: flex;
+            order: 0;
+            flex: 1 1;
+            width: auto;
+            grid-column-gap: 20px;
+            margin-top: 0;
+            margin-right: 20px;
+        }
+
+        .footer-center-child-right {
+            width: 40%;
+        }
+
+        .footer-center-child-left {
+            width: 40%;
+        }
+
+        .Bottom_container__Mgtkm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 2px solid rgba(255, 255, 255, .25);
+            text-align: center;
+        }
+
+        .Bottom_copyright__U4Q_M {
+            margin-bottom: 20px;
+        }
+
+        .Bottom_container__Mgtkm {
+            display: flex;
+            width: 100%;
+            margin-top: 60px;
+            padding-top: 20px;
+            text-align: center;
+            align-items: center;
+            border-top: 2px solid rgba(255, 255, 255, .25);
+        }
+
+        .LinkWithAnimatedLine_link___GFMv:hover{
+            transition: 0.2s;
+           border-bottom: 4px solid white;
+        }
+
+        .Bottom_legal__sF5Y_ {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .Bottom_legal__sF5Y_ li {
+            color: white;
+            list-style: none;
+            position: relative;
+            margin-right: 10px;
+            padding-right: 10px;
+            text-decoration: none;
+        }
+
+        .Bottom_legal__sF5Y_ li a {
+            padding: 16px 5px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .bottom-titles-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .LinkListItem_arrowIcon__jdfqE{
+            width: 0;
+            opacity: 0;
+        }
+
+
+        @media(min-width: 1366px) {
+            .Project_textContainer__Cx9od {
+                left: 90% !important;
+                width: 130% !important;
+            }
+        }
+
+        @media(max-width: 1280px){
+            .foooter-main-storage {
+                width: 100vw;
+            }
+        }
+
+
+        @media(min-width: 1200px) {
+            .Project_textContainer__Cx9od {
+                left: 90% !important;
+                width: 100% !important;
+            }
+        }
+
+        @media(max-width: 1024px){
+            .Industries_inner__THS7L{
+                flex-direction: column;
+            }
+
+            .Industries_text__FhxgH{
+                width: 100%;
+            }
+
+            .Industries_list__kDbrF{
+                width: 100%;
+                margin-top: 50px;
+            }
+
+            .paragraph-1{
+                max-width: 90%;
+            }
+
+            .SMEs_container__Iyo3O{
+                grid-template-columns: 1fr;
+            }
+
+            .Startups_planets__8nheI>span:first-child{
+                bottom: 30vw !important;
+                transform: scale(1.5);
+            }
+
+            .Startups_planets__8nheI>span:nth-child(3){
+                left: 62vw;
+                bottom: 58vw;
+                transform: scale(2);
+            }
+
+            .Startups_planets__8nheI>span:nth-child(4) {
+                width: 9vw !important;
+                bottom: 74vw;
+                right: -4vw;
+                transform: scale(2);
+            }
+
+            .Startups_planets__8nheI>span:nth-child(2) {
+              width: 18vw !important;
+              bottom: 0vw;
+              right: 3.7vw;
+              transform: scale(1.5);
+            
+            }
+
+            .Startups_rocket__Djzld{
+              transform: scale(1.5);
+            }
+        }
+
+        @media(min-width: 1024px) {
+            .Project_textContainer__Cx9od {
+                left: 90% !important;
+                width: 100% !important;
+            }
+
+            .Startups_backgroundSvg__baMY0 {
+               left: 0;
+               width: 100%;
+            }
+
+            
+            .Startups_content__BB7zK {
+                left: 0;
+                width: 45%;
+                margin-bottom: 0;
+                position: absolute;
+            }
+
+            .Startups_foregroundContainer__D921_ {
+               left: 0;
+               width: 100%;
+               padding-top: 58.4375%;
+            }
+
+            .Startups_rocket__Djzld{bottom: 11.7vw;
+               left: 47.5vw;
+               width: 23vw;
+               transform: rotate(-7deg);
+            }
+
+        }
+
+        @media(max-width: 960px){
+            .nav-child-center{
+                display: none;
+            }
+
+            .navbar-button-container{
+                display: none;
+            }
+
+            .logo-continer{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .Top_container__eI130 {
+                display: block;
+                width: 100%;
+            }
+            
+            .Info_container__c22NI {
+                display: flex;
+                width: 100%;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+
+            .Top_extraItems__U4XYB{
+                margin-top: 60px;
+                width: 100%;
+            }
+
+            .footer-center-child-left{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-center-child-right{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .Top_company__PhJZN{
+                width: 100%;
+                margin-top: 60px;
+            }
+
+            .Top_title__6z4Ur{
+                display: flex;
+                justify-content: center;
+            }
+
+            .Top_linkList__bau6S-bottom{
+                display: flex;
+                flex-direction: row !important;
+                justify-content: space-around;
+            }
+
+            .Top_linkList__bau6S li span{
+                text-align: left;
+            }
+        }
+
+        @media(min-width: 960px) {
+            .ListItem_container___G2YW>li>a {
+                max-width: 500px;
+            }
+
+            .Project_textContainer__Cx9od {
+                left: 90% !important;
+                width: 100% !important;
+            }
+
+            .Project_name___NOut {
+                font-size: 32px;
+            }
+            
+        }
+
+        @media(min-width: 920px){
+
+          .Startups_content__BB7zK {
+             width: 55%;
+             margin-bottom: -25vw;
+           }
+        }
+
+
+        @media(min-width: 850px) {
+
+            .CallToActionBlock_section__eu5MM {
+                margin-top: 60px;
+            }
+
+            .CallToActionBlock_inner__qRDBL {
+                flex-direction: row;
+            }
+
+            .CallToActionBlock_textContainer__AuxD4 {
+                text-align: left;
+            }
+        }
+
+        @media(max-width: 768px){
+            .Industries_list__kDbrF{
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media(min-width: 768px) {
+            .Project_textContainer__Cx9od {
+                top: 65%;
+                left: 80%;
+            }
+
+            .BottomLines_container__mi8yp {
+                filter: drop-shadow(0 -15px 15px rgba(0, 0, 0, .2));
+            }
+
+            .CallToActionBlock_imageContainer__aSxSu {
+                filter: drop-shadow(3px 3px 3px rgba(159, 159, 195, .3));
+            }
+
+            .Startups_rocket__Djzld{
+                filter: drop-shadow(0 15px 15px rgba(0,0,0,.3));
+            }
+            
+            .Startups_planets__8nheI>span {
+               filter: drop-shadow(0 15px 15px rgba(0,0,0,.3));
+                will-change: filter;
+            }
+            
+        }
+
+        @media(min-width: 750px) {
+
+            .CallToActionBlock_section__eu5MM {
+                margin-bottom: -70px;
+            }
+        }
+
+        @media(min-width: 690px) {
+            .ListItem_container___G2YW>li>a {
+                max-width: 350px;
+            }
+
+            .Project_textContainer__Cx9od {
+                top: 85%;
+                left: 60%;
+                width: 120%;
+            }
+
+            .Project_name___NOut {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            .SectionTitleH2_isLong__Gxx_w {
+                font-size: 48px;
+            }
+
+        }
+
+        @media (min-width: 640px) {
+            .SectionTitleH2_isLong__Gxx_w {
+                font-size: 44px;
+            }
+        }
+
+        @media(max-width: 570px) {
+            .ListItem_itemNumber__seuqQ span {
+                display: none;
+            }
+        }
+
+        @media(min-width: 570px) {
+            .ListItem_itemNumber__seuqQ span {
+                display: block;
+            }
+
+        }
+
+        @media(min-width: 530px) {
+            .Project_textContainer__Cx9od {
+                top: 90%;
+                left: 37%;
+                width: 84%;
+            }
+        }
+
+        @media(max-width: 500px){
+            .footer-center-child-left{
+                align-items: start !important;
+            }
+        }
+
+        @media (min-width: 490px) {
+
+            .CallToActionBlock_textInner___i1hw h2 {
+                font-size: 44px;
+            }
+        }
+
+        @media (min-width: 450px) {
+            .SectionTitleH2_isLong__Gxx_w {
+                font-size: 35px;
+            }
+        }
+
+        @media(max-width: 425px) {
+            .Project_textContainer__Cx9od {
+                left: -50px;
+            }
+
+        }
+
+        @media(min-width: 425px) {
+            .Project_textContainer__Cx9od {
+                left: 0;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-child nav-child-side logo-continer">
+            <a href="" style="border-radius: 100%; padding: 10px; height: 80px; width: 80px; z-index: 3; display: flex; justify-content: center; align-items: center; position: relative;">
+                <img src="./Assets/image (2).a2153f2b55833bcab60c.webp" alt="" style="height: 70px; width: 110px; display: flex; align-items: center; z-index: 3;">
+                <img src="./Assets/logoback.webp" alt="" style="position: absolute; height: 80px; width: 120px;">
+            </a>
+        </div>
+        <div class="nav-child nav-child-center">
+            <ul class="navbar-items">
+                <li class="navbar-list-items">Services</li>
+                <li class="navbar-list-items">Industries</li>
+                <li class="navbar-list-items">Projects</li>
+                <li class="navbar-list-items">Process</li>
+                <li class="navbar-list-items">About</li>
+            </ul>
+        </div>
+        <div class="nav-child nav-child-side navbar-button-container">
+            <button class="lets-do-it-button">
+                <div class="top-right-corner"></div>
+                <h6 class="button-content-text">LET'S DO IT</h6>
+                <svg class="airplane-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.21 91.02" width="32" height="44">
+                    <path fill="#ffffff" d="M10.23 77.4q6.06-10 7.23-9.45 1.67.77-6.67 23.07 15.24-18.14 16.67-17.1 1 .72-4.72 10.77a31.65 31.65 0 0 0 9.24-6.88c2-2.19 4.27-4.61 5.35-8.54a13.19 13.19 0 0 0-.14-9 12.45 12.45 0 0 0-6.74-6.6 12.82 12.82 0 0 0-9.66.35c-3.28 1.54-4.87 4.15-6.32 6.6a32.22 32.22 0 0 0-4.24 16.78Z">
+                    </path>
+                    <path fill="#ffffff" d="M13.84 68.15c4.45-6 5.33-5.45 6.19-5.14 1.54.56 1.88 4.5-4 19.11 9.77-12.25 13.31-15.1 14.62-14.24 1 .64 1.61 2.18-2.22 10.32.92-.36 6.82-2.73 8.89-8.93a12.59 12.59 0 0 0-.14-9 12.4 12.4 0 0 0-6.74-6.6 12.8 12.8 0 0 0-9.66.35c-4.75 2.35-7.58 8-6.94 14.13Z">
+                    </path>
+                    <path fill="#ffffff" d="M24.65 49.46c3.81-1.3 7.16-4.87 13.86-12 4.75-5.07 7-8.18 7.82-7.72s-.52 3.6-2.19 9c-3.23 10.41-4.82 15.63-4.1 19.61 1 5.24 4.25 9 9 14.43 3.18 3.64 4.77 5.47 5.94 5.42 5.86-.27 7.7-22.77 10.84-61 .61-7.35 1.09-14.43-2.6-16.58-3.95-2.3-10.35 2.23-18.57 8.22C2.4 39.37-1.02 43.94.19 46.4c.6 1.23 3.43 1.71 9.1 2.68 6.96 1.18 10.96 1.86 15.36.38Zm-8.47 8.69a14.3 14.3 0 0 0-1 3.62 8.92 8.92 0 0 0 .19 2.38c3.43-3.83 5.72-5.46 6.88-4.86q2.29 1.17-1.25 13.76c7.58-8.29 10.51-9.5 11.65-8.79 1 .61 1.3 3-.77 9.66a9.49 9.49 0 0 0 5-4 9.62 9.62 0 0 0 1.2-5.89 11.81 11.81 0 0 0-9.23-10.77c-7.8-1.63-11.99 3.49-12.67 4.89Z">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+    <section class="Intro_section__nsFpO" aria-labelledby="title" data-section-mode="dark"><span
+            style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                alt="" sizes="100vw" src="./Assets/projects.webp" decoding="async" data-nimg="fill"
+                class="PageIntroBackgroundImage_image__qJwSi"
+                style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"></span>
+        <div class="Intro_text__r2_tn">
+            <h1 id="title">Projects</h1>
+            <p>Our clients are companies of different sizes, all led by great entrepreneurs with a strategic vision for
+                the future. We help them transform the way they work by constantly delivering value to their businesses,
+                making them and the people around them confident and happy.</p>
+        </div>
+        <div class="PageIntroBottomLines_container__sqVVV">
+            <div class="PageIntroBottomLines_lineContainer__CRMUm"><svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 2558.055 536.989" fill="currentColor">
+                    <path
+                        d="M2253.895 485.774c-94.695 10.316-133.53-84.154-278.23-115.567-200.496-43.527-264.278 107.815-493 138.69-366.488 49.473-492.9-299.923-812.036-210.997-105.154 29.3-218.769 102.716-356.942 56.71-56.095-18.677-95.894-50.264-124.54-73.39C73.647 187.978 22.709 69.29 0 0v536.989h2558.055V0c-105.723 381.101-217.293 476.312-304.16 485.774Z">
+                    </path>
+                </svg></div>
+            <div class="PageIntroBottomLines_lineContainer__CRMUm"
+                style="opacity: 1; transform: translateY(0%) translateZ(0px);"><svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 2558.055 536.989" fill="currentColor">
+                    <path
+                        d="M2253.895 485.774c-94.695 10.316-133.53-84.154-278.23-115.567-200.496-43.527-264.278 107.815-493 138.69-366.488 49.473-492.9-299.923-812.036-210.997-105.154 29.3-218.769 102.716-356.942 56.71-56.095-18.677-95.894-50.264-124.54-73.39C73.647 187.978 22.709 69.29 0 0v536.989h2558.055V0c-105.723 381.101-217.293 476.312-304.16 485.774Z">
+                    </path>
+                </svg></div>
+        </div>
+    </section>
+    <section class="OurFocus_section__gmfR6" aria-labelledby="our-focus-title" data-section-mode="mixed">
+        <h2 class="SectionTitleH2_heading__g73_o SectionTitleH2_isShort__o6gRz" id="our-focus-title">Our Focus</h2>
+        <ul class="OurFocus_list__0oDSj">
+            <li class="OurFocus_industriesContainer__SrXpt" data-subsection-mode="light">
+                <div class="Industries_container__XgDtO">
+                    <div class="Industries_inner__THS7L">
+                        <div class="Industries_text__FhxgH">
+                            <h3 class="SectionSubtitleH3_heading__KHtfF">Industries</h3>
+                            <p class="paragraph-1">Explore the industries we focus on and what types of software we
+                                build for companies that
+                                operate in them. We have a team of experienced IT specialists that have worked on other
+                                projects within those sectors and know the challenges you're facing. At QualiSage we
+                                love challenges and we can support you and build a custom software application even if
+                                your company is in another field, so let's get started.</p>
+                            <button class="book-and-meeteng-button">Book a Meeting Now</button>
+                        </div>
+                        <ul class="Industries_list__kDbrF">
+                            <li><a class="DropdownListItemBox_link___tTop" aria-label="Renewable Energy"
+                                    href="/industries/renewable-energy">
+                                    <div class="DropdownListItemBox_shadowEffect___RbrS" style="opacity:0"></div>
+                                    <div class="DropdownListItemBox_backgroundEffect__gCxMg" style="opacity:0"></div>
+                                    <div class="Icon_container__oi4Ze">
+                                        <div class="Icon_colorPad__42cv5"
+                                            style="transform:translateX(0px) translateY(0px) rotateY(-8deg) translateZ(0)">
+                                            <div class="Icon_glass__jHtwP" style="transform:none"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                                    fill="currentColor" width="38" height="38">
+                                                    <path
+                                                        d="M24 4.008a13.981 13.981 0 0 0-9.611 24.152 2.36 2.36 0 0 1 .658 1.205l2.467 11.104a4.513 4.513 0 0 0 4.392 3.523h4.188a4.514 4.514 0 0 0 4.392-3.523l2.47-11.106a2.34 2.34 0 0 1 .655-1.2v-.003A13.98 13.98 0 0 0 24 4.008Zm-4.854 29.984-1.171-5.28a5.345 5.345 0 0 0-1.526-2.732v-.002a11.001 11.001 0 1 1 15.104 0 5.33 5.33 0 0 0-1.528 2.737l-1.171 5.277m-9.04 3h8.372l-.627 2.826a1.487 1.487 0 0 1-1.465 1.174h-4.188a1.484 1.484 0 0 1-1.465-1.174Zm9.148-26.538c-5.212 0-9.272 2.88-10.827 6.548s-.37 8.194 4.33 10.725a1.004 1.004 0 0 0 .242.095 15.662 15.662 0 0 0 .64 2.07 1.004 1.004 0 0 0 1.881-.7l-.018-.045a11.132 11.132 0 0 1-.632-7.224 6.804 6.804 0 0 1 1.14-2.464 1.004 1.004 0 1 0-1.54-1.287l-.001.001a9.365 9.365 0 0 0-1.535 3.222 11.847 11.847 0 0 0-.382 3.703c-2.82-2.09-3.34-4.803-2.277-7.312a9.254 9.254 0 0 1 7.434-5.112 8.294 8.294 0 0 0 .141 3.57 30.026 30.026 0 0 1 .945 4.038 4.512 4.512 0 0 1-2.102 3.719 1.004 1.004 0 1 0 1.056 1.706l.052-.034a6.52 6.52 0 0 0 3-5.391 20.594 20.594 0 0 0-.996-4.496c-.347-1.481-.418-2.751.276-3.76a1.004 1.004 0 0 0-.827-1.572Z">
+                                                    </path>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                    <div class="DropdownListItemBox_label__QkNN8">Renewable Energy<span
+                                            class="ActiveMenuItemLine_container__g9Rjq DropdownListItemBox_activeMenuItemLine__1ht7D"><span
+                                                class="ActiveMenuItemLine_line__hToOK"
+                                                style="opacity:0;transform:scaleX(0) translateZ(0)"></span></span></div>
+                                </a></li>
+                            <li><a class="DropdownListItemBox_link___tTop" aria-label="Manufacturing"
+                                    href="/industries/manufacturing">
+                                    <div class="DropdownListItemBox_shadowEffect___RbrS" style="opacity:0"></div>
+                                    <div class="DropdownListItemBox_backgroundEffect__gCxMg" style="opacity:0"></div>
+                                    <div class="Icon_container__oi4Ze">
+                                        <div class="Icon_colorPad__42cv5"
+                                            style="transform:translateX(0px) translateY(0px) rotateY(-8deg) translateZ(0)">
+                                            <div class="Icon_glass__jHtwP" style="transform:none"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                                    fill="currentColor" width="38" height="38">
+                                                    <path
+                                                        d="M10.342 5a4.522 4.522 0 0 0-4.494 4.258l-1.676 31C4.035 42.813 6.108 45 8.668 45h5.666c2.56 0 4.631-2.187 4.494-4.742l-1.676-31a1.5 1.5 0 0 0 0-.002C17.022 6.884 15.034 5 12.658 5h-2.316zm0 3h2.316a1.48 1.48 0 0 1 1.498 1.42l1.676 30.998A1.477 1.477 0 0 1 14.334 42H8.668c-.881 0-1.546-.7-1.5-1.58v-.002L8.844 9.42a1.5 1.5 0 0 0 0-.002A1.479 1.479 0 0 1 10.342 8zm18.344 3.012a1.501 1.501 0 0 0-1.198.38l-7.832 7.141.21 3.87L27 15.895V24.5c0 .586.341 1.117.873 1.361.533.246 1.159.16 1.604-.222L41 15.762V40.5c0 .827-.673 1.5-1.5 1.5H38v-7.5c0-2.468-2.032-4.5-4.5-4.5h-7c-2.468 0-4.5 2.032-4.5 4.5V42h-1.35a6.522 6.522 0 0 1-1.597 2.97l-.032.03H39.5c2.481 0 4.5-2.019 4.5-4.5v-28a1.5 1.5 0 0 0-2.477-1.139L30 21.238V12.5a1.5 1.5 0 0 0-1.314-1.488zM26.5 33h7c.846 0 1.5.654 1.5 1.5V42H25v-7.5c0-.846.654-1.5 1.5-1.5z">
+                                                    </path>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                    <div class="DropdownListItemBox_label__QkNN8">Manufacturing<span
+                                            class="ActiveMenuItemLine_container__g9Rjq DropdownListItemBox_activeMenuItemLine__1ht7D"><span
+                                                class="ActiveMenuItemLine_line__hToOK"
+                                                style="opacity:0;transform:scaleX(0) translateZ(0)"></span></span></div>
+                                </a></li>
+                            <li><a class="DropdownListItemBox_link___tTop" aria-label="Ecommerce &amp; Retail"
+                                    href="/industries/e-commerce-and-retail">
+                                    <div class="DropdownListItemBox_shadowEffect___RbrS" style="opacity:0"></div>
+                                    <div class="DropdownListItemBox_backgroundEffect__gCxMg" style="opacity:0"></div>
+                                    <div class="Icon_container__oi4Ze">
+                                        <div class="Icon_colorPad__42cv5"
+                                            style="transform:translateX(0px) translateY(0px) rotateY(-8deg) translateZ(0)">
+                                            <div class="Icon_glass__jHtwP" style="transform:none"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                                    fill="currentColor" width="38" height="38">
+                                                    <path
+                                                        d="M16.753 40H9.5a1.501 1.501 0 0 1-1.492-1.654l2.5-24A1.497 1.497 0 0 1 12 13h2v3.5a1.5 1.5 0 1 0 3 .042V11c0-3.331 2.669-6 6-6a5.97 5.97 0 0 1 5.912 5h-9.78c-.083.32-.132.654-.132 1v2h10v3.5a1.5 1.5 0 1 0 3 .042V11c0-4.953-4.047-9-9-9-4.615 0-8.44 3.514-8.941 8H12a4.49 4.49 0 0 0-4.477 4.033l-2.5 24a4.51 4.51 0 0 0 1.133 3.48A4.507 4.507 0 0 0 9.5 43h7.323l-.07-3ZM41.54 24.251l-1.062-10.218A4.49 4.49 0 0 0 36 10h-2.047c.031.33.047.664.047 1v2h2c.771 0 1.412.579 1.492 1.346l1.033 9.905h3.014Zm3.747 5.817v10.76a4.119 4.119 0 0 1-4.114 4.114H22.816a4.119 4.119 0 0 1-4.114-4.114v-10.76a4.119 4.119 0 0 1 4.114-4.114h18.356a4.119 4.119 0 0 1 4.114 4.114Zm-17.723 2.849V31.65c0-.7-.566-1.266-1.265-1.266h-2.532c-.7 0-1.266.566-1.266 1.266v1.266c0 .699.566 1.266 1.266 1.266h2.532c.699 0 1.265-.567 1.265-1.266Zm-1.265 6.645a.95.95 0 0 0-.95-.949H23.45a.95.95 0 0 0 0 1.899h1.9a.95.95 0 0 0 .949-.95Zm5.063 0a.95.95 0 0 0-.95-.949h-1.898a.95.95 0 0 0 0 1.899h1.899a.95.95 0 0 0 .95-.95Zm5.064 0a.95.95 0 0 0-.95-.949h-1.899a.95.95 0 0 0 0 1.899h1.9a.95.95 0 0 0 .949-.95Zm5.063 0a.95.95 0 0 0-.95-.949H38.64a.95.95 0 0 0 0 1.899h1.899a.95.95 0 0 0 .95-.95Zm0-8.228a.95.95 0 0 0-.95-.95h-8.227a.95.95 0 0 0 0 1.9h8.228a.95.95 0 0 0 .95-.95Z">
+                                                    </path>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                    <div class="DropdownListItemBox_label__QkNN8">Ecommerce &amp; Retail<span
+                                            class="ActiveMenuItemLine_container__g9Rjq DropdownListItemBox_activeMenuItemLine__1ht7D"><span
+                                                class="ActiveMenuItemLine_line__hToOK"
+                                                style="opacity:0;transform:scaleX(0) translateZ(0)"></span></span></div>
+                                </a></li>
+                            <li><a class="DropdownListItemBox_link___tTop" aria-label="Real Estate &amp; PropTech"
+                                    href="/industries/real-estate-and-proptech">
+                                    <div class="DropdownListItemBox_shadowEffect___RbrS" style="opacity:0"></div>
+                                    <div class="DropdownListItemBox_backgroundEffect__gCxMg" style="opacity:0"></div>
+                                    <div class="Icon_container__oi4Ze">
+                                        <div class="Icon_colorPad__42cv5"
+                                            style="transform:translateX(0px) translateY(0px) rotateY(-8deg) translateZ(0)">
+                                            <div class="Icon_glass__jHtwP" style="transform:none"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                                    fill="currentColor" width="38" height="38">
+                                                    <path
+                                                        d="M17.16 4.002a4.981 4.981 0 0 0-3.201 1.03A5.003 5.003 0 0 0 12 9v18H8.5C5.475 27 3 29.475 3 32.5v10A1.5 1.5 0 0 0 4.5 44h39a1.5 1.5 0 0 0 1.5-1.5v-17c0-3.025-2.475-5.5-5.5-5.5H35v-7.5a5.013 5.013 0 0 0-3.7-4.828l-13-3.5a5.001 5.001 0 0 0-1.14-.17zm-.092 3c.153.004.304.027.452.066l13 3.5A2 2 0 0 1 32 12.5V41H22v-8.5c0-3.025-2.475-5.5-5.5-5.5H15V9c0-.608.3-1.218.785-1.59a2.033 2.033 0 0 1 1.283-.408zM19 13a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1h-2zm7 0a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1h-2zm-7 7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1h-2zm7 0a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1h-2zm0 7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1h-2zm12 0h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zM8 34h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zm7 0h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zm11 0a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1h-2zm12 0h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1z">
+                                                    </path>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                    <div class="DropdownListItemBox_label__QkNN8">Real Estate &amp; PropTech<span
+                                            class="ActiveMenuItemLine_container__g9Rjq DropdownListItemBox_activeMenuItemLine__1ht7D"><span
+                                                class="ActiveMenuItemLine_line__hToOK"
+                                                style="opacity:0;transform:scaleX(0) translateZ(0)"></span></span></div>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="OurFocus_smesContainer___Cgr7" data-subsection-mode="light" style="margin: 100px 0 0">
+                <div class="SMEs_container__Iyo3O">
+                    <div class="SMEs_imageContainer__ftlnJ"><span
+                            style="box-sizing:border-box;display:block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative"><span
+                                style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;padding-top:75.050916496945%"></span><img
+                                alt="" src="./Assets/smes.webp"
+                                style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
+                                sizes="(min-width: 1024px) 51vw, 100vw" src="./Assets/smes.webp"
+                                style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
+                                loading="lazy" /></noscript></span></div>
+                    <div class="SMEs_content__K_Pz9">
+                        <h3 class="SectionSubtitleH3_heading__KHtfF">SMEs</h3>
+                        <p class="paragraph-1">As part of a small or medium-sized business, you are facing challenges in
+                            your day-to-day
+                            work. Having a flexible and reliable software partner is key to your organization's success
+                            and sustainable growth. We build software solutions that digitalize your business, automate
+                            your internal processes, boost your team's productivity and give you more control over your
+                            goals.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="OurFocus_startupsContainer__4kabD" data-subsection-mode="dark" style="overflow: hidden;">
+                <div class="Startups_container__gdn0K">
+                    <div class="Startups_content__BB7zK">
+                        <h3 class="SectionSubtitleH3_heading__KHtfF">Startups</h3>
+                        <p class="paragraph-1">Whether you are just starting up with your great idea and want quick time
+                            to market by
+                            building an MVP (Minimum Viable Product), or you already have an MVP and want to turn it
+                            into something bigger and greater - we can make it all happen. Using an agile mindset and an
+                            iterative approach, we strive for continuous improvement of your product.</p>
+                    </div>
+                    <div style="position: relative;">
+                        <svg class="Startups_backgroundSvg__baMY0" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 1600 960">
+                            <defs>
+                                <linearGradient id="ourFocusStartupsBackgroundLinearGradient"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#8074f1"></stop>
+                                    <stop offset="1" stop-color="#9186f3"></stop>
+                                </linearGradient>
+                                <filter id="ourFocusStartupsInsetShadow" x="-50%" y="-50%" width="200%" height="200%">
+                                    <feComponentTransfer in="SourceAlpha">
+                                        <feFuncA type="table" tableValues="1 0"></feFuncA>
+                                    </feComponentTransfer>
+                                    <feGaussianBlur stdDeviation="4"></feGaussianBlur>
+                                    <feOffset dx="0" dy="2" result="offsetblur"></feOffset>
+                                    <feFlood flood-color="rgb(0, 0, 0)" result="color"></feFlood>
+                                    <feComposite in2="offsetblur" operator="in"></feComposite>
+                                    <feComposite in2="SourceAlpha" operator="in"></feComposite>
+                                    <feMerge>
+                                        <feMergeNode in="SourceGraphic"></feMergeNode>
+                                        <feMergeNode></feMergeNode>
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            <path
+                                d="M1601.46622,960c-247.99378-65.4886-297.916-123.91344-299.29346-164.4668-2.7522-81.03112,187.7854-106.247,204.50183-222.65675,18.57764-129.37054-201.26184-206.08155-173.92261-336.18859,12.99146-61.82612,77.15589-113.61649,139.55213-132.07728,57.90747-17.13274,108.046-3.71077,129.16211,3.32968V21.36858c-210.92713-47.73442-321.985-7.45654-384.915,42.17594-94.90869,74.85388-96.569,183.77871-191.53662,209.21759C923.34878,299.9952,859.24594,192.8444,783.43918,226.978,692.7496,267.813,747.44852,437.84675,652.22684,493.3582c-84.95563,49.52663-168.77991-62.3357-337.48261-28.58728-96.70816,19.34616-160.0116,74.27939-179.305,91.43636C-23.8317,697.84128-2.01217,928.41016,1.46623,960Z"
+                                fill="url(#ourFocusStartupsBackgroundLinearGradient)"
+                                filter="url(#ourFocusStartupsInsetShadow)"></path>
+                        </svg>
+                        <div class="Startups_foregroundContainer__D921_">
+                            <div class="Startups_foreground__7ndlz"><svg class="Startups_foregroundSvg__tcMDu"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 935">
+                                    <defs>
+                                        <linearGradient id="ourFocusStartupsForegroundLinearGradient"
+                                            gradientUnits="userSpaceOnUse">
+                                            <stop offset="0" stop-color="#9237f6"></stop>
+                                            <stop offset="0.14285714285714285" stop-color="#8d42f6"></stop>
+                                            <stop offset="0.2857142857142857" stop-color="#884bf6"></stop>
+                                            <stop offset="0.42857142857142855" stop-color="#8452f6"></stop>
+                                            <stop offset="0.5714285714285714" stop-color="#8059f5"></stop>
+                                            <stop offset="0.7142857142857142" stop-color="#7d60f3"></stop>
+                                            <stop offset="0.8571428571428571" stop-color="#7a66f2"></stop>
+                                            <stop offset="1" stop-color="#786bf0"></stop>
+                                        </linearGradient>
+                                    </defs>
+                                    <path
+                                        d="M1600,935c-257.69116-55.08882-321.22864-115.07536-325.64783-162.68207-7.25122-78.115,146.19519-106.41547,161.533-226.4504,17.06873-133.58136-158.13269-214.61827-122.09643-341.76668,14.77819-52.14275,57.04589-83.68724,74.21325-96.49927C1476.75769,41.36293,1582.82739,65.89115,1600,70.1539V6.70535c-223.05615-25.97242-335.35852,27.96991-396.88513,85.20956-68.577,63.79888-79.09754,136.36712-163.974,165.76471-99.25025,34.376-156.6308-39.99537-230.986,0C723.64,303.13991,768.06079,415.20575,682.14117,477.56277c-78.8125,57.19894-147.6051-14.29294-306.16677,30.31891C276.92709,535.749,211.785,589.52547,185.61972,611.58155,53.28654,723.13219,13.00314,871.907,0,935Z"
+                                        fill="url(#ourFocusStartupsForegroundLinearGradient)"
+                                        filter="url(#ourFocusStartupsInsetShadow)"></path>
+                                </svg><span
+                                    style="box-sizing:border-box;display:block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative"><span
+                                        style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;padding-top:58.4375%"></span><img
+                                        alt="" src="./Assets/stars-background.webp" decoding="async"
+                                        data-nimg="responsive"
+                                        style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"><noscript><img
+                                            alt="" sizes="100vw"
+                                            srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fstars-background.92ababaa.webp&amp;w=640&amp;q=80 640w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fstars-background.92ababaa.webp&amp;w=750&amp;q=80 750w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fstars-background.92ababaa.webp&amp;w=828&amp;q=80 828w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fstars-background.92ababaa.webp&amp;w=1080&amp;q=80 1080w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fstars-background.92ababaa.webp&amp;w=1200&amp;q=80 1200w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fstars-background.92ababaa.webp&amp;w=1920&amp;q=80 1920w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fstars-background.92ababaa.webp&amp;w=2048&amp;q=80 2048w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fstars-background.92ababaa.webp&amp;w=3840&amp;q=80 3840w"
+                                            src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fstars-background.92ababaa.webp&amp;w=3840&amp;q=80"
+                                            decoding="async" data-nimg="responsive"
+                                            style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
+                                            loading="lazy" /></noscript></span></div>
+                        </div>
+                        <div class="Startups_rocket__Djzld">
+                            <div style="opacity: 1; transform: none;">
+                                <div
+                                    style="transform: translateX(3.82593px) translateY(-2.73281px) scale(0.975887) rotate(1.31375deg) translateZ(0px); height: 100%; width: 100%;">
+                                    <span
+                                        style="box-sizing:border-box;display:block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative; height: 100%; width: 100%;"><span
+                                            style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;padding-top:82.43243243243244%"></span><img
+                                            alt="" src="./Assets/rocket.webp" decoding="async" data-nimg="responsive"
+                                            style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"><noscript><img
+                                                alt="" sizes="(min-width: 1024px) 23vw, 37vw" src="./Assets/rocket.webp"
+                                                style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
+                                                loading="lazy" /></noscript></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Startups_smoke__Dut0a">
+                            <div style="opacity: 1; transform: none;">
+                                <div
+                                    style="transform: translateX(3.26142px) translateY(7.82742px) scaleX(1.02471) translateZ(0px);">
+                                    <span
+                                        style="box-sizing:border-box;display:block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative"><span
+                                            style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;padding-top:42.96875%"></span><img
+                                            alt="" src="./Assets/smoke.webp"
+                                            style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
+                                            sizes="(min-width: 1024px) 40vw, 54vw"
+                                            style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" /></noscript></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Startups_planets__8nheI" style="opacity: 1; transform: none;"><span
+                                style="box-sizing:border-box;display:block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative"><span
+                                    style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;padding-top:100%"></span><img
+                                    alt="" src="./Assets/planet-1.webp"
+                                    style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"></span><span
+                                style="box-sizing:border-box;display:block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative"><span
+                                    style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;padding-top:100%"></span><img
+                                    alt="" src="./Assets/planet-2.webp"
+                                    style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"></span><span
+                                style="box-sizing:border-box;display:block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative"><span
+                                    style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;padding-top:100%"></span><img
+                                    alt="" src="./Assets/planet-3.webp" decoding="async" data-nimg="responsive"
+                                    style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"></span><span
+                                style="box-sizing:border-box;display:block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative"><span
+                                    style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;padding-top:100%"></span><img
+                                    alt="" src="./Assets/planet-1.webp" decoding="async" data-nimg="responsive"
+                                    style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"><noscript><img
+                                        alt="" sizes="(min-width: 1024px) 9vw, 15vw"
+                                        srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fplanet-4.e8f01f93.webp&amp;w=64&amp;q=90 64w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fplanet-4.e8f01f93.webp&amp;w=96&amp;q=90 96w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fplanet-4.e8f01f93.webp&amp;w=128&amp;q=90 128w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fplanet-4.e8f01f93.webp&amp;w=256&amp;q=90 256w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fplanet-4.e8f01f93.webp&amp;w=384&amp;q=90 384w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fplanet-4.e8f01f93.webp&amp;w=640&amp;q=90 640w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fplanet-4.e8f01f93.webp&amp;w=750&amp;q=90 750w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fplanet-4.e8f01f93.webp&amp;w=828&amp;q=90 828w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fplanet-4.e8f01f93.webp&amp;w=1080&amp;q=90 1080w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fplanet-4.e8f01f93.webp&amp;w=1200&amp;q=90 1200w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fplanet-4.e8f01f93.webp&amp;w=1920&amp;q=90 1920w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fplanet-4.e8f01f93.webp&amp;w=2048&amp;q=90 2048w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fplanet-4.e8f01f93.webp&amp;w=3840&amp;q=90 3840w"
+                                        src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fplanet-4.e8f01f93.webp&amp;w=3840&amp;q=90"
+                                        decoding="async" data-nimg="responsive"
+                                        style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
+                                        loading="lazy" /></noscript></span></div><svg class="Startups_cloudsSvg__fHZfi"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 225" fill="currentColor">
+                            <defs>
+                                <filter id="ourFocusStartupsInnerGlow">
+                                    <feFlood flood-color="#d3dafd"></feFlood>
+                                    <feComposite in2="SourceAlpha" operator="out"></feComposite>
+                                    <feGaussianBlur stdDeviation="0" result="blur"></feGaussianBlur>
+                                    <feOffset dx="0" dy="5" result="blur"></feOffset>
+                                    <feComposite operator="atop" in2="SourceGraphic"></feComposite>
+                                </filter>
+                            </defs>
+                            <path
+                                d="M0,71.82005c7.78019-9.503,42.61926-49.9035,103.94981-58.91308C165.5136,3.86313,210.59126,32.79259,220.70656,39.65109,280.137-5.90335,357.06509-12.06356,412.52124,22.936c50.34933,31.77656,64.38644,85.7344,67.55212,99.56569a118.10244,118.10244,0,0,1,75.6139,6.75244c38.08081,17.03538,54.53222,48.9504,58.65637,57.611,3.30762-3.45532,40.5722-41.03812,95.07336-32.06982,52.14588,8.58079,75.86347,52.50172,78.3938,57.388a91.70238,91.70238,0,0,1,50.03864-18.56665c31.58923-1.74207,53.85485,13.8881,60.04632,18.56665,3.52106-6.29705,17.86121-30.22107,48.37067-41.35309a91.27818,91.27818,0,0,1,61.71429,0c3.606-11.52234,20.32349-60.47787,70.332-87.71775,72.99634-39.76146,147.593,4.511,151.22779,6.75245a113.841,113.841,0,0,1,131.2124-14.06764c6.13293-5.22024,30.77515-24.96261,67.55212-24.47758,40.51429.53432,66.10059,25.22493,71.166,30.32263,2.99145-1.40853,47.70044-21.64731,81.18994,2.40788A64.60031,64.60031,0,0,1,1600,106.66165V225H0Z"
+                                filter="url(#ourFocusStartupsInnerGlow)"></path>
+                        </svg>
+                    </div><svg width="0" height="0" aria-hidden="true">
+                        <defs>
+                            <clipPath id="ourFocusStartupsBackground" clipPathUnits="objectBoundingBox"
+                                transform="scale(0.000625, 0.0010695187165775)">
+                                <path
+                                    d="M1600,935c-257.69116-55.08882-321.22864-115.07536-325.64783-162.68207-7.25122-78.115,146.19519-106.41547,161.533-226.4504,17.06873-133.58136-158.13269-214.61827-122.09643-341.76668,14.77819-52.14275,57.04589-83.68724,74.21325-96.49927C1476.75769,41.36293,1582.82739,65.89115,1600,70.1539V6.70535c-223.05615-25.97242-335.35852,27.96991-396.88513,85.20956-68.577,63.79888-79.09754,136.36712-163.974,165.76471-99.25025,34.376-156.6308-39.99537-230.986,0C723.64,303.13991,768.06079,415.20575,682.14117,477.56277c-78.8125,57.19894-147.6051-14.29294-306.16677,30.31891C276.92709,535.749,211.785,589.52547,185.61972,611.58155,53.28654,723.13219,13.00314,871.907,0,935Z">
+                                </path>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section class="List_section__7ySxr" aria-labelledby="our-clients-title" data-section-mode="dark">
+        <h2 class="SectionTitleH2_heading__g73_o SectionTitleH2_isShort__o6gRz" id="our-clients-title">Our Clients</h2>
+        <p>Explore these hand-picked insights on some of our greatest collaborations and see how we bring ideas to life.
+        </p>
+        <div class="List_container__K_jcV">
+            <div class="TopLines_container__RsDGZ"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1690 315"
+                    fill="currentColor">
+                    <path
+                        d="M125.162 161.428c148.573 58.006 245.685-39.759 416.989-61.104 284.56-35.458 346.172 193.245 571.264 130.301C1280.507 183.9 1320.228 37.27 1482.15 40.441c88.425 1.732 160.279 47.099 207.849 86.07V0H0v74.136c26.176 28.108 67.358 64.724 125.162 87.292Z">
+                    </path>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1690 315" fill="currentColor"
+                    style="opacity: 1; transform: translateY(0%) translateZ(0px);">
+                    <path
+                        d="M172.118 245.71c150.98 39.34 230.745-130.017 421.74-138.639 227.374-10.264 285.508 222.028 477.034 192.28 175.297-27.228 212.144-235.108 394.749-245.932 95.263-5.647 175.421 45.584 224.359 84.788V0H0v90.948C31.088 146.7 85.72 223.199 172.118 245.71Z">
+                    </path>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1690 315" fill="currentColor"
+                    style="opacity: 1; transform: translateY(0%) translateZ(0px);">
+                    <path
+                        d="M149.81 255.334c144.678 54.102 235.426-88.02 439.043-97.397 247.522-11.399 297.293 189.787 494.549 148.733 167.212-34.801 200.034-194.32 383.212-211.135 94.135-8.642 174.005 25.358 223.386 52.401V0H0v109.295c26.838 50.643 73.167 117.378 149.81 146.039Z">
+                    </path>
+                </svg></div>
+            <div class="List_puzzleHands__jc_Wu">
+                <div style="position: relative; height: 100%; width: 100%;">
+                    <div
+                        style="transform: translateX(0%) translateZ(0px); position: absolute; height: 100%; width: 100%;">
+                        <span
+                            style="box-sizing:border-box;display:block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative"><span
+                                style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;padding-top:44.27083333333333%"></span><img
+                                alt="" src="./Assets/left-hand.webp"
+                                style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"></span>
+                    </div>
+                    <div class="List_rightHand__zyZrs"
+                        style="transform: translateX(0%) translateZ(0px); position: absolute; height: 100%; width: 100%;">
+                        <span
+                            style="box-sizing:border-box;display:block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative"><span
+                                style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;padding-top:44.27083333333333%"></span><img
+                                alt="" src="./Assets/right-hand.webp"
+                                style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="List_inner__25c_k">
+                <ul class="ListItem_container___G2YW">
+                    <li><a class="Project_link__GMf3U" aria-label="Read more about the website of Bounty Hunter World"
+                            href="/projects/bounty-hunter-world-website">
+                            <div class="Project_iconContainer__CqUDd"><span></span><svg
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor">
+                                    <path
+                                        d="M11 5C9.07 5 7.5 6.57 7.5 8.5S9.07 12 11 12s3.5-1.57 3.5-3.5S12.93 5 11 5zm26 0c-1.93 0-3.5 1.57-3.5 3.5S35.07 12 37 12s3.5-1.57 3.5-3.5S38.93 5 37 5zm-13 6c-7.168 0-13 5.832-13 13s5.832 13 13 13c3.044 0 5.84-1.06 8.059-2.82l8.38 8.38a1.5 1.5 0 1 0 2.122-2.12l-8.381-8.381A12.924 12.924 0 0 0 37 24c0-7.168-5.832-13-13-13zM6.5 14c-.83 0-1.5.67-1.5 1.5v1.62c0 1.6 1.83 3.2 4.33 3.71.56-2.59 1.79-4.92 3.5-6.83H6.5zm28.67 0c1.71 1.91 2.94 4.24 3.5 6.83 2.5-.51 4.33-2.11 4.33-3.71V15.5c0-.83-.67-1.5-1.5-1.5h-6.33zM24 16a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7zm-4.5 9h9a1.5 1.5 0 0 1 1.5 1.5v1.625C30 30.058 27.314 32 24 32s-6-1.942-6-3.875V26.5a1.5 1.5 0 0 1 1.5-1.5zM9.39 27.4a3.473 3.473 0 0 0-1.89 3.1c0 1.93 1.57 3.5 3.5 3.5.55 0 1.07-.13 1.53-.36a14.754 14.754 0 0 1-3.14-6.24zM6.5 36c-.83 0-1.5.67-1.5 1.5v1.62C5 41.06 7.69 43 11 43s6-1.94 6-3.88V37.5c0-.09-.01-.17-.03-.25A15.9 15.9 0 0 1 15.01 36H6.5z">
+                                    </path>
+                                </svg></div>
+                            <div class="Project_imageContainer__BeLxV" style="transform:none"><span
+                                    style="box-sizing:border-box;display:block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative"><span
+                                        style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;padding-top:90%"></span><img
+                                        alt="" src="./Assets/bounty-hunter-world-website.webp"
+                                        style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"><img
+                                        alt=""
+                                        sizes="(min-width: 570px) 50vw, (min-width: 768px) 35vw, (min-width: 960px) 50vw, (min-width: 1180px) 35vw, 70vw"
+                                        srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbounty-hunter-world-website.db3af053.webp&amp;w=256&amp;q=85 256w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbounty-hunter-world-website.db3af053.webp&amp;w=384&amp;q=85 384w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbounty-hunter-world-website.db3af053.webp&amp;w=640&amp;q=85 640w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbounty-hunter-world-website.db3af053.webp&amp;w=750&amp;q=85 750w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbounty-hunter-world-website.db3af053.webp&amp;w=828&amp;q=85 828w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbounty-hunter-world-website.db3af053.webp&amp;w=1080&amp;q=85 1080w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbounty-hunter-world-website.db3af053.webp&amp;w=1200&amp;q=85 1200w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbounty-hunter-world-website.db3af053.webp&amp;w=1920&amp;q=85 1920w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbounty-hunter-world-website.db3af053.webp&amp;w=2048&amp;q=85 2048w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbounty-hunter-world-website.db3af053.webp&amp;w=3840&amp;q=85 3840w"
+                                        src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbounty-hunter-world-website.db3af053.webp&amp;w=3840&amp;q=85"
+                                        decoding="async" data-nimg="responsive"
+                                        style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
+                                        loading="lazy" /></noscript></span></div>
+                            <div class="Project_textContainer__Cx9od">
+                                <div class="Project_textInner__PxJNB" style="transform:translateX(0%) translateZ(0)">
+                                    <div class="Project_name___NOut">Website of Recruitment Platform Bounty Hunter World
+                                    </div>
+                                    <div class="Project_description__fxd5T">Building a custom-designed website for
+                                        Bounty Hunter World - the different job hunting platform with an innovative
+                                        ecosystem.</div>
+                                    <div class="Project_viewProject__kGVoO">View project<svg
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor">
+                                            <path
+                                                d="m41.414 22.586-14-14a2 2 0 1 0-2.828 2.828L35.172 22H8a2 2 0 0 0 0 4h27.172L24.586 36.586a2 2 0 1 0 2.828 2.828l14-14a2 2 0 0 0 0-2.828z">
+                                            </path>
+                                        </svg></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="ListItem_itemNumber__seuqQ" aria-disabled="true"
+                            style="opacity: 1; transform: translateX(0) translateY(-50%) translateZ(0px);">
+                            <span>01</span>
+                        </div>
+                    </li>
+                    <li><a class="Project_link__GMf3U Project_isEven__cQh5u"
+                            aria-label="Read more about the warehouse management system"
+                            href="/projects/sport-clothing-vendor-warehouse-management-system">
+                            <div class="Project_iconContainer__CqUDd"><span></span><svg
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor">
+                                    <path
+                                        d="M34.006 2.016c-6.603 0-11.992 5.39-11.992 11.992C22.014 20.61 27.403 26 34.006 26c6.603 0 11.992-5.39 11.992-11.992 0-6.602-5.39-11.992-11.992-11.992zm0 3c1.085 0 2.12.199 3.082.548-.5.946-1.768 1.623-3.266 1.623-1.437 0-2.67-.621-3.209-1.507a8.993 8.993 0 0 1 3.393-.664zM10.498 6c-.178 0-.352.01-.525.027.99 1.982 2.957 3.847 5.619 3.4A5.504 5.504 0 0 0 10.498 6zm-2.443.578A5.5 5.5 0 0 0 4.998 11.5c0 .169.01.336.025.502 3.686-.251 6.716 1.485 7.829 4.463a5.497 5.497 0 0 0 3.146-4.965c0-.038-.005-.075-.006-.113-.389.069-.777.11-1.16.11-2.76 0-5.311-1.759-6.734-4.749-.027-.055-.028-.113-.043-.17zm19.062 1.645c.11.02.218.048.324.09 1.285.502 1.758 2.37 1.055 4.17-.674 1.726-2.183 2.749-3.44 2.388a9.158 9.158 0 0 1-.042-.863 8.943 8.943 0 0 1 2.104-5.785zm13.803.027a8.96 8.96 0 0 1 2.033 6.652c-1.228.253-2.654-.755-3.305-2.42-.703-1.799-.23-3.666 1.055-4.17.07-.027.144-.044.217-.062zm-6.848 2.438c1.932 0 3.5 1.569 3.5 3.5s-1.568 3.5-3.5 3.5a3.502 3.502 0 0 1-3.5-3.5c0-1.931 1.57-3.5 3.5-3.5zM5.598 13.983a5.496 5.496 0 0 0 4.9 3.016c.135 0 .266-.01.398-.02-.943-2.247-3.227-3.025-5.298-2.996zm34.595 4.207c.575.024 1.089.2 1.471.522a8.963 8.963 0 0 1-5.592 4.04c-.58-1.154.112-2.818 1.649-3.821.808-.529 1.694-.773 2.472-.74zm-11.783.28c.62.035 1.285.224 1.918.576 1.64.91 2.456 2.575 1.889 3.775a8.968 8.968 0 0 1-5.694-3.82c.477-.385 1.144-.574 1.887-.531zm-15.195.937c-.853.023-1.688.118-2.492.281-3.218.656-6.025 2.486-7.4 5.387-1.377 2.901-1.017 6.235.513 9.14 1.53 2.907 4.216 5.469 7.707 7.124 3.49 1.655 7.176 2.116 10.395 1.46.402-.081.798-.182 1.185-.3a1.5 1.5 0 0 0 .27-.053c3.783-1.029 9.96-1.396 14.136.08.209.427.554.79 1.022.996l5.537 2.452a2.092 2.092 0 0 0 2.758-1.065 2.091 2.091 0 0 0-1.067-2.756l-5.537-2.45a2.067 2.067 0 0 0-1.408-.09c-3.773-2.073-7.603-6.985-9.533-10.358a1.5 1.5 0 0 0-.06-.098 12.76 12.76 0 0 0-.415-.887c-1.53-2.906-4.218-5.467-7.709-7.123a18.101 18.101 0 0 0-5.299-1.595 16.06 16.06 0 0 0-2.603-.145zM15 22.49c.138.015.273.02.412.04.809.11 1.635.301 2.463.564a1.5 1.5 0 0 1-2.877-.594l.002-.01zm-4.502.51a1.5 1.5 0 1 1-.001 3.001A1.5 1.5 0 0 1 10.498 23zm9.594.992c.904.45 1.733.973 2.484 1.547-.273.283-.654.461-1.078.461a1.5 1.5 0 0 1-1.5-1.5c0-.179.036-.349.094-.508zM15.498 25a1.5 1.5 0 1 1-.001 3.001A1.5 1.5 0 0 1 15.498 25zm-7 2a1.5 1.5 0 1 1-.001 3.001A1.5 1.5 0 0 1 8.498 27zm12 0a1.5 1.5 0 1 1-.001 3.001A1.5 1.5 0 0 1 20.498 27zm-7 1.734a1.5 1.5 0 1 1-.001 3.001 1.5 1.5 0 0 1 .001-3zm12 .266c.103 0 .204.012.3.031.132.212.261.425.374.639.27.512.48 1.024.644 1.533a1.496 1.496 0 0 1-2.818-.703 1.5 1.5 0 0 1 1.5-1.5zm-18 2a1.5 1.5 0 0 1 0 3c-.101 0-.199-.012-.295-.031-.263-.38-.508-.762-.713-1.15-.147-.28-.276-.56-.392-.839.212-.57.755-.98 1.4-.98zm11 0a1.5 1.5 0 1 1-.001 3.001A1.5 1.5 0 0 1 18.498 31zm5 1.734a1.5 1.5 0 1 1-.001 3.001 1.5 1.5 0 0 1 .001-3zm-11 .266a1.5 1.5 0 1 1-.001 3.001A1.5 1.5 0 0 1 12.498 33zm5 2a1.5 1.5 0 1 1-.001 3.001A1.5 1.5 0 0 1 17.498 35zm12.473.504c.849 1.068 1.758 2.134 2.765 3.13a32.939 32.939 0 0 0-4.103-.017c.04-.058.086-.109.125-.168a8.77 8.77 0 0 0 .58-1.037c.293-.618.492-1.259.633-1.908zM11.498 37a1.5 1.5 0 0 1 1.5 1.5c0 .066-.02.126-.03.19-.046-.022-.093-.039-.14-.061a15.433 15.433 0 0 1-2.244-1.31c.254-.198.568-.319.914-.319zm11 0a1.5 1.5 0 0 1 1.5 1.5c0 .148-.026.289-.066.424-.66.367-1.41.646-2.229.844A1.497 1.497 0 0 1 22.498 37zm-6 2c.66 0 1.216.43 1.416 1.021-.221-.019-.442-.033-.666-.064a14.61 14.61 0 0 1-1.904-.4A1.487 1.487 0 0 1 16.498 39z">
+                                    </path>
+                                </svg></div>
+                            <div class="Project_imageContainer__BeLxV" style="transform:none"><span
+                                    style="box-sizing:border-box;display:block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative"><span
+                                        style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;padding-top:90%"></span><img
+                                        alt=""
+                                        src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsport-clothing.f18015a9.webp&amp;w=3840&amp;q=85"
+                                        decoding="async" data-nimg="responsive"
+                                        style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
+                                        sizes="(min-width: 570px) 50vw, (min-width: 768px) 35vw, (min-width: 960px) 50vw, (min-width: 1180px) 35vw, 70vw"
+                                        srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsport-clothing.f18015a9.webp&amp;w=256&amp;q=85 256w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsport-clothing.f18015a9.webp&amp;w=384&amp;q=85 384w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsport-clothing.f18015a9.webp&amp;w=640&amp;q=85 640w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsport-clothing.f18015a9.webp&amp;w=750&amp;q=85 750w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsport-clothing.f18015a9.webp&amp;w=828&amp;q=85 828w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsport-clothing.f18015a9.webp&amp;w=1080&amp;q=85 1080w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsport-clothing.f18015a9.webp&amp;w=1200&amp;q=85 1200w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsport-clothing.f18015a9.webp&amp;w=1920&amp;q=85 1920w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsport-clothing.f18015a9.webp&amp;w=2048&amp;q=85 2048w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsport-clothing.f18015a9.webp&amp;w=3840&amp;q=85 3840w"><noscript><img
+                                            alt=""
+                                            sizes="(min-width: 570px) 50vw, (min-width: 768px) 35vw, (min-width: 960px) 50vw, (min-width: 1180px) 35vw, 70vw"
+                                            srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsport-clothing.f18015a9.webp&amp;w=256&amp;q=85 256w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsport-clothing.f18015a9.webp&amp;w=384&amp;q=85 384w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsport-clothing.f18015a9.webp&amp;w=640&amp;q=85 640w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsport-clothing.f18015a9.webp&amp;w=750&amp;q=85 750w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsport-clothing.f18015a9.webp&amp;w=828&amp;q=85 828w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsport-clothing.f18015a9.webp&amp;w=1080&amp;q=85 1080w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsport-clothing.f18015a9.webp&amp;w=1200&amp;q=85 1200w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsport-clothing.f18015a9.webp&amp;w=1920&amp;q=85 1920w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsport-clothing.f18015a9.webp&amp;w=2048&amp;q=85 2048w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsport-clothing.f18015a9.webp&amp;w=3840&amp;q=85 3840w"
+                                            src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsport-clothing.f18015a9.webp&amp;w=3840&amp;q=85"
+                                            decoding="async" data-nimg="responsive"
+                                            style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
+                                            loading="lazy" /></noscript></span></div>
+                            <div class="Project_textContainer__Cx9od">
+                                <div class="Project_textInner__PxJNB" style="transform:translateX(0%) translateZ(0)">
+                                    <div class="Project_name___NOut">Warehouse Management System for Sport Clothing
+                                        Vendor</div>
+                                    <div class="Project_description__fxd5T">Processes automation by focusing on people
+                                        while keeping the company's low operational costs.</div>
+                                    <div class="Project_viewProject__kGVoO">View project<svg
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor">
+                                            <path
+                                                d="m41.414 22.586-14-14a2 2 0 1 0-2.828 2.828L35.172 22H8a2 2 0 0 0 0 4h27.172L24.586 36.586a2 2 0 1 0 2.828 2.828l14-14a2 2 0 0 0 0-2.828z">
+                                            </path>
+                                        </svg></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="ListItem_itemNumber__seuqQ" aria-disabled="true"
+                            style="opacity:1;transform:translateX(0) translateY(-50%) translateZ(0)"><span>02</span>
+                        </div>
+                    </li>
+                    <li><a class="Project_link__GMf3U" aria-label="Read more about the workforce planning software"
+                            href="/projects/construction-workforce-planning-software">
+                            <div class="Project_iconContainer__CqUDd"><span></span><svg
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor">
+                                    <path
+                                        d="M18.166 4.004a5.02 5.02 0 0 0-3.205 1.027A5.028 5.028 0 0 0 13 9v17h3.5c4.135 0 7.5 3.365 7.5 7.5v9c0 .539-.134 1.044-.352 1.5H34.5a1.5 1.5 0 0 0 1.5-1.5v-30a5.007 5.007 0 0 0-3.7-4.828l-13-3.5a4.923 4.923 0 0 0-1.134-.168zM20 12.998h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zm7 0h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zm-7 7h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zm7 0h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zM38 20v7h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2v3h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2v6h5.5a1.5 1.5 0 0 0 1.5-1.5v-17c0-3.025-2.475-5.5-5.5-5.5H38zm-11 6.998h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zM8.5 28C5.475 28 3 30.475 3 33.5v9A1.5 1.5 0 0 0 4.5 44h16a1.5 1.5 0 0 0 1.5-1.5v-9c0-3.025-2.475-5.5-5.5-5.5h-8zM27 33.998h2c.323 0 .596.163.78.4h.02v.032c.118.164.2.352.2.568v2a.975.975 0 0 1-.2.57v.032h-.02a.982.982 0 0 1-.78.398h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zM8 34h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zm7 0h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1z">
+                                    </path>
+                                </svg></div>
+                            <div class="Project_imageContainer__BeLxV" style="transform:none"><span
+                                    style="box-sizing:border-box;display:block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative"><span
+                                        style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;padding-top:90%"></span><img
+                                        alt=""
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                        decoding="async" data-nimg="responsive"
+                                        style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"><noscript><img
+                                            alt=""
+                                            sizes="(min-width: 570px) 50vw, (min-width: 768px) 35vw, (min-width: 960px) 50vw, (min-width: 1180px) 35vw, 70vw"
+                                            srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fworkforce-planning.6e86ec25.webp&amp;w=256&amp;q=85 256w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fworkforce-planning.6e86ec25.webp&amp;w=384&amp;q=85 384w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fworkforce-planning.6e86ec25.webp&amp;w=640&amp;q=85 640w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fworkforce-planning.6e86ec25.webp&amp;w=750&amp;q=85 750w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fworkforce-planning.6e86ec25.webp&amp;w=828&amp;q=85 828w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fworkforce-planning.6e86ec25.webp&amp;w=1080&amp;q=85 1080w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fworkforce-planning.6e86ec25.webp&amp;w=1200&amp;q=85 1200w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fworkforce-planning.6e86ec25.webp&amp;w=1920&amp;q=85 1920w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fworkforce-planning.6e86ec25.webp&amp;w=2048&amp;q=85 2048w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fworkforce-planning.6e86ec25.webp&amp;w=3840&amp;q=85 3840w"
+                                            src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fworkforce-planning.6e86ec25.webp&amp;w=3840&amp;q=85"
+                                            decoding="async" data-nimg="responsive"
+                                            style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
+                                            loading="lazy" /></noscript></span></div>
+                            <div class="Project_textContainer__Cx9od">
+                                <div class="Project_textInner__PxJNB" style="transform:translateX(0%) translateZ(0)">
+                                    <div class="Project_name___NOut">Workforce Planning Software for a Construction
+                                        Company</div>
+                                    <div class="Project_description__fxd5T">Migration from an off-the-shelf solution to
+                                        a customized software to optimize and simplify the employees' day-to-day work.
+                                    </div>
+                                    <div class="Project_viewProject__kGVoO">View project<svg
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor">
+                                            <path
+                                                d="m41.414 22.586-14-14a2 2 0 1 0-2.828 2.828L35.172 22H8a2 2 0 0 0 0 4h27.172L24.586 36.586a2 2 0 1 0 2.828 2.828l14-14a2 2 0 0 0 0-2.828z">
+                                            </path>
+                                        </svg></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="ListItem_itemNumber__seuqQ" aria-disabled="true"
+                            style="opacity:1;transform:translateX(0) translateY(-50%) translateZ(0)"><span>03</span>
+                        </div>
+                    </li>
+                    <li><a class="Project_link__GMf3U Project_isEven__cQh5u"
+                            aria-label="Read more about the event management portal"
+                            href="/projects/event-management-portal">
+                            <div class="Project_iconContainer__CqUDd"><span></span><svg
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor">
+                                    <path
+                                        d="M12.5 6A6.508 6.508 0 0 0 6 12.5v1.47h36V12.5C42 8.916 39.084 6 35.5 6h-23zM6 16.97V35.5c0 3.584 2.916 6.5 6.5 6.5h10.102c.255-.953.624-2.25 1.142-4.059a5.01 5.01 0 0 1 1.24-2.115 2.5 2.5 0 1 1 1.318-1.32l10.51-10.512c1.004-1.003 2.214-1.654 3.5-1.887a5.464 5.464 0 0 1 1.19-.107c.167 0 .331.011.496.023v-5.052H6zM15.5 22a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zm8.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zm8.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zm8.998 2a4.704 4.704 0 0 0-.83.076c-.884.16-1.728.62-2.441 1.334l-11.8 11.799c-.356.357-.619.802-.759 1.285l-1.57 5.48c-.072.19-.105.391-.098.592A1.481 1.481 0 0 0 25.43 46c.2.007.404-.025.595-.098l5.48-1.57c.484-.14.926-.402 1.284-.76l11.8-11.799c.715-.713 1.176-1.557 1.335-2.441.05-.279.073-.556.074-.83a4.441 4.441 0 0 0-1.318-3.182A4.451 4.451 0 0 0 41.498 24zM15.5 31a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z">
+                                    </path>
+                                </svg></div>
+                            <div class="Project_imageContainer__BeLxV" style="transform:none"><span
+                                    style="box-sizing:border-box;display:block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative"><span
+                                        style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;padding-top:90%"></span><img
+                                        alt=""
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                        decoding="async" data-nimg="responsive"
+                                        style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"><noscript><img
+                                            alt=""
+                                            sizes="(min-width: 570px) 50vw, (min-width: 768px) 35vw, (min-width: 960px) 50vw, (min-width: 1180px) 35vw, 70vw"
+                                            srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fevent-management.4a88c114.webp&amp;w=256&amp;q=85 256w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fevent-management.4a88c114.webp&amp;w=384&amp;q=85 384w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fevent-management.4a88c114.webp&amp;w=640&amp;q=85 640w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fevent-management.4a88c114.webp&amp;w=750&amp;q=85 750w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fevent-management.4a88c114.webp&amp;w=828&amp;q=85 828w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fevent-management.4a88c114.webp&amp;w=1080&amp;q=85 1080w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fevent-management.4a88c114.webp&amp;w=1200&amp;q=85 1200w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fevent-management.4a88c114.webp&amp;w=1920&amp;q=85 1920w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fevent-management.4a88c114.webp&amp;w=2048&amp;q=85 2048w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fevent-management.4a88c114.webp&amp;w=3840&amp;q=85 3840w"
+                                            src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fevent-management.4a88c114.webp&amp;w=3840&amp;q=85"
+                                            decoding="async" data-nimg="responsive"
+                                            style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
+                                            loading="lazy" /></noscript></span></div>
+                            <div class="Project_textContainer__Cx9od">
+                                <div class="Project_textInner__PxJNB" style="transform:translateX(0%) translateZ(0)">
+                                    <div class="Project_name___NOut">Event Management Portal for an Owner of Event
+                                        Venues</div>
+                                    <div class="Project_description__fxd5T">Steering clear from misinformation and loss
+                                        of data by keeping all the necessary details in one place.</div>
+                                    <div class="Project_viewProject__kGVoO">View project<svg
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor">
+                                            <path
+                                                d="m41.414 22.586-14-14a2 2 0 1 0-2.828 2.828L35.172 22H8a2 2 0 0 0 0 4h27.172L24.586 36.586a2 2 0 1 0 2.828 2.828l14-14a2 2 0 0 0 0-2.828z">
+                                            </path>
+                                        </svg></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="ListItem_itemNumber__seuqQ" aria-disabled="true"
+                            style="opacity:1;transform:translateX(0) translateY(-50%) translateZ(0)"><span>04</span>
+                        </div>
+                    </li>
+                    <li><a class="Project_link__GMf3U" aria-label="Read more about the e-learning application"
+                            href="/projects/restaurant-e-learning-application">
+                            <div class="Project_iconContainer__CqUDd"><span></span><svg
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor">
+                                    <path
+                                        d="M15.5 5C11.358 5 8 10.522 8 15.768c0 3.881 1.84 6.521 4.475 7.634C12.177 30.936 12 37.83 12 38.625 12 41.041 13.567 43 15.5 43s3.5-1.959 3.5-4.375c0-.796-.178-7.692-.475-15.223C21.16 22.29 23 19.65 23 15.768 23 10.52 19.642 5 15.5 5zm20.273.043a2.236 2.236 0 0 0-1.92.844C30.564 9.935 28 16.989 28 25.58v1.39a3 3 0 0 0 1.887 2.786L33 31.002v9.361c0 1.305.94 2.492 2.238 2.623A2.496 2.496 0 0 0 38 40.508V7.404c0-1.37-1.08-2.283-2.227-2.361z">
+                                    </path>
+                                </svg></div>
+                            <div class="Project_imageContainer__BeLxV" style="transform:none"><span
+                                    style="box-sizing:border-box;display:block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative"><span
+                                        style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;padding-top:90%"></span><img
+                                        alt=""
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                        decoding="async" data-nimg="responsive"
+                                        style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"><noscript><img
+                                            alt=""
+                                            sizes="(min-width: 570px) 50vw, (min-width: 768px) 35vw, (min-width: 960px) 50vw, (min-width: 1180px) 35vw, 70vw"
+                                            srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fe-learning-restaurant.5dcc28c8.webp&amp;w=256&amp;q=85 256w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fe-learning-restaurant.5dcc28c8.webp&amp;w=384&amp;q=85 384w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fe-learning-restaurant.5dcc28c8.webp&amp;w=640&amp;q=85 640w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fe-learning-restaurant.5dcc28c8.webp&amp;w=750&amp;q=85 750w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fe-learning-restaurant.5dcc28c8.webp&amp;w=828&amp;q=85 828w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fe-learning-restaurant.5dcc28c8.webp&amp;w=1080&amp;q=85 1080w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fe-learning-restaurant.5dcc28c8.webp&amp;w=1200&amp;q=85 1200w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fe-learning-restaurant.5dcc28c8.webp&amp;w=1920&amp;q=85 1920w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fe-learning-restaurant.5dcc28c8.webp&amp;w=2048&amp;q=85 2048w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fe-learning-restaurant.5dcc28c8.webp&amp;w=3840&amp;q=85 3840w"
+                                            src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fe-learning-restaurant.5dcc28c8.webp&amp;w=3840&amp;q=85"
+                                            decoding="async" data-nimg="responsive"
+                                            style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
+                                            loading="lazy" /></noscript></span></div>
+                            <div class="Project_textContainer__Cx9od">
+                                <div class="Project_textInner__PxJNB" style="transform:translateX(0%) translateZ(0)">
+                                    <div class="Project_name___NOut">E-Learning Application for Internal Training in a
+                                        Chain Restaurant</div>
+                                    <div class="Project_description__fxd5T">Keeping cooks and chefs engaged and happy
+                                        while boosting their productivity in the kitchen.</div>
+                                    <div class="Project_viewProject__kGVoO">View project<svg
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor">
+                                            <path
+                                                d="m41.414 22.586-14-14a2 2 0 1 0-2.828 2.828L35.172 22H8a2 2 0 0 0 0 4h27.172L24.586 36.586a2 2 0 1 0 2.828 2.828l14-14a2 2 0 0 0 0-2.828z">
+                                            </path>
+                                        </svg></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="ListItem_itemNumber__seuqQ" aria-disabled="true"
+                            style="opacity:1;transform:translateX(0) translateY(-50%) translateZ(0)"><span>05</span>
+                        </div>
+                    </li>
+                    <li><a class="Project_link__GMf3U Project_isEven__cQh5u" aria-label="Read more about the ERP"
+                            href="/projects/computer-parts-erp">
+                            <div class="Project_iconContainer__CqUDd"><span></span><svg
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor">
+                                    <path
+                                        d="M11.5 10C9.57 10 8 11.57 8 13.5v15c0 1.93 1.57 3.5 3.5 3.5h17.63a9.506 9.506 0 0 1-.13-1.5 9.5 9.5 0 0 1 9.5-9.5c.512 0 1.01.053 1.5.13V13.5c0-1.93-1.57-3.5-3.5-3.5h-25zm27.074 13a7.852 7.852 0 0 0-1.463.125c-2.985.536-5.405 2.926-5.97 5.906a7.572 7.572 0 0 0 .369 4.153l-7.565 7.548c-1.222 1.22-1.286 3.281-.021 4.457.58.54 1.322.811 2.064.811.776 0 1.553-.296 2.145-.887l7.65-7.636a7.566 7.566 0 0 0 4.178.384c2.986-.562 5.381-2.987 5.916-5.978a7.658 7.658 0 0 0-.03-2.895c-.207-1.015-1.474-1.382-2.208-.65l-3.051 3.043c-.414.413-.956.619-1.5.619a2.12 2.12 0 0 1-1.358-.488c-.977-.812-.933-2.342-.033-3.239l2.926-2.918c.736-.734.367-2.007-.652-2.21A7.511 7.511 0 0 0 38.574 23zM5.5 33a1.5 1.5 0 1 0 0 3h20.355l3.006-3H5.5z">
+                                    </path>
+                                </svg></div>
+                            <div class="Project_imageContainer__BeLxV" style="transform:none"><span
+                                    style="box-sizing:border-box;display:block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative"><span
+                                        style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;padding-top:90%"></span><img
+                                        alt=""
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                        decoding="async" data-nimg="responsive"
+                                        style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"><noscript><img
+                                            alt=""
+                                            sizes="(min-width: 570px) 50vw, (min-width: 768px) 35vw, (min-width: 960px) 50vw, (min-width: 1180px) 35vw, 70vw"
+                                            srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcomputer-parts.182252e3.webp&amp;w=256&amp;q=85 256w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcomputer-parts.182252e3.webp&amp;w=384&amp;q=85 384w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcomputer-parts.182252e3.webp&amp;w=640&amp;q=85 640w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcomputer-parts.182252e3.webp&amp;w=750&amp;q=85 750w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcomputer-parts.182252e3.webp&amp;w=828&amp;q=85 828w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcomputer-parts.182252e3.webp&amp;w=1080&amp;q=85 1080w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcomputer-parts.182252e3.webp&amp;w=1200&amp;q=85 1200w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcomputer-parts.182252e3.webp&amp;w=1920&amp;q=85 1920w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcomputer-parts.182252e3.webp&amp;w=2048&amp;q=85 2048w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcomputer-parts.182252e3.webp&amp;w=3840&amp;q=85 3840w"
+                                            src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcomputer-parts.182252e3.webp&amp;w=3840&amp;q=85"
+                                            decoding="async" data-nimg="responsive"
+                                            style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
+                                            loading="lazy" /></noscript></span></div>
+                            <div class="Project_textContainer__Cx9od">
+                                <div class="Project_textInner__PxJNB" style="transform:translateX(0%) translateZ(0)">
+                                    <div class="Project_name___NOut">New and Second-Hand Computer Parts ERP</div>
+                                    <div class="Project_description__fxd5T">Complete digitalization of every department
+                                        through careful identification and analysis of the challenges.</div>
+                                    <div class="Project_viewProject__kGVoO">View project<svg
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor">
+                                            <path
+                                                d="m41.414 22.586-14-14a2 2 0 1 0-2.828 2.828L35.172 22H8a2 2 0 0 0 0 4h27.172L24.586 36.586a2 2 0 1 0 2.828 2.828l14-14a2 2 0 0 0 0-2.828z">
+                                            </path>
+                                        </svg></div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="ListItem_itemNumber__seuqQ" aria-disabled="true"
+                            style="opacity:1;transform:translateX(0) translateY(-50%) translateZ(0)"><span>06</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="BottomLines_container__mi8yp">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1690 315" fill="currentColor">
+                    <path
+                        d="M125.162 161.428c148.573 58.006 245.685-39.759 416.989-61.104 284.56-35.458 346.172 193.245 571.264 130.301C1280.507 183.9 1320.228 37.27 1482.15 40.441c88.425 1.732 160.279 47.099 207.849 86.07V0H0v74.136c26.176 28.108 67.358 64.724 125.162 87.292Z">
+                    </path>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" style="color:rgba(236,239,254,.3)" viewBox="0 0 1690 315"
+                    fill="currentColor" style="opacity:1;transform:translateY(30%) scale(-1) translateZ(0)">
+                    <path
+                        d="M172.118 245.71c150.98 39.34 230.745-130.017 421.74-138.639 227.374-10.264 285.508 222.028 477.034 192.28 175.297-27.228 212.144-235.108 394.749-245.932 95.263-5.647 175.421 45.584 224.359 84.788V0H0v90.948C31.088 146.7 85.72 223.199 172.118 245.71Z">
+                    </path>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" style="color:rgba(236,239,254,.3)" viewBox="0 0 1690 315"
+                    fill="currentColor" style="opacity:1;transform:translateY(30%) scale(-1) translateZ(0)">
+                    <path
+                        d="M149.81 255.334c144.678 54.102 235.426-88.02 439.043-97.397 247.522-11.399 297.293 189.787 494.549 148.733 167.212-34.801 200.034-194.32 383.212-211.135 94.135-8.642 174.005 25.358 223.386 52.401V0H0v109.295c26.838 50.643 73.167 117.378 149.81 146.039Z">
+                    </path>
+                </svg>
+
+            </div><svg width="0" height="0" aria-hidden="true">
+                <defs>
+                    <clipPath id="projectShapeClipPath" clipPathUnits="objectBoundingBox"
+                        transform="scale(0.001, 0.0011111111111111)">
+                        <path
+                            d="M.56461,523.44347C-7.56718,396.79365,73.97645,303.409,126.76516,242.95482,239.088,114.32152,484.325-62.2165,725.00436,23.178,880.61525,78.38967,951.1669,213.592,957.99,227.16974c84.82411,168.7969,16.97728,334.6373,4.85387,364.271-78.71972,192.41721-279.28312,303.90375-465.9713,308.41613-168.88149,4.082-287.83608-80.3089-316.71484-101.99586C133.24265,762.62936,9.97854,670.06226.56461,523.44347Z">
+                        </path>
+                    </clipPath>
+                </defs>
+            </svg>
+        </div>
+    </section>
+    <section class="CallToActionBlock_section__eu5MM YourCompanyCouldBeNext_container__ng_Di"
+        aria-labelledby="your-company-could-be-next-title" data-section-mode="light">
+        <div class="CallToActionBlock_backgroundText__QflR7" aria-disabled="true" style="opacity: 1;">Creative <br>
+            Ideas</div>
+        <div class="CallToActionBlock_inner__qRDBL">
+            <div class="CallToActionBlock_imageContainer__aSxSu" style="opacity: 1; transform: none;"><span
+                    style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"><span
+                        style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 100% 0px 0px;"></span><img
+                        alt="" src="./Assets/inspiration-bulb.webp"
+                        style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"></span>
+            </div>
+            <div class="CallToActionBlock_textContainer__AuxD4">
+                <div class="CallToActionBlock_textInner___i1hw">
+                    <h2 class="SectionTitleH2_heading__g73_o SectionTitleH2_isLong__Gxx_w"
+                        id="your-company-could-be-next-title">Feeling Inspired by Looking at All Those Experiences?</h2>
+                    <p>Make your company's story the next successful one. Share with us your ideas and let's make
+                        something extraordinary together.</p>
+                    <button class="lets-do-it-button">
+                        <div class="top-right-corner"></div>
+                        <h6 class="button-content-text">LET'S DO IT</h6>
+                        <svg class="airplane-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.21 91.02"
+                            width="32" height="44">
+                            <path fill="#ffffff"
+                                d="M10.23 77.4q6.06-10 7.23-9.45 1.67.77-6.67 23.07 15.24-18.14 16.67-17.1 1 .72-4.72 10.77a31.65 31.65 0 0 0 9.24-6.88c2-2.19 4.27-4.61 5.35-8.54a13.19 13.19 0 0 0-.14-9 12.45 12.45 0 0 0-6.74-6.6 12.82 12.82 0 0 0-9.66.35c-3.28 1.54-4.87 4.15-6.32 6.6a32.22 32.22 0 0 0-4.24 16.78Z">
+                            </path>
+                            <path fill="#ffffff"
+                                d="M13.84 68.15c4.45-6 5.33-5.45 6.19-5.14 1.54.56 1.88 4.5-4 19.11 9.77-12.25 13.31-15.1 14.62-14.24 1 .64 1.61 2.18-2.22 10.32.92-.36 6.82-2.73 8.89-8.93a12.59 12.59 0 0 0-.14-9 12.4 12.4 0 0 0-6.74-6.6 12.8 12.8 0 0 0-9.66.35c-4.75 2.35-7.58 8-6.94 14.13Z">
+                            </path>
+                            <path fill="#ffffff"
+                                d="M24.65 49.46c3.81-1.3 7.16-4.87 13.86-12 4.75-5.07 7-8.18 7.82-7.72s-.52 3.6-2.19 9c-3.23 10.41-4.82 15.63-4.1 19.61 1 5.24 4.25 9 9 14.43 3.18 3.64 4.77 5.47 5.94 5.42 5.86-.27 7.7-22.77 10.84-61 .61-7.35 1.09-14.43-2.6-16.58-3.95-2.3-10.35 2.23-18.57 8.22C2.4 39.37-1.02 43.94.19 46.4c.6 1.23 3.43 1.71 9.1 2.68 6.96 1.18 10.96 1.86 15.36.38Zm-8.47 8.69a14.3 14.3 0 0 0-1 3.62 8.92 8.92 0 0 0 .19 2.38c3.43-3.83 5.72-5.46 6.88-4.86q2.29 1.17-1.25 13.76c7.58-8.29 10.51-9.5 11.65-8.79 1 .61 1.3 3-.77 9.66a9.49 9.49 0 0 0 5-4 9.62 9.62 0 0 0 1.2-5.89 11.81 11.81 0 0 0-9.23-10.77c-7.8-1.63-11.99 3.49-12.67 4.89Z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="foooter-main-storage">
+        <div class="DecorativeLines_container__dQAzD">
+            <div class="DecorativeLines_svgContainer__UxzVK"><svg class="footer-svg-top"
+                    xmlns="http://www.w3.org/2000/svg" width="2668.683" height="234.818" fill="currentColor"
+                    class="DecorativeLines_topLine__PT_CR"
+                    style="opacity: 1; transform: translateY(0%) scale(1) translateZ(0px);">
+                    <path
+                        d="M2176.637 39.43c-168.958-16.77-253.496 192.718-472.921 165.69a341.569 341.569 0 0 1-52.485-10.71c-25.46-9.272-45.384-21.226-65.784-34.954-37.907-25.51-65.706-47.47-101.567-52.475-97.853-13.9-151.41 76.39-284.516 52.718C1068.424 136.412 1053.052 10.603 907.324.51c-34.35-2.379-66.195 4.331-66.195 4.331s-24.985 5.78-47.987 17.67c-71.35 36.886-88.091 92.836-167.285 139.79a204.294 204.294 0 0 1-7.741 4.386c-40.25 21.468-79.461 22.074-91.502 21.885-26.84-.42-51.554-5.933-98.544-23.846-24.954-9.513-26.321-9.93-41.147-12.432-34.603-5.839-68.42 5.549-79.346 9.198-1.035.345-1.839.622-2.384.81-100.085 34.48-150.545 51.82-170.965 56.71A556.366 556.366 0 0 1 16.559 234.64 541.21 541.21 0 0 1 0 234.773h2668.683a624.02 624.02 0 0 1-172.355-21.877c-195.748-53.711-201.037-161.69-319.691-173.467Z">
+                    </path>
+                </svg></div>
+            <div class="DecorativeLines_svgContainer__UxzVK"><svg class="footer-svg-center"
+                    xmlns="http://www.w3.org/2000/svg" width="2481.958" height="172.607" fill="currentColor"
+                    class="DecorativeLines_middleLine__MeC6P"
+                    style="opacity: 1; transform: translateY(0%) scale(1) translateZ(0px);">
+                    <path
+                        d="M79.634 163.536c-11.257 2.815-22.666 4.76-22.666 4.76a301.49 301.49 0 0 1-21.89 2.915A304.376 304.376 0 0 1 0 172.548h2481.958c-57.82 0-103.02-9.37-140.333-23.317C2185.97 91.05 2175.032 40.7 2079.957 30.415c-118.825-12.853-209.278 77.195-348.621 112.164-33.122 8.312-86.882 17.998-149.187 6.016h-.002c-27.894-5.793-49.957-12.448-62.413-17.385-43.487-17.237-63.342-38.092-112.127-50.801-99.612-25.951-160.132 59.4-292.161 42.813C993.666 107.922 965.06 7.155 829.529.524 810.412-.41 769.887-2 723.336 14.98c-38.208 13.938-54.968 31.081-92.917 55.418 0 0-55.485 42.3-133.613 63.524C371.028 168.09 330.763 82.8 225.012 119.199c0 0-84.79 29.183-145.378 44.337Z">
+                    </path>
+                </svg></div>
+            <div class="DecorativeLines_svgContainer__UxzVK"><svg class="footer-svg-bottom"
+                    xmlns="http://www.w3.org/2000/svg" width="2335.092" height="105.403" fill="currentColor"
+                    class="DecorativeLines_bottomLine__vadu8">
+                    <path
+                        d="M74.921 100.09a446.06 446.06 0 0 1-41.92 4.495A459.256 459.256 0 0 1 0 105.368h2335.092c-223.656 0-246.638-92.755-378.213-83.239-98.011 7.089-211.076 67.398-337.23 73.808-68.599 3.486-131.122-4.597-131.122-4.597-26.244-3.392-47.001-7.29-58.72-10.181-40.914-10.095-59.594-22.308-105.493-29.751-119.868-19.44-155.388 37.443-274.873 25.073C933.601 64.488 905.652 5.1 777.648.34c-14.585-.542-49.306-1.477-88.938 6.67-46.035 9.464-66.213 24.567-95.595 38.535C529.07 75.994 449.457 87.48 402.22 90.187c-110.727 6.347-149.824-26.313-223.885-10.963-59.014 12.231-73.03 16.185-103.414 20.866Z">
+                    </path>
+                </svg></div>
+        </div>
+        <div class="Footer_container__5d2_x">
+            <div class="Footer_inner__RY4ud">
+                <div class="Top_container__eI130">
+                    <div class="Info_container__c22NI"> <a href="" style="border-radius: 100%; padding: 10px; height: 80px; width: 80px; z-index: 3; display: flex; justify-content: center; align-items: center; position: relative;">
+                        <img src="./Assets/image (2).a2153f2b55833bcab60c.webp" alt="" style="height: 70px; width: 110px; display: flex; align-items: center; z-index: 3;">
+                        <img src="./Assets/logoback.webp" alt="" style="position: absolute; height: 80px; width: 120px;">
+                    </a>
+                        <p class="Info_aboutUs__i4f40">We are a software company that strives to create high quality
+                            products that correspond to our clients' expectations.</p>
+                        <div class="Socials_container__d5LbO"><a
+                                class="SocialLink_link__Ru2wq first-footer-sosial-icon"
+                                href="https://www.linkedin.com/company/qualisage" aria-label="LinkedIn"
+                                target="_blank" rel="nofollow noreferrer" style="transform:none"><svg
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor">
+                                    <path
+                                        d="M36.5 6h-25A5.507 5.507 0 0 0 6 11.5v25c0 3.032 2.468 5.5 5.5 5.5h25c3.032 0 5.5-2.468 5.5-5.5v-25C42 8.468 39.532 6 36.5 6zM18 34a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V21a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v13zm-2.5-16a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zM35 34a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1v-7.5c0-1.379-1.121-2.5-2.5-2.5S25 25.121 25 26.5V34a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V21a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v.541A5.965 5.965 0 0 1 29 20c3.309 0 6 2.691 6 6v8z">
+                                    </path>
+                                </svg></a><a class="SocialLink_link__Ru2wq" href="https://dribbble.com/qualisage"
+                                aria-label="Dribbble" target="_blank" rel="nofollow noreferrer"
+                                style="transform:none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                    fill="currentColor">
+                                    <path
+                                        d="M34.25 26c-1.402 0-2.774.123-4.113.348a78.71 78.71 0 0 1 4.127 14.785c4.767-2.867 8.252-7.648 9.356-13.286A24.621 24.621 0 0 0 34.25 26zm-8.227-1.755a75.509 75.509 0 0 0-1.699-3.591 38.806 38.806 0 0 1-20.242 1.719A20.344 20.344 0 0 0 4 24c0 5.405 2.164 10.308 5.661 13.911 3.396-6.478 9.271-11.46 16.362-13.666zm1.082-4.74a78.888 78.888 0 0 1 1.876 4.003A27.728 27.728 0 0 1 34.25 23c3.416 0 6.687.624 9.712 1.758.009-.254.038-.502.038-.758 0-4.98-1.842-9.531-4.864-13.035a39.158 39.158 0 0 1-12.031 8.54zM11.985 39.95C15.335 42.48 19.488 44 24 44c2.641 0 5.159-.527 7.469-1.461a75.81 75.81 0 0 0-4.286-15.505c-6.682 1.994-12.189 6.738-15.198 12.916zm25.03-31.105C33.513 5.834 28.97 4 24 4c-2.181 0-4.276.363-6.243 1.011A79.773 79.773 0 0 1 25.72 16.84a36.148 36.148 0 0 0 11.295-7.995zM4.552 19.41c2.094.381 4.246.59 6.448.59 4.173 0 8.179-.722 11.909-2.033a76.836 76.836 0 0 0-8.026-11.746C9.749 8.864 5.911 13.658 4.552 19.41z">
+                                    </path>
+                                </svg></a><a class="SocialLink_link__Ru2wq" href="https://twitter.com/QualiSage"
+                                aria-label="Twitter" target="_blank" rel="nofollow noreferrer"
+                                style="transform:none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                    fill="currentColor">
+                                    <path
+                                        d="M44.719 10.305a.998.998 0 0 0-1.136-.214l-.164.075-.418.191c.407-.649.73-1.343.953-2.061a.999.999 0 0 0-1.474-1.151c-1.141.693-2.237 1.192-3.37 1.54A9.463 9.463 0 0 0 32.5 6a9.5 9.5 0 0 0-9.5 9.5v.5l-.999-.08C12.278 14.77 9.51 8.23 9.395 7.948a1.5 1.5 0 0 0-2.456-.509C6.741 7.638 5 9.48 5 13c0 2.508 1.118 4.542 2.565 6.124a9.094 9.094 0 0 1-1.077-.753 1.504 1.504 0 0 0-1.669-.208 1.503 1.503 0 0 0-.813 1.473c.019.211.445 4.213 5.068 7.235l-.843.153A1.5 1.5 0 0 0 7.3 29.4c.105.141 2.058 2.68 6.299 4.14A28.848 28.848 0 0 1 4.5 35a1.5 1.5 0 0 0-1.129 2.487C3.532 37.672 7.435 42 17.5 42 34.213 42 42 26.485 42 16v-.5c0-.148-.016-.293-.022-.439 2.092-2.022 2.879-3.539 2.917-3.614a1 1 0 0 0-.176-1.142z">
+                                    </path>
+                                </svg></a><a class="SocialLink_link__Ru2wq"
+                                href="https://www.youtube.com/channel/UCtKj0KXj-aWwEx-4YWKDGWw" aria-label="YouTube"
+                                target="_blank" rel="nofollow noreferrer" style="transform:none"><svg
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor">
+                                    <path
+                                        d="M23.857 8.5c-6.352 0-12.255.453-15.623 1.156a1.5 1.5 0 0 0-.021.006c-2.538.569-4.927 2.386-5.43 5.233a1.5 1.5 0 0 0-.002.011C2.395 17.2 2 20.191 2 24.5c0 4.301.396 7.212.885 9.627.515 2.762 2.85 4.635 5.426 5.21a1.5 1.5 0 0 0 .037.01c3.515.693 9.25 1.153 15.603 1.153s12.092-.46 15.608-1.152a1.5 1.5 0 0 0 .037-.01c2.537-.569 4.926-2.386 5.43-5.233a1.5 1.5 0 0 0 .003-.021c.38-2.34.874-5.328.971-9.645a1.5 1.5 0 0 0 0-.033c0-4.318-.494-7.327-.977-9.71-.51-2.769-2.848-4.647-5.427-5.223a1.5 1.5 0 0 0-.12-.022c-3.43-.482-9.265-.951-15.619-.951zm-3.7 8.502c.37-.008.753.08 1.113.283l8.603 4.861a2.124 2.124 0 0 1 0 3.71l-8.603 4.86c-1.44.813-3.233-.216-3.233-1.855V19.14c0-1.23 1.008-2.114 2.12-2.137z">
+                                    </path>
+                                </svg></a><a class="SocialLink_link__Ru2wq"
+                                href="https://www.facebook.com/QualiSage/" aria-label="Facebook" target="_blank"
+                                rel="nofollow noreferrer" style="transform:none"><svg
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor">
+                                    <path
+                                        d="M24 4C12.972 4 4 12.972 4 24c0 10.006 7.394 18.295 17 19.75V29h-4a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h4v-3.632C21 15.617 23.427 13 27.834 13c1.786 0 3.195.124 3.254.129a1 1 0 0 1 .912.996V17.5a1 1 0 0 1-1 1h-2c-1.103 0-2 .897-2 2V24h4a1 1 0 0 1 .993 1.124l-.375 3c-.063.5-.489.876-.993.876H27v14.75c9.606-1.455 17-9.744 17-19.75 0-11.028-8.972-20-20-20z">
+                                    </path>
+                                </svg></a></div><a class="Email_link__ZMVsa" href="mailto:info@qualisage.com"
+                            aria-label="Email us at info@qualisage.com"><span class="Email_inner__54Qz3"><svg
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor"
+                                    class="Email_icon__cVwSi" style="opacity:0">
+                                    <path
+                                        d="M10 8c-3.14 0-5.72 2.42-5.98 5.5L24 24.29 43.98 13.5C43.72 10.42 41.14 8 38 8H10zm-6 8.89V34c0 3.31 2.69 6 6 6h28c3.31 0 6-2.69 6-6V16.89L24.71 27.32c-.22.12-.46.18-.71.18-.25 0-.49-.06-.71-.18L4 16.89z">
+                                    </path>
+                                </svg>info@qualisage.com</span></a>
+                        <p class="adress-title-footer"><strong>Headquarters</strong><br>Sofia, Bulgaria</p>
+                        <div class="ExternalLink_container__0KtGC"><a class="footer-logo-links-icon-svg-1" href="https://clutch.co/profile/qualisage"
+                                target="_blank" rel="nofollow noreferrer" aria-label="QualiSage's profile on Clutch"
+                                style="opacity:0.9;transform:none"><svg class="clutech-svg-left"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 25" fill="currentColor">
+                                    <path
+                                        d="M22.942 0h4v25h-4V0Zm18 17.025c0 3.826-3.217 4.131-4.174 4.131-2.39 0-2.826-2.238-2.826-3.588V8h-4v9.548c0 2.37.744 4.326 2.048 5.63 1.152 1.153 2.878 1.783 4.748 1.783 1.326 0 3.204-.413 4.204-1.326V25h4V8h-4v9.025ZM52.942 2h-4v6h-3v4h3v13h4V12h3V8h-3V2ZM68.54 19.917c-.87.783-2.02 1.217-3.283 1.217-2.782 0-4.825-2.043-4.825-4.848s1.978-4.762 4.825-4.762c1.24 0 2.412.413 3.305 1.196l.607.522 2.697-2.696-.675-.609C69.603 8.504 67.496 7.7 65.255 7.7c-5 0-8.63 3.608-8.63 8.565 0 4.936 3.717 8.673 8.63 8.673 2.283 0 4.412-.804 5.98-2.26l.651-.609-2.739-2.694-.608.542ZM86.142 9.482C84.99 8.33 83.64 7.7 81.77 7.7c-1.326 0-2.828.413-3.828 1.325V0h-4v25h4v-9.365c0-3.826 2.718-4.13 3.675-4.13 2.391 0 2.325 2.239 2.325 3.587V25h4v-9.887c0-2.37-.495-4.326-1.8-5.631Zm-21.018 3.956a2.892 2.892 0 1 1 0 5.784 2.892 2.892 0 0 1 0-5.784Zm-47.782 5.283c-1.52 1.565-3.587 2.413-5.76 2.413-4.457 0-7.697-3.5-7.697-8.304 0-4.826 3.24-8.326 7.696-8.326 2.153 0 4.196.847 5.74 2.391l.608.609 2.674-2.674-.587-.609C17.8 1.938 14.8.7 11.581.7 5.016.7.081 5.917.081 12.851c0 6.913 4.957 12.109 11.5 12.109 3.24 0 6.24-1.26 8.457-3.543l.587-.609-2.652-2.717-.63.63Z">
+                                    </path>
+                                </svg></a><a class="footer-logo-links-icon-svg-2" href="https://www.goodfirms.co/company/qualisage" target="_blank"
+                                rel="nofollow noreferrer" aria-label="QualiSage's profile on GoodFirms"
+                                style="opacity:0.9;transform:none"><svg class="clutech-svg-right"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141 21" fill="currentColor">
+                                    <path
+                                        d="M8.633 7.385s-1.166-.116-1.166.923v4.615h7.7v1.385s.023.692-.7.692h-7v6h8.4s5.086-.785 5.133-6V7.385H8.633ZM20.767 0H5.6C.116 1.292 0 5.792 0 5.792V21h5.834V7.154C5.834 5.977 7 5.77 7 5.77h13.767V0Zm20.021 16.648c-.4.267-.697.461-.905.588a16.21 16.21 0 0 1-2.122 1.105c-.953.4-1.81.588-2.575.588-2.627 0-4.802-.802-6.56-2.424C26.868 14.883 26 12.852 26 10.393c0-2.37.783-4.42 2.366-6.167 1.583-1.746 3.497-2.602 5.759-2.602.94 0 1.946.165 2.992.5 1.355.434 2.453 1.069 3.323 1.906l-1.514 1.675c-.643-.623-1.478-1.087-2.453-1.372-.73-.214-1.53-.32-2.418-.32-1.583 0-2.927.637-3.984 1.906-1.065 1.28-1.6 2.798-1.6 4.58 0 1.765.608 3.208 1.826 4.367 1.218 1.158 2.766 1.746 4.645 1.746.783 0 1.584-.25 2.401-.73.679-.517 1.027-.767 1.044-.785v-3.653h-5.08l.73-2.281h6.751v7.485Zm15.345-4.456c0 1.764-.626 3.297-1.879 4.58-1.253 1.283-2.801 1.943-4.645 1.943-1.705 0-3.201-.642-4.489-1.907-1.288-1.265-1.914-2.798-1.914-4.598 0-1.782.61-3.315 1.827-4.634s2.714-1.96 4.471-1.96c1.949 0 3.523.633 4.767 1.889 1.227 1.239 1.862 2.798 1.862 4.687Zm-2.383.036c0-1.194-.405-2.206-1.201-3.03-.805-.834-1.792-1.248-2.975-1.248-1.113 0-2.053.428-2.836 1.284-.783.855-1.166 1.835-1.166 2.94 0 1.159.4 2.139 1.183 2.959.783.82 1.758 1.247 2.94 1.247 1.097 0 2.032-.414 2.837-1.23.813-.824 1.218-1.8 1.218-2.922Zm17.519-.036c0 1.764-.626 3.297-1.879 4.58-1.253 1.283-2.801 1.943-4.645 1.943-1.705 0-3.201-.642-4.489-1.907-1.287-1.265-1.914-2.798-1.914-4.598 0-1.782.61-3.315 1.827-4.634 1.218-1.32 2.714-1.96 4.471-1.96 1.949 0 3.523.633 4.767 1.889 1.227 1.239 1.862 2.798 1.862 4.687Zm-2.383.036c0-1.194-.405-2.206-1.201-3.03-.805-.834-1.792-1.248-2.975-1.248-1.113 0-2.053.428-2.836 1.284-.783.855-1.166 1.835-1.166 2.94 0 1.159.4 2.139 1.184 2.959.783.82 1.757 1.247 2.94 1.247 1.096 0 2.031-.414 2.836-1.23.813-.824 1.218-1.8 1.218-2.922Zm16.406 6.13-2.209.339v-2.121l-.47.534c-.414.388-.88.719-1.392.963a5.5 5.5 0 0 1-2.383.517c-1.705-.004-3.167-.624-4.35-1.89-1.183-1.266-1.774-2.762-1.774-4.508 0-1.8.591-3.35 1.757-4.634s2.592-1.925 4.297-1.925c.975 0 1.828.157 2.54.481.506.23.94.535 1.305.91.122.16.244.338.366.498v-5.56l2.313-.339v16.735Zm-2.069-6.006c0-1.247-.424-2.294-1.271-3.154-.857-.87-1.81-1.301-2.905-1.301-1.218 0-2.197.405-2.94 1.23-.702.779-1.062 1.746-1.062 2.869 0 1.265.365 2.316 1.096 3.136.73.82 1.653 1.23 2.784 1.23 1.113 0 2.089-.373 2.958-1.14.888-.784 1.34-1.747 1.34-2.87ZM97.575 4.28h-6.524v4.437h5.062v2.281h-5.062v7.343l-2.54.374V1.98h8.559l.505 2.3Zm5.237-1.302-1.566 1.978-1.496-1.978 1.583-1.96 1.479 1.96Zm-.47 15.381-2.331.32V6.293l2.331-.356v12.422Zm10.526-12.547-1.096 2.53a2.978 2.978 0 0 0-.435-.035 4.318 4.318 0 0 0-.679.053c-.227.035-.468.13-.73.25-.483.222-.909.675-1.27 1.372a5.494 5.494 0 0 0-.61 2.549v5.81l-2.33.374V6.293l2.157-.392v2.584c.278-.446.574-.891.852-1.354.4-.464.87-.801 1.392-.999.278-.106.782-.204 1.548-.267.73-.06 1.149-.089 1.201-.053Zm17.362 12.546-2.331.339v-8.501c0-.785-.174-1.355-.522-1.711-.348-.357-.87-.535-1.549-.535-.817 0-1.447.337-1.861 1.016a2.816 2.816 0 0 0-.435 1.461v7.913l-2.331.428v-8.519c0-.748-.17-1.323-.505-1.71-.344-.397-.8-.589-1.392-.589h-.226c-.818 0-1.407.34-1.775 1.034-.275.518-.417 1.176-.417 1.978v7.378l-2.418.428V6.293l2.174-.374v1.586c.244-.375.487-.678.714-.891.626-.588 1.357-.874 2.174-.874.922 0 1.598.146 2.07.446.398.253.783.748 1.166 1.461.8-1.265 1.931-1.907 3.428-1.907 1.426 0 2.487.447 3.183 1.355.574.749.853 1.853.853 3.297v7.966Zm10.65-3.76c0 1.14-.404 2.08-1.2 2.816-.804.743-1.81 1.105-3.028 1.105-.922 0-1.74-.214-2.488-.642-.748-.427-1.304-.909-1.67-1.479l1.636-1.461c.121.178.226.32.33.427.61.625 1.34.945 2.192.945.592 0 1.058-.164 1.392-.463.344-.308.505-.731.505-1.284 0-.623-.401-1.046-1.2-1.283-1.587-.471-2.437-.748-2.558-.802-.731-.374-1.258-.762-1.584-1.212-.371-.513-.556-1.194-.556-2.067 0-1.07.4-1.96 1.183-2.673.783-.713 1.722-1.052 2.8-1.052.819 0 1.584.178 2.28.553.696.374 1.2.766 1.496 1.23l-1.392 1.514c-.21-.21-.436-.4-.678-.57-.557-.392-1.096-.588-1.6-.588-.488 0-.892.102-1.201.32-.37.262-.557.66-.557 1.177 0 .499.173.874.54 1.105.312.197.976.4 2.018.641 1.045.24 1.835.687 2.418 1.284.634.65.922 1.443.922 2.459Z">
+                                    </path>
+                                </svg></a></div>
+                    </div>
+                    <div class="Top_extraItems__U4XYB">
+                        <div class="footer-center-child-left">
+                            <div class="Top_title__6z4Ur">Key Services</div>
+                            <ul class="Top_linkList__bau6S">
+                                <li><a class="LinkListItem_link__0BOYP" aria-label="Custom Software Development"
+                                        href="/services/custom-software-development"><span
+                                            class="LinkListItem_inner__wIPAE"
+                                            style="transform: translateX(-20px) translateZ(0px);"><svg
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                                fill="currentColor" class="LinkListItem_arrowIcon__jdfqE"
+                                                style="opacity: 0;">
+                                                <path
+                                                    d="M15.979 5.98a2 2 0 0 0-1.393 3.434L29.172 24 14.586 38.586a2 2 0 1 0 2.828 2.828l16-16a2 2 0 0 0 0-2.828l-16-16a2 2 0 0 0-1.435-.606z">
+                                                </path>
+                                            </svg>Custom Software Development</span></a></li>
+                                <li><a class="LinkListItem_link__0BOYP" aria-label="MVP Development"
+                                        href="/services/minimum-viable-product"><span
+                                            class="LinkListItem_inner__wIPAE"
+                                            style="transform: translateX(-20px) translateZ(0px);"><svg
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                                fill="currentColor" class="LinkListItem_arrowIcon__jdfqE"
+                                                style="opacity: 0;">
+                                                <path
+                                                    d="M15.979 5.98a2 2 0 0 0-1.393 3.434L29.172 24 14.586 38.586a2 2 0 1 0 2.828 2.828l16-16a2 2 0 0 0 0-2.828l-16-16a2 2 0 0 0-1.435-.606z">
+                                                </path>
+                                            </svg>MVP Development</span></a></li>
+                                <li><a class="LinkListItem_link__0BOYP" aria-label="Mobile App Development"
+                                        href="/services/mobile-app-development"><span
+                                            class="LinkListItem_inner__wIPAE"
+                                            style="transform: translateX(-20px) translateZ(0px);"><svg
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                                fill="currentColor" class="LinkListItem_arrowIcon__jdfqE"
+                                                style="opacity: 0;">
+                                                <path
+                                                    d="M15.979 5.98a2 2 0 0 0-1.393 3.434L29.172 24 14.586 38.586a2 2 0 1 0 2.828 2.828l16-16a2 2 0 0 0 0-2.828l-16-16a2 2 0 0 0-1.435-.606z">
+                                                </path>
+                                            </svg>Mobile App Development</span></a></li>
+                                <li><a class="LinkListItem_link__0BOYP" aria-label="Website Development"
+                                        href="/services/website-development"><span class="LinkListItem_inner__wIPAE"
+                                            style="transform: translateX(-20px) translateZ(0px);"><svg
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                                fill="currentColor" class="LinkListItem_arrowIcon__jdfqE"
+                                                style="opacity: 0;">
+                                                <path
+                                                    d="M15.979 5.98a2 2 0 0 0-1.393 3.434L29.172 24 14.586 38.586a2 2 0 1 0 2.828 2.828l16-16a2 2 0 0 0 0-2.828l-16-16a2 2 0 0 0-1.435-.606z">
+                                                </path>
+                                            </svg>Website Development</span></a></li>
+                                <li><a class="LinkListItem_link__0BOYP" aria-label="Ecommerce Development"
+                                        href="/services/e-commerce"><span class="LinkListItem_inner__wIPAE"
+                                            style="transform: translateX(-20px) translateZ(0px);"><svg
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                                fill="currentColor" class="LinkListItem_arrowIcon__jdfqE"
+                                                style="opacity: 0;">
+                                                <path
+                                                    d="M15.979 5.98a2 2 0 0 0-1.393 3.434L29.172 24 14.586 38.586a2 2 0 1 0 2.828 2.828l16-16a2 2 0 0 0 0-2.828l-16-16a2 2 0 0 0-1.435-.606z">
+                                                </path>
+                                            </svg>Ecommerce Development</span></a></li>
+                                <li><a class="LinkListItem_link__0BOYP" aria-label="Legacy Software Modernization"
+                                        href="/services/legacy-software-modernization"><span
+                                            class="LinkListItem_inner__wIPAE"
+                                            style="transform: translateX(-20px) translateZ(0px);"><svg
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                                fill="currentColor" class="LinkListItem_arrowIcon__jdfqE"
+                                                style="opacity: 0;">
+                                                <path
+                                                    d="M15.979 5.98a2 2 0 0 0-1.393 3.434L29.172 24 14.586 38.586a2 2 0 1 0 2.828 2.828l16-16a2 2 0 0 0 0-2.828l-16-16a2 2 0 0 0-1.435-.606z">
+                                                </path>
+                                            </svg>Legacy Software Modernization</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-center-child-right">
+                            <div class="Top_title__6z4Ur">Focus Industries</div>
+                            <ul class="Top_linkList__bau6S">
+                                <li><a class="LinkListItem_link__0BOYP" aria-label="Renewable Energy"
+                                        href="/industries/renewable-energy"><span class="LinkListItem_inner__wIPAE"
+                                            style="transform:translateX(-20px) translateZ(0)"><svg
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                                fill="currentColor" class="LinkListItem_arrowIcon__jdfqE"
+                                                style="opacity:0">
+                                                <path
+                                                    d="M15.979 5.98a2 2 0 0 0-1.393 3.434L29.172 24 14.586 38.586a2 2 0 1 0 2.828 2.828l16-16a2 2 0 0 0 0-2.828l-16-16a2 2 0 0 0-1.435-.606z">
+                                                </path>
+                                            </svg>Renewable Energy</span></a></li>
+                                <li><a class="LinkListItem_link__0BOYP" aria-label="Manufacturing"
+                                        href="/industries/manufacturing"><span class="LinkListItem_inner__wIPAE"
+                                            style="transform:translateX(-20px) translateZ(0)"><svg
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                                fill="currentColor" class="LinkListItem_arrowIcon__jdfqE"
+                                                style="opacity:0">
+                                                <path
+                                                    d="M15.979 5.98a2 2 0 0 0-1.393 3.434L29.172 24 14.586 38.586a2 2 0 1 0 2.828 2.828l16-16a2 2 0 0 0 0-2.828l-16-16a2 2 0 0 0-1.435-.606z">
+                                                </path>
+                                            </svg>Manufacturing</span></a></li>
+                                <li><a class="LinkListItem_link__0BOYP" aria-label="Ecommerce &amp; Retail"
+                                        href="/industries/e-commerce-and-retail"><span
+                                            class="LinkListItem_inner__wIPAE"
+                                            style="transform:translateX(-20px) translateZ(0)"><svg
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                                fill="currentColor" class="LinkListItem_arrowIcon__jdfqE"
+                                                style="opacity:0">
+                                                <path
+                                                    d="M15.979 5.98a2 2 0 0 0-1.393 3.434L29.172 24 14.586 38.586a2 2 0 1 0 2.828 2.828l16-16a2 2 0 0 0 0-2.828l-16-16a2 2 0 0 0-1.435-.606z">
+                                                </path>
+                                            </svg>Ecommerce &amp; Retail</span></a></li>
+                                <li><a class="LinkListItem_link__0BOYP" aria-label="Real Estate &amp; PropTech"
+                                        href="/industries/real-estate-and-proptech"><span
+                                            class="LinkListItem_inner__wIPAE"
+                                            style="transform:translateX(-20px) translateZ(0)"><svg
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                                fill="currentColor" class="LinkListItem_arrowIcon__jdfqE"
+                                                style="opacity:0">
+                                                <path
+                                                    d="M15.979 5.98a2 2 0 0 0-1.393 3.434L29.172 24 14.586 38.586a2 2 0 1 0 2.828 2.828l16-16a2 2 0 0 0 0-2.828l-16-16a2 2 0 0 0-1.435-.606z">
+                                                </path>
+                                            </svg>Real Estate &amp; PropTech</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="Top_company__PhJZN">
+                        <div class="Top_title__6z4Ur">Company</div>
+                        <ul class="Top_linkList__bau6S Top_linkList__bau6S-bottom">
+                            <li><a class="LinkListItem_link__0BOYP" aria-label="Projects" href="/projects"><span
+                                        class="LinkListItem_inner__wIPAE"
+                                        style="transform: translateX(-20px) translateZ(0px);"><svg
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                            fill="currentColor" class="LinkListItem_arrowIcon__jdfqE"
+                                            style="opacity: 0;">
+                                            <path
+                                                d="M15.979 5.98a2 2 0 0 0-1.393 3.434L29.172 24 14.586 38.586a2 2 0 1 0 2.828 2.828l16-16a2 2 0 0 0 0-2.828l-16-16a2 2 0 0 0-1.435-.606z">
+                                            </path>
+                                        </svg>Projects</span></a></li>
+                            <li><a class="LinkListItem_link__0BOYP" aria-label="Process" href="/process"><span
+                                        class="LinkListItem_inner__wIPAE"
+                                        style="transform: translateX(-20px) translateZ(0px);"><svg
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                            fill="currentColor" class="LinkListItem_arrowIcon__jdfqE"
+                                            style="opacity: 0;">
+                                            <path
+                                                d="M15.979 5.98a2 2 0 0 0-1.393 3.434L29.172 24 14.586 38.586a2 2 0 1 0 2.828 2.828l16-16a2 2 0 0 0 0-2.828l-16-16a2 2 0 0 0-1.435-.606z">
+                                            </path>
+                                        </svg>Process</span></a></li>
+                            <li><a class="LinkListItem_link__0BOYP" aria-label="About" href="/about"><span
+                                        class="LinkListItem_inner__wIPAE"
+                                        style="transform:translateX(-20px) translateZ(0)"><svg
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                            fill="currentColor" class="LinkListItem_arrowIcon__jdfqE"
+                                            style="opacity:0">
+                                            <path
+                                                d="M15.979 5.98a2 2 0 0 0-1.393 3.434L29.172 24 14.586 38.586a2 2 0 1 0 2.828 2.828l16-16a2 2 0 0 0 0-2.828l-16-16a2 2 0 0 0-1.435-.606z">
+                                            </path>
+                                        </svg>About</span></a></li>
+                            <li><a class="LinkListItem_link__0BOYP" aria-label="Blog" href="/blog"><span
+                                        class="LinkListItem_inner__wIPAE"
+                                        style="transform:translateX(-20px) translateZ(0)"><svg
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                            fill="currentColor" class="LinkListItem_arrowIcon__jdfqE"
+                                            style="opacity:0">
+                                            <path
+                                                d="M15.979 5.98a2 2 0 0 0-1.393 3.434L29.172 24 14.586 38.586a2 2 0 1 0 2.828 2.828l16-16a2 2 0 0 0 0-2.828l-16-16a2 2 0 0 0-1.435-.606z">
+                                            </path>
+                                        </svg>Blog</span></a></li>
+                            <li><a class="LinkListItem_link__0BOYP" aria-label="Contact us" aria-current="page"
+                                    href="/contact-us"><span class="LinkListItem_inner__wIPAE"
+                                        style="transform:translateX(-20px) translateZ(0)"><svg
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                            fill="currentColor" class="LinkListItem_arrowIcon__jdfqE"
+                                            style="opacity:0">
+                                            <path
+                                                d="M15.979 5.98a2 2 0 0 0-1.393 3.434L29.172 24 14.586 38.586a2 2 0 1 0 2.828 2.828l16-16a2 2 0 0 0 0-2.828l-16-16a2 2 0 0 0-1.435-.606z">
+                                            </path>
+                                        </svg>Contact us</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="Bottom_container__Mgtkm">
+                    <div class="bottom-titles-container">
+                        <p class="Bottom_copyright__U4Q_M">© 2020-2023 QualiSage. All rights reserved.</p>
+                        <ul class="Bottom_legal__sF5Y_">
+                            <li><a class="LinkWithAnimatedLine_link___GFMv" href="/terms-of-use">Terms of Use<span
+                                        class="ActiveLine_container__wB2id"><span class="ActiveLine_line__26M7B"
+                                            style="opacity: 0; transform: scaleX(0) translateZ(0px);"></span></span></a>
+                            </li>
+                            <li><a class="LinkWithAnimatedLine_link___GFMv" href="/privacy">Privacy<span
+                                        class="ActiveLine_container__wB2id"><span class="ActiveLine_line__26M7B"
+                                            style="opacity: 0; transform: scaleX(0) translateZ(0px);"></span></span></a>
+                            </li>
+                            <li><a class="LinkWithAnimatedLine_link___GFMv" href="/cookies">Cookies<span
+                                        class="ActiveLine_container__wB2id"><span class="ActiveLine_line__26M7B"
+                                            style="opacity: 0; transform: scaleX(0) translateZ(0px);"></span></span></a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
